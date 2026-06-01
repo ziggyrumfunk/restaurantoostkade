@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
+import Script from 'next/script';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server';
 import { Outfit, Italiana } from 'next/font/google';
@@ -136,6 +137,20 @@ export default async function LocaleLayout({
           <Reveal />
         </NextIntlClientProvider>
         <JsonLd />
+
+        {/* Zenchef booking widget — floating reserve button bottom-right.
+            data-open="0" prevents the booking modal from auto-popping on
+            page load (annoying for browsing visitors). Increase if you want
+            it to auto-open after N milliseconds. */}
+        <div
+          className="zc-widget-config"
+          data-restaurant="371789"
+          data-open="0"
+          data-language={locale}
+        />
+        <Script id="zenchef-sdk" strategy="afterInteractive">
+          {`(function (d, s, id) { const el = d.getElementsByTagName(s)[0]; if (d.getElementById(id) || el.parentNode == null) { return; } var js = d.createElement(s); js.id = id; js.async = true; js.src = 'https://sdk.zenchef.com/v1/sdk.min.js'; el.parentNode.insertBefore(js, el); })(document, 'script', 'zenchef-sdk');`}
+        </Script>
       </body>
     </html>
   );

@@ -123,14 +123,62 @@ export function Impressions() {
         ))}
       </div>
 
-      {/* Mobile: single column, items in source order */}
-      <div className={`container ${styles.masonryMobile}`}>
-        {SLOTS.map((slot, i) => (
-          <div key={`${slot.src}-${i}`} className={`${styles.tile} reveal`}>
-            <Tile slot={slot} />
+      {/* Mobile: horizontal auto-scrolling marquee of uniform-height columns.
+          Each column is either 1 video OR 2 photos stacked, so total heights
+          align. Track is duplicated so the CSS animation loops seamlessly. */}
+      <MobileMarquee />
+    </section>
+  );
+}
+
+/**
+ * Build columns where each is one video OR two stacked photos. This keeps
+ * the visual rhythm even and makes the mobile marquee tidy.
+ */
+function buildMobileColumns(slots: Slot[]): Slot[][] {
+  const cols: Slot[][] = [];
+  let buffer: Slot[] = [];
+  for (const slot of slots) {
+    if (slot.kind === 'video') {
+      if (buffer.length > 0) {
+        cols.push(buffer);
+        buffer = [];
+      }
+      cols.push([slot]);
+    } else {
+      buffer.push(slot);
+      if (buffer.length === 2) {
+        cols.push(buffer);
+        buffer = [];
+      }
+    }
+  }
+  if (buffer.length > 0) cols.push(buffer); // trailing single photo, if any
+  return cols;
+}
+
+function MobileMarquee() {
+  const cols = buildMobileColumns(SLOTS);
+  // Duplicate for seamless loop
+  const doubled = [...cols, ...cols];
+  return (
+    <div className={styles.mobileMarquee} aria-hidden="false">
+      <div className={styles.mobileTrack}>
+        {doubled.map((items, ci) => (
+          <div key={`mc-${ci}`} className={styles.mobileColumn}>
+            {items.map((slot, i) => (
+              <div
+                key={`mc-${ci}-${i}`}
+                className={`${styles.mobileCell} ${
+                  slot.kind === 'video' ? styles.cellTall : styles.cellHalf
+                }`}
+              >
+                <Tile slot={slot} />
+              </div>
+            ))}
           </div>
         ))}
       </div>
-    </section>
+    </div>
   );
 }

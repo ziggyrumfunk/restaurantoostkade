@@ -29,7 +29,7 @@
   position: absolute;
   inset: 6px;
   border: 1px dashed var(--color-line);
-  border-radius: 6px;
+  border-radius: 0;
   pointer-events: none;
   opacity: 0.5;
 }

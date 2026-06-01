@@ -25,12 +25,11 @@
   padding-bottom: var(--space-6);
 }
 .hero::before {
-  /* Cream wash so the marble texture stays very subtle. Sits behind the
-     collage by giving the collage explicit z-index above it. */
+  /* Theme-aware wash so the marble texture stays subtle in both modes. */
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(246, 239, 225, 0.55);
+  background: rgba(var(--scrim-bg), 0.55);
   pointer-events: none;
   z-index: 0;
 }
@@ -93,9 +92,9 @@
   pointer-events: none;
   background: radial-gradient(
     ellipse 45% 55% at 50% 50%,
-    rgba(247, 243, 236, 0.95) 0%,
-    rgba(247, 243, 236, 0.6) 45%,
-    rgba(247, 243, 236, 0) 75%
+    rgba(var(--scrim-bg), 0.95) 0%,
+    rgba(var(--scrim-bg), 0.6) 45%,
+    rgba(var(--scrim-bg), 0) 75%
   );
 }
 
@@ -114,8 +113,9 @@
 .logo {
   width: clamp(120px, 14vw, 200px);
   height: auto;
-  /* Logo ships white. Invert to dark on the cream background. */
-  filter: brightness(0);
+  /* Logo ships white. Invert to dark on the cream background; flip off in
+     dark mode where the white version reads correctly on dark. */
+  filter: brightness(var(--logo-invert));
   margin-bottom: var(--space-5);
   animation: logoIn 1s var(--ease) both;
   animation-delay: 0.05s;

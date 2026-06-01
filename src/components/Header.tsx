@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { Link, usePathname } from '@/i18n/routing';
 import { LanguageSwitcher } from './LanguageSwitcher';
+import { ThemeToggle } from './ThemeToggle';
 import styles from './Header.module.css';
 
 export function Header() {
@@ -68,6 +69,7 @@ export function Header() {
         </nav>
 
         <div className={styles.actions}>
+          <ThemeToggle />
           <LanguageSwitcher />
           <Link href="/reservations" className={`btn ${styles.reserveBtn}`}>
             {t('reservations')}
@@ -101,6 +103,7 @@ export function Header() {
         </ul>
         <div className={styles.mobileFooter}>
           <LanguageSwitcher inline />
+          <ThemeToggle />
         </div>
       </div>
     </header>

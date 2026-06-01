@@ -15,7 +15,11 @@ export function IntroSplit() {
           </div>
           <p className="lead">{t('introBody')}</p>
         </div>
-        <div className={`${styles.media} reveal`}>
+        <div
+          className={`${styles.media} reveal`}
+          data-parallax-zoom
+          data-parallax-strength="0.12"
+        >
           {/* width/height match the real file (2048x1365) so next/image renders
               at the correct aspect ratio with no cropping. */}
           <Image

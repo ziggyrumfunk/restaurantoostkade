@@ -38,7 +38,11 @@ export function Highlights() {
       <div className={`container ${styles.grid}`}>
         {cards.map((c) => (
           <Link href={c.href} key={c.href} className={`${styles.card} reveal`}>
-            <div className={styles.imgWrap}>
+            <div
+              className={styles.imgWrap}
+              data-parallax-zoom
+              data-parallax-strength="0.14"
+            >
               <Image
                 src={c.img}
                 alt=""

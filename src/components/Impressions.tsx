@@ -1,5 +1,6 @@
 'use client';
 
+import { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import styles from './Impressions.module.css';
@@ -159,10 +160,72 @@ function buildMobileColumns(slots: Slot[]): Slot[][] {
 
 function MobileMarquee() {
   const cols = buildMobileColumns(SLOTS);
-  // Duplicate for seamless loop
+  // Duplicate the column set so the scroll position can wrap seamlessly.
   const doubled = [...cols, ...cols];
+  const scrollerRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    const el = scrollerRef.current;
+    if (!el) return;
+    const prefersReduced =
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReduced) return;
+
+    let rafId: number | null = null;
+    let paused = false;
+    let resumeAt = 0;
+
+    const tick = () => {
+      const now = performance.now();
+      if (paused || now < resumeAt) {
+        rafId = requestAnimationFrame(tick);
+        return;
+      }
+      const half = el.scrollWidth / 2;
+      // Wrap silently when we reach the duplicate half so the loop is seamless.
+      if (el.scrollLeft >= half) {
+        el.scrollLeft -= half;
+      }
+      el.scrollLeft += 0.4; // slow drift
+      rafId = requestAnimationFrame(tick);
+    };
+
+    // Manual finger swipe pauses the auto-scroll, then resumes after a quiet
+    // moment so it doesn't fight the user.
+    const pauseFor = (ms: number) => {
+      paused = false;
+      resumeAt = performance.now() + ms;
+    };
+    const onTouchStart = () => {
+      paused = true;
+    };
+    const onTouchEnd = () => {
+      paused = false;
+      pauseFor(2500);
+    };
+    const onWheel = () => pauseFor(1500);
+
+    rafId = requestAnimationFrame(tick);
+    el.addEventListener('touchstart', onTouchStart, { passive: true });
+    el.addEventListener('touchend', onTouchEnd, { passive: true });
+    el.addEventListener('touchcancel', onTouchEnd, { passive: true });
+    el.addEventListener('wheel', onWheel, { passive: true });
+
+    return () => {
+      if (rafId) cancelAnimationFrame(rafId);
+      el.removeEventListener('touchstart', onTouchStart);
+      el.removeEventListener('touchend', onTouchEnd);
+      el.removeEventListener('touchcancel', onTouchEnd);
+      el.removeEventListener('wheel', onWheel);
+    };
+  }, []);
+
   return (
-    <div className={styles.mobileMarquee} aria-hidden="false">
+    <div
+      ref={scrollerRef}
+      className={styles.mobileMarquee}
+      aria-hidden="false"
+    >
       <div className={styles.mobileTrack}>
         {doubled.map((items, ci) => (
           <div key={`mc-${ci}`} className={styles.mobileColumn}>

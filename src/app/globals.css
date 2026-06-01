@@ -319,6 +319,24 @@ p.lead { font-size: var(--fs-md); line-height: var(--lh-loose); color: var(--col
 .leaves-corner.br { bottom: 0; right: 0; transform: scale(-1, -1); }
 
 /* -----------------------------------------------------------------------
+   Mobile parallax zoom — driven by MobileParallaxZoom.tsx
+   Apply data-parallax-zoom (and optionally data-parallax-strength="0.15")
+   to a wrapper element. The wrapper clips its content and the inner image
+   scales with the --ps CSS variable as it scrolls.
+   ----------------------------------------------------------------------- */
+[data-parallax-zoom] {
+  overflow: hidden;
+}
+@media (max-width: 720px) {
+  [data-parallax-zoom] > * {
+    transform: scale(var(--ps, 1));
+    transform-origin: center;
+    transition: transform 80ms linear;
+    will-change: transform;
+  }
+}
+
+/* -----------------------------------------------------------------------
    Zenchef booking widget theming
    The floating button lives in the page DOM (the booking modal itself is
    inside an iframe and can't be styled). We target multiple class patterns

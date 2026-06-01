@@ -134,4 +134,108 @@
 
 .title {
   color: var(--color-ink);
-  font-size: c
+  font-size: clamp(2.5rem, 6vw, 4.75rem);
+  line-height: 1;
+  letter-spacing: -0.03em;
+  font-weight: 500;
+  max-width: 20ch;
+  white-space: pre-line;
+}
+
+.lead {
+  margin-top: var(--space-5);
+  max-width: 46ch;
+  font-size: var(--fs-md);
+  color: var(--color-ink-soft);
+}
+
+.actions {
+  margin-top: var(--space-6);
+  display: flex;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.ghost {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.95rem 1.4rem;
+  border-radius: 0;
+  border: 1px solid var(--color-ink);
+  background: transparent;
+  font-size: var(--fs-sm);
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-ink);
+  transition: background var(--dur) var(--ease), color var(--dur) var(--ease), transform var(--dur) var(--ease);
+  white-space: nowrap;
+}
+.ghost:hover {
+  background: var(--color-ink);
+  color: var(--color-bg);
+  transform: translateY(-1px);
+}
+
+.scrollHint {
+  position: absolute;
+  bottom: var(--space-5);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  width: 24px;
+  height: 36px;
+  border: 1px solid var(--color-ink-mute);
+  border-radius: 0;
+  opacity: 0.7;
+}
+.scrollHint span {
+  position: absolute;
+  top: 6px;
+  left: 50%;
+  width: 2px;
+  height: 8px;
+  background: var(--color-ink);
+  transform: translateX(-50%);
+  border-radius: 2px;
+  animation: dot 1.8s var(--ease) infinite;
+}
+@keyframes dot {
+  0%, 100% { transform: translate(-50%, 0); opacity: 0.9; }
+  50%      { transform: translate(-50%, 12px); opacity: 0.3; }
+}
+
+@media (max-width: 720px) {
+  .hideMobile { display: none; }
+  .hero {
+    min-height: 640px;
+  }
+  /* Stack CTAs vertically on narrow screens, each full-width */
+  .actions {
+    flex-direction: column;
+    gap: var(--space-3);
+    width: 100%;
+    max-width: 280px;
+  }
+  .actions :global(.btn),
+  .ghost {
+    width: 100%;
+    justify-content: center;
+  }
+  /* Stronger central halo so text stays readable over photos */
+  .centerHalo {
+    background: radial-gradient(
+      ellipse 75% 65% at 50% 50%,
+      rgba(247, 243, 236, 0.98) 0%,
+      rgba(247, 243, 236, 0.85) 50%,
+      rgba(247, 243, 236, 0.2) 90%
+    );
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tile, .tileImg, .logo { animation: none !important; }
+  .tile { opacity: 1; }
+}

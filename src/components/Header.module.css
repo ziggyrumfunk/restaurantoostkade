@@ -103,7 +103,8 @@
 .mobile {
   position: fixed;
   inset: 84px 0 0 0;
-  background: var(--color-bg);
+  /* Fully opaque cream — explicit hex rather than the alpha-rgba header bg. */
+  background: #f6efe1;
   padding: var(--space-7) var(--gutter) var(--space-7);
   display: flex;
   flex-direction: column;
@@ -112,6 +113,15 @@
   pointer-events: none;
   transform: translateY(-12px);
   transition: opacity var(--dur) var(--ease), transform var(--dur) var(--ease);
+  z-index: 49; /* below the sticky header bar (z 50) but above all content */
+}
+
+/* When the mobile menu is open the header bar itself goes from translucent
+   glass to fully opaque so page content can't peek through the top 84px. */
+.menuOpen.header,
+.header.menuOpen {
+  background: #f6efe1;
+  border-bottom-color: var(--color-line);
 }
 .menuOpen .mobile {
   opacity: 1;

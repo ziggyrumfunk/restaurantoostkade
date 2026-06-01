@@ -148,7 +148,10 @@ export default async function LocaleLayout({
           data-open="0"
           data-language={locale}
         />
-        <Script id="zenchef-sdk" strategy="afterInteractive">
+        {/* Use a different id on the wrapper than the SDK's own id ('zenchef-sdk').
+            Otherwise the IIFE's duplicate-guard sees its own script tag and
+            bails out before loading the SDK. */}
+        <Script id="zenchef-sdk-loader" strategy="afterInteractive">
           {`(function (d, s, id) { const el = d.getElementsByTagName(s)[0]; if (d.getElementById(id) || el.parentNode == null) { return; } var js = d.createElement(s); js.id = id; js.async = true; js.src = 'https://sdk.zenchef.com/v1/sdk.min.js'; el.parentNode.insertBefore(js, el); })(document, 'script', 'zenchef-sdk');`}
         </Script>
       </body>

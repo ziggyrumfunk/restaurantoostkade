@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Main long stem with hanging leaves, inspired by Oostkade menu PDF -->
+  <path d="M10 20 C 50 60, 80 110, 110 180" opacity="0.9"/>
+  <!-- Leaf 1: long pointed leaf with veins -->
+  <g opacity="0.85">
+    <path d="M28 40 C 18 55, 22 78, 48 90 C 60 82, 64 60, 50 42 C 42 36, 32 36, 28 40 Z"/>
+    <path d="M30 46 C 38 60, 44 75, 50 88" opacity="0.6"/>
+    <path d="M35 55 L 42 58" opacity="0.5"/>
+    <path d="M37 65 L 45 67" opacity="0.5"/>
+    <path d="M40 75 L 47 78" opacity="0.5"/>
+  </g>
+  <!-- Leaf 2: smaller leaf opposite -->
+  <g opacity="0.85">
+    <path d="M68 95 C 80 100, 95 96, 100 80 C 92 70, 75 72, 68 88 C 66 92, 66 94, 68 95 Z"/>
+    <path d="M72 92 C 82 88, 92 84, 98 80" opacity="0.6"/>
+    <path d="M78 89 L 84 85" opacity="0.5"/>
+    <path d="M84 91 L 90 86" opacity="0.5"/>
+  </g>
+  <!-- Hanging bud / flower 1 -->
+  <g opacity="0.85">
+    <path d="M88 135 C 80 142, 82 158, 92 162 C 100 158, 102 144, 96 136 C 94 134, 90 133, 88 135 Z"/>
+    <path d="M85 145 C 88 150, 92 154, 97 156" opacity="0.6"/>
+  </g>
+  <!-- Hanging bud / flower 2 -->
+  <g opacity="0.85">
+    <path d="M115 158 C 108 164, 110 178, 120 182 C 128 178, 130 166, 124 158 C 122 156, 118 156, 115 158 Z"/>
+    <path d="M112 168 C 116 173, 120 177, 125 178" opacity="0.6"/>
+  </g>
+  <!-- Tiny secondary leaf cluster up high -->
+  <g opacity="0.75">
+    <path d="M18 30 C 14 36, 18 42, 24 40 C 26 36, 24 30, 18 30 Z"/>
+  </g>
+</svg>

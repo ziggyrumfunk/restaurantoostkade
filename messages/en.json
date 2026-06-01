@@ -1,0 +1,212 @@
+{
+  "Meta": {
+    "siteName": "Restaurant Oostkade",
+    "tagline": "On the harbour of Oud-Beijerland",
+    "defaultTitle": "Restaurant Oostkade | Oud-Beijerland",
+    "defaultDescription": "Modern cuisine with an Asian twist on the harbour of Oud-Beijerland. Lunch, dinner, business lunch and private dining."
+  },
+  "Nav": {
+    "home": "Home",
+    "menu": "Menu",
+    "drinks": "Drinks",
+    "lunch": "Business lunch",
+    "events": "Private dining",
+    "reservations": "Reservations",
+    "contact": "Contact",
+    "languageLabel": "Language",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "Home": {
+    "heroEyebrow": "On the harbour of Oud-Beijerland",
+    "heroTitle": "World flavours,\ncity atmosphere.",
+    "heroLead": "A modern restaurant with world dishes, often with an Asian twist. Welcome to our table.",
+    "heroCtaReserve": "Reserve a table",
+    "heroCtaMenu": "View the menu",
+    "introTitle": "Our story",
+    "introBody": "Restaurant Oostkade sits on the harbour of Oud-Beijerland. Since 2022 chef Yorick Schaeffer is at the helm. Our kitchen blends classic technique with world flavours, often with an Asian twist. Fresh produce, honest cooking, and an atmosphere that fits every moment, from business lunch to dinner with friends.",
+    "highlightsTitle": "Our highlights",
+    "highlight1Title": "Business lunch",
+    "highlight1Body": "2, 3 or 4 courses from €29. With wine pairing from €14. Designed for productive afternoons.",
+    "highlight1Cta": "To lunch",
+    "highlight2Title": "Private dining",
+    "highlight2Body": "Room for 120 guests. Birthdays, corporate events, bespoke catering. We make it memorable.",
+    "highlight2Cta": "To events",
+    "highlight3Title": "Harbour view",
+    "highlight3Body": "Terrace overlooking the water. Our favourite spot in summer, cosy inside in winter.",
+    "highlight3Cta": "To contact",
+    "ctaStripTitle": "A table tonight?",
+    "ctaStripBody": "Reserve online or call us directly.",
+    "ctaStripButton": "Reserve now"
+  },
+  "Impressions": {
+    "eyebrow": "Impressions",
+    "title": "A look inside",
+    "lead": "A quick glimpse of the kitchen, the terrace and the atmosphere at Oostkade."
+  },
+  "Reviews": {
+    "eyebrow": "What guests say",
+    "title": "In their own words",
+    "hugo": {
+      "body": "Pleasantly surprised by the quality of the food. A great combination of flavours and dishes that looked and tasted quite unique."
+    },
+    "jvb": {
+      "body": "Amazing place. Such a good, exciting menu, super wines, cocktails and a beautiful terrace."
+    },
+    "petra": {
+      "body": "Everything was incredibly delicious and the service was fantastic. The timing between courses was spot on and the team was super friendly, even to our 80-year-old parents."
+    },
+    "susanne": {
+      "body": "A wonderful, first-class dinner. Each of the five courses was tasty, varied and beautifully presented. Stylish, modern and sophisticated yet still cosy."
+    },
+    "rob": {
+      "body": "We always go for the surprise menu and it never disappoints. Great value for money, generously filled plates, and a delicious dessert. Worth repeating."
+    },
+    "ate": {
+      "body": "Fantastic menu, wonderful flavours and a lovely atmosphere. The surprise menu is highly recommended, and the location is fantastic."
+    },
+    "arie": {
+      "body": "A fantastic culinary experience on the outdoor terrace. Cones with tuna, tacos with sea bass, an oyster PS Martini, and a great drinks menu to match."
+    },
+    "martijn": {
+      "body": "We had dinner with 18 people at a long table and everything was perfectly organised. Delicious food served all at once, excellent service, and a great atmosphere inside and out."
+    },
+    "lieke": {
+      "body": "You feel the good energy the moment you walk in. Hip, modern decor with real attention to detail. The cocktails are fantastic — the place for a fun night out."
+    },
+    "rosalie": {
+      "body": "Truly one of my favourites. Great service, welcoming staff, and food that always makes me happy. The new owner is super creative and doing a great job."
+    }
+  },
+  "Menu": {
+    "title": "Menu",
+    "lead": "Our menu changes with the seasons. Ask our team about the specials of the week.",
+    "sectionLunch": "Lunch",
+    "sectionStarters": "Starters",
+    "sectionMains": "Mains",
+    "sectionDesserts": "Desserts",
+    "sectionDrinks": "Drinks",
+    "downloadPdf": "Download menu (PDF)",
+    "note": "Got an allergy? Please let us know!",
+    "mustTry": "Must try",
+    "veggie": "Vegetarian",
+    "tabDinner": "Dinner menu",
+    "tabLunch": "Lunch menu"
+  },
+  "Drinks": {
+    "title": "Drinks menu",
+    "lead": "Our drinks list with wines, beers, cocktails, mocktails and house specials. Ask our team for a recommendation.",
+    "note": "Looking for something special? Ask about our wine specials."
+  },
+  "Lunch": {
+    "title": "Lunch and business lunch",
+    "lead": "Quick, polished, and always on time. From a rustic sandwich menu to a full 4-course meal.",
+    "businessTitle": "Business lunch",
+    "businessBody": "Our business lunch is designed for productive afternoons. Pick 2, 3 or 4 courses, optionally with a matching wine pairing.",
+    "twoCourse": "2 courses",
+    "threeCourse": "3 courses",
+    "fourCourse": "4 courses",
+    "winePairing": "Wine pairing from €14",
+    "casualTitle": "Lunch menu",
+    "casualHeading": "Or something lighter?",
+    "casualBody": "Our lunch menu offers rustic sandwiches, flatbreads and salads with fresh, seasonal ingredients. Dinner dishes are also available at lunch.",
+    "viewMenu": "View the lunch menu",
+    "reserveCta": "Reserve for lunch",
+    "excerptEyebrow": "From the menu",
+    "excerptTitle": "Lunch favourites",
+    "viewFullMenu": "View full menu"
+  },
+  "Events": {
+    "title": "Events & business meetings",
+    "lead": "Got something to celebrate? We would love to welcome you at Restaurant Oostkade in Oud-Beijerland.",
+    "introTitle": "Celebrate by the harbour",
+    "introBody": "Whether you are planning a birthday, anniversary, wedding or a business meeting, Oostkade is the right venue for both small and large groups. Enjoy our flavourful dishes and extensive drinks list in our beautiful location on the harbour of Oud-Beijerland.",
+    "capacityTitle": "Up to 120 guests",
+    "capacityBody": "We can arrange our atmospheric restaurant and spacious terrace overlooking the harbour entirely to your wishes. The whole restaurant or a private section — we tailor it to suit you.",
+    "cateringTitle": "Catering on location",
+    "cateringBody": "Prefer a party or dinner at your own location? Our kitchen will come to you. From private dining to full-service catering, we are happy to think along with you.",
+    "menusTitle": "Bespoke menus",
+    "menusBody": "Sharing dining, walking dinner, or a classic five-course menu. Everything is possible. Together we create an unforgettable experience.",
+    "planTitle": "Plan your event",
+    "planBody": "We would love to hear about your plans. Call us or fill in the form below and we will be in touch within 48 hours to discuss the possibilities together.",
+    "inquireTitle": "Tell us about your event",
+    "inquireBody": "Send us a message and we'll get back within 48 hours.",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone",
+      "date": "Date",
+      "guests": "Number of guests",
+      "type": "Event type",
+      "typePlaceholder": "e.g. birthday, business dinner, wedding",
+      "message": "Message",
+      "submit": "Send inquiry",
+      "successTitle": "Thank you for your inquiry",
+      "successBody": "We'll be in touch within 24 hours.",
+      "errorTitle": "Something went wrong",
+      "errorBody": "Please try again or call us on 0186-617170."
+    }
+  },
+  "Reservations": {
+    "title": "Reserve a table",
+    "lead": "Booking is easy via the Zenchef button at the bottom right of the page. Pick your date, time and number of guests — you'll receive an email confirmation right away.",
+    "widgetTitle": "Book via Zenchef",
+    "widgetBody": "Click the booking button at the bottom right of the page to reserve your table. Pick a date, time and number of guests in a few clicks.",
+    "groupsTitle": "Groups of 8 or more",
+    "groupsBody": "For larger groups or special requests, please call us directly on 0186-617170 or email info@restaurantoostkade.nl.",
+    "hoursTitle": "When you can visit",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone",
+      "date": "Date",
+      "time": "Time",
+      "guests": "Number of guests",
+      "notes": "Notes (allergies, occasion)",
+      "submit": "Reserve",
+      "successTitle": "Reservation received",
+      "successBody": "You'll receive an email confirmation within minutes.",
+      "errorTitle": "Something went wrong",
+      "errorBody": "Please try again or call us on 0186-617170."
+    },
+    "phoneTitle": "Prefer to call?",
+    "phoneBody": "Call us on 0186-617170. We're available during opening hours."
+  },
+  "Contact": {
+    "title": "Contact",
+    "addressLabel": "Address",
+    "address": "Oostkade 24, 3261 KL Oud-Beijerland",
+    "phoneLabel": "Phone",
+    "phone": "0186-617170",
+    "emailLabel": "Email",
+    "email": "info@restaurantoostkade.nl",
+    "hoursLabel": "Opening hours",
+    "hoursMondayClosed": "Monday: closed",
+    "hoursTueSun": "Tuesday to Sunday: from 12:00",
+    "hoursMon": "Monday",
+    "hoursTue": "Tuesday",
+    "hoursWed": "Wednesday",
+    "hoursThu": "Thursday",
+    "hoursFri": "Friday",
+    "hoursSat": "Saturday",
+    "hoursSun": "Sunday",
+    "hoursClosed": "closed",
+    "hoursMonTime": "closed",
+    "hoursTueTime": "12:00 — 22:00",
+    "hoursWedTime": "12:00 — 22:00",
+    "hoursThuTime": "12:00 — 22:00",
+    "hoursFriTime": "12:00 — 23:00",
+    "hoursSatTime": "12:00 — 23:00",
+    "hoursSunTime": "12:00 — 22:00",
+    "directionsCta": "View on Google Maps",
+    "socialsLabel": "Follow us"
+  },
+  "Footer": {
+    "rights": "All rights reserved.",
+    "newsletter": "Stay in the loop",
+    "newsletterLead": "Subscribe to our newsletter for specials and events.",
+    "newsletterPlaceholder": "Your email address",
+    "newsletterSubmit": "Subscribe",
+    "newsletterSuccess": "Thanks for subscribing."
+  }
+}

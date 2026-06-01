@@ -1,0 +1,116 @@
+.header {
+  position: relative;
+  padding-top: clamp(3.5rem, 7vw, 6rem);
+  padding-bottom: clamp(2rem, 4vw, 3rem);
+  background: var(--color-bg);
+  overflow: hidden;
+}
+
+/* When a backdrop is provided, give the header more height + dark surface so
+   the photo strip has room to breathe. */
+.withBackdrop {
+  padding-top: clamp(6rem, 11vw, 9rem);
+  padding-bottom: clamp(3rem, 7vw, 5rem);
+  min-height: 380px;
+  background: var(--color-contrast);
+  color: var(--color-bg);
+}
+
+/* Botanical corner accents on the cream variant only */
+.header:not(.withBackdrop)::before,
+.header:not(.withBackdrop)::after {
+  content: '';
+  position: absolute;
+  width: clamp(120px, 12vw, 200px);
+  height: clamp(120px, 12vw, 200px);
+  background-image: url('/decor/leaves-corner.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  opacity: 0.3;
+  pointer-events: none;
+  filter: invert(57%) sepia(35%) saturate(450%) hue-rotate(2deg) brightness(96%) contrast(86%);
+}
+.header:not(.withBackdrop)::before { top: 0; left: 0; }
+.header:not(.withBackdrop)::after  { bottom: 0; right: 0; transform: scale(-1, -1); }
+
+.inner {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  max-width: 64ch;
+  align-items: flex-start;
+}
+
+.title {
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  margin: 0;
+}
+.withBackdrop .title {
+  color: var(--color-bg);
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.45);
+}
+
+.divider {
+  display: block;
+  width: clamp(160px, 22vw, 240px);
+  height: 16px;
+  background-image: url('/decor/divider.svg');
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: contain;
+  opacity: 0.7;
+  filter: invert(57%) sepia(35%) saturate(450%) hue-rotate(2deg) brightness(96%) contrast(86%);
+}
+.withBackdrop .divider {
+  opacity: 0.85;
+  /* Brighter gold on the dark photo strip */
+  filter: invert(71%) sepia(33%) saturate(580%) hue-rotate(2deg) brightness(102%) contrast(86%);
+}
+.withBackdrop .inner p {
+  color: rgba(247, 243, 236, 0.88);
+}
+.withBackdrop .inner :global(.eyebrow) {
+  color: var(--color-accent-soft);
+}
+
+/* --- Full-width photo strip ----------------------------------- */
+.backdrop {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.strip {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  width: 100%;
+  height: 100%;
+}
+.stripTile {
+  position: relative;
+  overflow: hidden;
+}
+.stripImg {
+  object-fit: cover;
+  filter: brightness(0.55) saturate(0.95);
+}
+
+/* Cream-to-dark wash on top of the photo strip, with a brighter spotlight
+   behind the headline so it stays sharp. */
+.scrim {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 55% 90% at 25% 50%, rgba(15, 17, 11, 0.55) 0%, rgba(15, 17, 11, 0.85) 70%, rgba(15, 17, 11, 0.95) 100%),
+    linear-gradient(180deg, rgba(15, 17, 11, 0.35) 0%, rgba(15, 17, 11, 0) 35%, rgba(15, 17, 11, 0) 60%, rgba(15, 17, 11, 0.55) 100%);
+}
+
+@media (max-width: 720px) {
+  /* On mobile, show fewer tiles so each is still recognizable */
+  .stripTile:nth-of-type(n + 4) { display: none; }
+}

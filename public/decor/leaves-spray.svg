@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 80" fill="none" stroke="currentColor" stroke-width="0.85" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Symmetric leaf spray for around section headings -->
+  <g opacity="0.85">
+    <!-- Left side stem -->
+    <path d="M65 40 C 50 38, 30 32, 10 36"/>
+    <!-- Left leaf 1 -->
+    <path d="M40 30 C 32 24, 22 28, 22 36 C 28 38, 38 36, 40 30 Z"/>
+    <path d="M28 30 L 38 32" opacity="0.55"/>
+    <!-- Left leaf 2 -->
+    <path d="M52 36 C 46 32, 38 34, 38 40 C 44 42, 50 40, 52 36 Z"/>
+    <!-- Left dangling bud -->
+    <path d="M22 42 C 18 46, 19 52, 24 53 C 28 52, 28 46, 25 42 C 24 41, 23 41, 22 42 Z"/>
+  </g>
+  <g opacity="0.85">
+    <!-- Right side stem (mirrored) -->
+    <path d="M75 40 C 90 38, 110 32, 130 36"/>
+    <!-- Right leaf 1 -->
+    <path d="M100 30 C 108 24, 118 28, 118 36 C 112 38, 102 36, 100 30 Z"/>
+    <path d="M112 30 L 102 32" opacity="0.55"/>
+    <!-- Right leaf 2 -->
+    <path d="M88 36 C 94 32, 102 34, 102 40 C 96 42, 90 40, 88 36 Z"/>
+    <!-- Right dangling bud -->
+    <path d="M118 42 C 122 46, 121 52, 116 53 C 112 52, 112 46, 115 42 C 116 41, 117 41, 118 42 Z"/>
+  </g>
+  <!-- Center dot ornament -->
+  <circle cx="70" cy="40" r="1.4" fill="currentColor" stroke="none" opacity="0.9"/>
+</svg>

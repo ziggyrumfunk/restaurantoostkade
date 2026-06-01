@@ -1,0 +1,22 @@
+.switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  font-weight: 500;
+}
+.lang {
+  padding: 6px 2px;
+  color: var(--color-ink-mute);
+  transition: color var(--dur) var(--ease);
+}
+.lang:hover { color: var(--color-ink); }
+.active { color: var(--color-ink); }
+.sep { color: var(--color-line); }
+
+.inline {
+  font-size: 0.95rem;
+  letter-spacing: 0.22em;
+}
+.inline .lang { padding-block: 10px; }

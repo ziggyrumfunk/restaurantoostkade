@@ -1,0 +1,183 @@
+.section {
+  position: relative;
+  background: var(--color-bg);
+  padding-block: clamp(2rem, 5vw, 4rem);
+  overflow: hidden;
+}
+/* Marble paper feel from the menu PDF */
+.section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('/decor/marble-texture.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.45;
+  pointer-events: none;
+  z-index: 0;
+}
+.section > * { position: relative; z-index: 1; }
+
+.tabsWrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: clamp(1.25rem, 3vw, 2.5rem);
+}
+.tabs {
+  display: inline-flex;
+  border: 1px solid var(--color-accent);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.45);
+  padding: 4px;
+  gap: 4px;
+  box-shadow: 0 8px 30px rgba(20, 18, 14, 0.06);
+}
+.tab {
+  font-family: var(--font-body);
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--color-ink);
+  padding: 0.7rem 1.4rem;
+  border-radius: 999px;
+  background: transparent;
+  transition: background var(--dur) var(--ease), color var(--dur) var(--ease);
+}
+.tab:hover { background: rgba(177, 138, 79, 0.1); }
+.tabActive {
+  background: var(--color-ink);
+  color: var(--color-bg);
+}
+.tabActive:hover { background: var(--color-ink); }
+
+/* Gold rectangle frame matching the menu card */
+.frame {
+  position: relative;
+  padding: clamp(2rem, 5vw, 4rem) clamp(1.25rem, 4vw, 3rem);
+}
+.frame::before {
+  content: '';
+  position: absolute;
+  inset: 8px;
+  border: 1px solid var(--color-accent);
+  border-radius: 4px;
+  pointer-events: none;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2.5rem, 6vw, 5rem) clamp(2rem, 5vw, 4rem);
+}
+@media (max-width: 760px) {
+  .grid { grid-template-columns: 1fr; }
+}
+
+.col, .callout {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.colTitle {
+  font-size: clamp(2.5rem, 5.5vw, 4rem);
+  color: var(--color-accent);
+  letter-spacing: 0;
+  margin: 0 0 var(--space-2);
+}
+
+.callout {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: var(--space-6) clamp(1.5rem, 4vw, 3rem);
+  border: 1px solid var(--color-accent);
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.55);
+  align-items: center;
+}
+.calloutTitle {
+  font-size: var(--fs-md);
+  color: var(--color-ink);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-weight: 600;
+  margin: 0;
+}
+.calloutBody {
+  color: var(--color-ink-mute);
+  font-style: italic;
+  margin: 0;
+}
+
+.items {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+.item { display: flex; flex-direction: column; gap: 2px; }
+
+.itemHead {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-3);
+}
+
+.name {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: var(--fs-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-ink);
+}
+
+.dots {
+  flex: 1;
+  border-bottom: 1px dotted var(--color-line);
+  transform: translateY(-3px);
+  min-width: 24px;
+}
+
+.price {
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  color: var(--color-ink);
+  white-space: nowrap;
+}
+
+.desc {
+  font-size: var(--fs-sm);
+  color: var(--color-ink-mute);
+  font-style: italic;
+  max-width: 52ch;
+  line-height: 1.5;
+}
+
+.heart { color: var(--color-ink); flex-shrink: 0; }
+
+.legendRow {
+  margin-top: var(--space-7);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+}
+.note {
+  text-align: center;
+  font-size: var(--fs-sm);
+  color: var(--color-ink-mute);
+  font-style: italic;
+  margin: 0;
+}
+.url {
+  font-size: var(--fs-xs);
+  letter-spacing: 0.22em;
+  color: var(--color-accent);
+  text-transform: uppercase;
+}

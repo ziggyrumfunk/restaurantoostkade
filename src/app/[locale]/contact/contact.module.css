@@ -1,0 +1,50 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: start;
+}
+@media (max-width: 900px) { .grid { grid-template-columns: 1fr; } }
+
+.info { display: flex; flex-direction: column; gap: var(--space-6); }
+.block { display: flex; flex-direction: column; gap: var(--space-2); }
+.block p { font-size: var(--fs-md); color: var(--color-ink); }
+.block a { border-bottom: 1px solid var(--color-line); padding-bottom: 2px; transition: border-color var(--dur) var(--ease); }
+.block a:hover { border-bottom-color: var(--color-ink); }
+
+.hoursList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+  max-width: 360px;
+}
+.hoursList li {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding-block: 6px;
+  border-bottom: 1px dashed var(--color-line-soft);
+  font-size: var(--fs-sm);
+  color: var(--color-ink-soft);
+}
+.hoursList li:last-child { border-bottom: 0; }
+.hoursList li > span:first-child {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: var(--fs-xs);
+  color: var(--color-ink);
+}
+
+.mapWrap {
+  aspect-ratio: 4/3;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--color-surface);
+  box-shadow: var(--shadow-soft);
+  border: 1px solid var(--color-line);
+}
+.mapWrap iframe { width: 100%; height: 100%; border: 0; }

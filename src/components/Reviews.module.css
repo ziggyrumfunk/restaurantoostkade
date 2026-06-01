@@ -1,0 +1,123 @@
+.section {
+  position: relative;
+  background: var(--color-bg);
+  padding-block: clamp(4rem, 9vw, 7rem);
+  overflow: hidden;
+}
+/* Botanical accent in the top-right, mirrored from the menu PDF layout */
+.section::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: clamp(140px, 14vw, 220px);
+  height: clamp(140px, 14vw, 220px);
+  background-image: url('/decor/leaves-corner.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  opacity: 0.35;
+  pointer-events: none;
+  transform: scaleX(-1);
+  filter: invert(57%) sepia(35%) saturate(450%) hue-rotate(2deg) brightness(96%) contrast(86%);
+}
+
+.head {
+  text-align: center;
+  margin-bottom: var(--space-7);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  margin-top: var(--space-3);
+  color: var(--color-ink);
+}
+
+/* Marquee viewport — fades to background at edges so cards drift in / out. */
+.viewport {
+  position: relative;
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to right,
+    transparent 0,
+    black 8%,
+    black 92%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0,
+    black 8%,
+    black 92%,
+    transparent 100%
+  );
+}
+
+.track {
+  display: flex;
+  gap: var(--space-5);
+  width: max-content;
+  padding-block: var(--space-3);
+  animation: scroll 80s linear infinite;
+  will-change: transform;
+}
+.viewport:hover .track {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.card {
+  flex: 0 0 auto;
+  width: clamp(280px, 28vw, 380px);
+  background: var(--color-bg-elev);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5) var(--space-5) var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  box-shadow: var(--shadow-soft);
+}
+
+.stars {
+  color: var(--color-accent);
+  display: inline-flex;
+  gap: 2px;
+}
+
+.quote {
+  font-size: var(--fs-sm);
+  line-height: var(--lh-loose);
+  color: var(--color-ink);
+  margin: 0;
+  flex: 1;
+}
+
+.byline {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--color-line);
+  padding-top: var(--space-3);
+  margin-top: var(--space-2);
+}
+.author {
+  font-weight: 600;
+  color: var(--color-ink);
+  font-size: var(--fs-sm);
+}
+.meta {
+  font-size: var(--fs-xs);
+  color: var(--color-ink-mute);
+  margin-top: 2px;
+  letter-spacing: 0.02em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .track { animation: none; transform: translateX(0); }
+}

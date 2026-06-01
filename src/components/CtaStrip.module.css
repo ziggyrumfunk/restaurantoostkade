@@ -1,0 +1,64 @@
+.strip {
+  position: relative;
+  overflow: hidden;
+  padding-block: clamp(5rem, 10vw, 8rem);
+  min-height: 360px;
+}
+
+/* Backdrop layer — collage of darkened photos behind the headline. */
+.backdrop {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.tile {
+  position: absolute;
+  overflow: hidden;
+}
+.tile1 { top: 0;    left: 0;   width: 38%; height: 100%; clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%); }
+.tile2 { top: 0;    left: 30%; width: 38%; height: 60%;  clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%); }
+.tile3 { top: 40%;  left: 32%; width: 40%; height: 60%;  clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%); }
+.tile4 { top: 0;    left: 60%; width: 45%; height: 100%; clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%); }
+
+.img {
+  object-fit: cover;
+  /* Strongly darken so the headline + button stay legible. */
+  filter: brightness(0.32) saturate(1.1);
+}
+
+/* Color wash on top of the photos — adds the warm bronze atmosphere. */
+.scrim {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 50% 70% at 50% 50%, rgba(21, 17, 11, 0.55) 0%, rgba(21, 17, 11, 0.85) 70%, rgba(21, 17, 11, 0.95) 100%),
+    linear-gradient(180deg, rgba(177, 138, 79, 0.08) 0%, rgba(21, 17, 11, 0.0) 60%);
+}
+
+/* Content */
+.inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-6);
+  flex-wrap: wrap;
+  text-align: left;
+}
+.copy { max-width: 36ch; }
+.eyebrow { color: var(--color-accent-soft); }
+.title {
+  color: var(--color-bg);
+  margin-block: var(--space-2);
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+}
+.body {
+  color: rgba(247, 243, 236, 0.85);
+  font-size: var(--fs-md);
+  max-width: 36ch;
+}
+
+.cta { box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35); }

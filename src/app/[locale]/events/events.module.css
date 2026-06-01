@@ -1,0 +1,172 @@
+/* --- Intro ---------------------------------------------------- */
+.intro {
+  position: relative;
+  background: var(--color-bg);
+  overflow: hidden;
+  padding-block: clamp(3rem, 7vw, 6rem);
+}
+.intro::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: clamp(160px, 16vw, 240px);
+  height: clamp(160px, 16vw, 240px);
+  background-image: url('/decor/leaves-corner.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  opacity: 0.3;
+  transform: scaleX(-1);
+  pointer-events: none;
+  filter: invert(57%) sepia(35%) saturate(450%) hue-rotate(2deg) brightness(96%) contrast(86%);
+}
+
+.introGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 6vw, 5rem);
+  align-items: center;
+}
+@media (max-width: 900px) { .introGrid { grid-template-columns: 1fr; } }
+
+.introCopy {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  max-width: 52ch;
+}
+.h2 { margin: 0; }
+
+.introMedia {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+}
+
+.img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* --- Three feature cards ------------------------------------- */
+.cardsSection {
+  position: relative;
+  background: var(--color-surface);
+  overflow: hidden;
+  padding-block: clamp(3rem, 7vw, 6rem);
+}
+.cardsSection::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('/decor/marble-texture.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.4;
+  pointer-events: none;
+  z-index: 0;
+}
+.cardsSection > * { position: relative; z-index: 1; }
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(1.25rem, 3vw, 2rem);
+}
+@media (max-width: 900px) { .cards { grid-template-columns: 1fr; } }
+
+.card {
+  background: var(--color-bg-elev);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-soft);
+  transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
+}
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-card);
+}
+.cardImg {
+  aspect-ratio: 4/3;
+  overflow: hidden;
+}
+.cardImg .img { height: 100%; object-fit: cover; }
+.cardBody {
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+.cardTitle {
+  font-family: var(--font-script);
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  color: var(--color-accent);
+  line-height: 1;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+
+/* --- Wide image strip ---------------------------------------- */
+.stripSection {
+  background: var(--color-bg);
+  padding-block: clamp(3rem, 6vw, 5rem);
+}
+.stripGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: clamp(200px, 22vw, 320px);
+  gap: var(--space-4);
+}
+@media (max-width: 760px) {
+  .stripGrid {
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: clamp(160px, 30vw, 240px);
+  }
+}
+
+.stripTile {
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  position: relative;
+}
+.stripTile .img { width: 100%; height: 100%; object-fit: cover; }
+.tileWide { grid-column: span 2; }
+@media (max-width: 760px) { .tileWide { grid-column: span 2; } }
+
+/* --- Plan your event lead-in --------------------------------- */
+.planSection {
+  background: var(--color-bg);
+  padding-block: clamp(3rem, 6vw, 5rem) clamp(2rem, 4vw, 3rem);
+}
+.planInner {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  align-items: center;
+  max-width: 60ch;
+  margin-inline: auto;
+}
+
+/* --- Dark form section --------------------------------------- */
+.formSection {
+  position: relative;
+  overflow: hidden;
+  padding-block: clamp(3rem, 6vw, 5rem);
+}
+.formWrap {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: clamp(2rem, 6vw, 5rem);
+  align-items: start;
+}
+@media (max-width: 900px) { .formWrap { grid-template-columns: 1fr; } }
+.formCopy { display: flex; flex-direction: column; gap: var(--space-4); }
+.formH2 { color: var(--color-bg); margin: 0; }

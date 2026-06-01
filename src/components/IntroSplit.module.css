@@ -1,0 +1,71 @@
+.split {
+  background: var(--color-bg);
+  position: relative;
+  overflow: hidden;
+}
+/* Soft botanical corner accents — pulled from the menu PDF */
+.split::before, .split::after {
+  content: '';
+  position: absolute;
+  width: clamp(140px, 14vw, 220px);
+  height: clamp(140px, 14vw, 220px);
+  background-image: url('/decor/leaves-corner.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  opacity: 0.35;
+  pointer-events: none;
+  filter: invert(57%) sepia(35%) saturate(450%) hue-rotate(2deg) brightness(96%) contrast(86%);
+}
+.split::before { top: 0; left: 0; }
+.split::after  { bottom: 0; right: 0; transform: scale(-1, -1); }
+
+.headingWrap {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-block: var(--space-3) var(--space-5);
+}
+.headingWrap > .ornament-divider { align-self: flex-start; }
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 6vw, 5rem);
+  align-items: center;
+}
+@media (max-width: 900px) {
+  .grid { grid-template-columns: 1fr; }
+}
+
+.copy { max-width: 52ch; position: relative; z-index: 1; }
+.title { margin: 0; }
+
+.media {
+  position: relative;
+  /* No fixed aspect ratio — image renders at its natural ratio (no cropping). */
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+}
+.img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+.stamp {
+  position: absolute;
+  bottom: 18px;
+  right: 18px;
+  background: var(--color-bg);
+  color: var(--color-ink);
+  padding: 14px 18px;
+  border-radius: 999px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1;
+  box-shadow: var(--shadow-card);
+}
+.stamp span { font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--color-ink-mute); }
+.stamp strong { font-family: var(--font-display); font-weight: 500; font-size: 1.6rem; margin-top: 4px; }

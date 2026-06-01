@@ -1,0 +1,80 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  width: 100%;
+}
+.row2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+@media (max-width: 600px) {
+  .row2 { grid-template-columns: 1fr; }
+}
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.field > span {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: inherit;
+  opacity: 0.7;
+}
+.field input,
+.field textarea,
+.field select {
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid currentColor;
+  border-bottom-color: rgba(247, 243, 236, 0.35);
+  padding: 12px 0;
+  color: var(--color-bg);
+  font-size: var(--fs-base);
+  font-family: var(--font-body);
+  outline: none;
+  border-radius: 0;
+  transition: border-color var(--dur) var(--ease);
+}
+.field input::placeholder,
+.field textarea::placeholder {
+  color: rgba(247, 243, 236, 0.4);
+}
+.field input:focus,
+.field textarea:focus,
+.field select:focus { border-bottom-color: var(--color-bg); }
+.field textarea { resize: vertical; min-height: 100px; }
+
+.submitRow {
+  margin-top: var(--space-4);
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+.success {
+  padding: var(--space-6);
+  background: rgba(247, 243, 236, 0.08);
+  border-radius: var(--radius-lg);
+}
+.success h3 { color: var(--color-bg); margin-bottom: var(--space-2); }
+.error { color: #ffb4a8; font-size: var(--fs-sm); }
+
+/* Light variant used on light backgrounds (reservations) */
+.light .field input,
+.light .field textarea,
+.light .field select {
+  color: var(--color-ink);
+  border-bottom-color: var(--color-line);
+}
+.light .field input:focus,
+.light .field textarea:focus,
+.light .field select:focus { border-bottom-color: var(--color-ink); }
+.light .field input::placeholder,
+.light .field textarea::placeholder { color: var(--color-ink-mute); }
+.light .field > span { color: var(--color-ink-mute); }
+.light .success { background: var(--color-surface); }
+.light .success h3 { color: var(--color-ink); }

@@ -1,0 +1,44 @@
+.splash {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: var(--color-contrast);
+  display: grid;
+  place-items: center;
+  opacity: 1;
+  transition: opacity 600ms var(--ease);
+  /* Block any pointer interactions while visible. */
+  pointer-events: auto;
+}
+
+.leaving {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.inner {
+  /* Gentle entrance: fade + slight rise + soft pulse on the logo */
+  animation: splashIn 700ms var(--ease) both;
+}
+
+.logo {
+  width: clamp(140px, 22vw, 220px);
+  height: auto;
+  /* Logo ships white, on the dark splash background it stays white. */
+  filter: drop-shadow(0 1px 20px rgba(255, 255, 255, 0.08));
+  animation: pulse 1.6s var(--ease) infinite;
+}
+
+@keyframes splashIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: none; }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50%      { transform: scale(0.98); opacity: 0.75; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .inner, .logo { animation: none; }
+}

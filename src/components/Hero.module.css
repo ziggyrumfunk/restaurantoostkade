@@ -1,0 +1,217 @@
+.hero {
+  position: relative;
+  /* Fill the viewport (small viewport height for mobile address bar safety),
+     with a floor so very short screens still have room for the photos. */
+  height: 100svh;
+  min-height: 720px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  color: var(--color-ink);
+  background-color: var(--color-bg);
+  /* Layered backdrop: warm bronze radial halo + faint marble paper texture so
+     the hero doesn't read as flat cream. */
+  background-image:
+    radial-gradient(ellipse 70% 60% at 50% 35%, rgba(177, 138, 79, 0.18) 0%, rgba(247, 243, 236, 0) 70%),
+    radial-gradient(ellipse 50% 50% at 15% 80%, rgba(177, 138, 79, 0.10) 0%, rgba(247, 243, 236, 0) 70%),
+    radial-gradient(ellipse 50% 50% at 85% 80%, rgba(177, 138, 79, 0.10) 0%, rgba(247, 243, 236, 0) 70%),
+    url('/decor/marble-texture.jpg');
+  background-size: auto, auto, auto, cover;
+  background-position: center, center, center, center;
+  background-blend-mode: normal, normal, normal, luminosity;
+  margin-top: -84px; /* slide under sticky header */
+  padding-top: 84px;
+  padding-bottom: var(--space-6);
+}
+.hero::before {
+  /* Cream wash so the marble texture stays very subtle. Sits behind the
+     collage by giving the collage explicit z-index above it. */
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(246, 239, 225, 0.55);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Collage layer ------------------------------------------------- */
+.collage {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.tile {
+  position: absolute;
+  aspect-ratio: 4 / 5;
+  border-radius: 4px;
+  overflow: hidden;
+  /* Soft natural shadow on the cream background. */
+  box-shadow:
+    0 1px 2px rgba(20, 18, 14, 0.08),
+    0 18px 40px rgba(20, 18, 14, 0.14),
+    0 4px 14px rgba(20, 18, 14, 0.08);
+  --mx: 0px;
+  --my: 0px;
+  --rot: 0deg;
+  --tilt: 0deg;
+  --delay: 0s;
+  transform: translate3d(var(--mx), var(--my), 0) rotate(calc(var(--rot) + var(--tilt)));
+  /* Snappier follow so it feels responsive, not laggy. */
+  transition: transform 220ms var(--ease);
+  opacity: 0;
+  animation: tileIn 900ms var(--ease) both;
+  animation-delay: var(--delay);
+  will-change: transform, opacity;
+}
+
+.tileImg {
+  object-fit: cover;
+  /* Subtle Ken Burns. Photos are not darkened — we want them lively. */
+  animation: kenBurns 24s ease-in-out infinite alternate;
+}
+
+@keyframes tileIn {
+  0%   { opacity: 0; transform: translate3d(0, 24px, 0) rotate(var(--rot)) scale(0.95); }
+  100% { opacity: 1; transform: translate3d(var(--mx), var(--my), 0) rotate(calc(var(--rot) + var(--tilt))) scale(1); }
+}
+
+@keyframes kenBurns {
+  0%   { transform: scale(1.02); }
+  100% { transform: scale(1.1); }
+}
+
+/* Central spotlight to keep the type readable without darkening photos.
+   It fades the surrounding cream into a slightly creamier glow behind the
+   logo and headline. */
+.centerHalo {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background: radial-gradient(
+    ellipse 45% 55% at 50% 50%,
+    rgba(247, 243, 236, 0.95) 0%,
+    rgba(247, 243, 236, 0.6) 45%,
+    rgba(247, 243, 236, 0) 75%
+  );
+}
+
+/* Content layer ------------------------------------------------- */
+.content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-block: clamp(2.5rem, 7vw, 5rem);
+  max-width: 720px;
+}
+
+.logo {
+  width: clamp(120px, 14vw, 200px);
+  height: auto;
+  /* Logo ships white. Invert to dark on the cream background. */
+  filter: brightness(0);
+  margin-bottom: var(--space-5);
+  animation: logoIn 1s var(--ease) both;
+  animation-delay: 0.05s;
+}
+
+@keyframes logoIn {
+  from { opacity: 0; transform: translateY(8px) scale(0.98); }
+  to   { opacity: 1; transform: none; }
+}
+
+.eyebrow {
+  color: var(--color-accent);
+  display: inline-block;
+  margin-bottom: var(--space-4);
+}
+
+.title {
+  color: var(--color-ink);
+  font-size: clamp(2.5rem, 6vw, 4.75rem);
+  line-height: 1;
+  letter-spacing: -0.03em;
+  font-weight: 500;
+  max-width: 20ch;
+  white-space: pre-line;
+}
+
+.lead {
+  margin-top: var(--space-5);
+  max-width: 46ch;
+  font-size: var(--fs-md);
+  color: var(--color-ink-soft);
+}
+
+.actions {
+  margin-top: var(--space-6);
+  display: flex;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.ghost {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.95rem 1.4rem;
+  border-radius: 999px;
+  border: 1px solid var(--color-ink);
+  background: transparent;
+  font-size: var(--fs-sm);
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-ink);
+  transition: background var(--dur) var(--ease), color var(--dur) var(--ease), transform var(--dur) var(--ease);
+  white-space: nowrap;
+}
+.ghost:hover {
+  background: var(--color-ink);
+  color: var(--color-bg);
+  transform: translateY(-1px);
+}
+
+.scrollHint {
+  position: absolute;
+  bottom: var(--space-5);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  width: 24px;
+  height: 36px;
+  border: 1px solid var(--color-ink-mute);
+  border-radius: 999px;
+  opacity: 0.7;
+}
+.scrollHint span {
+  position: absolute;
+  top: 6px;
+  left: 50%;
+  width: 2px;
+  height: 8px;
+  background: var(--color-ink);
+  transform: translateX(-50%);
+  border-radius: 2px;
+  animation: dot 1.8s var(--ease) infinite;
+}
+@keyframes dot {
+  0%, 100% { transform: translate(-50%, 0); opacity: 0.9; }
+  50%      { transform: translate(-50%, 12px); opacity: 0.3; }
+}
+
+@media (max-width: 720px) {
+  .hideMobile { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tile, .tileImg, .logo { animation: none !important; }
+  .tile { opacity: 1; }
+}

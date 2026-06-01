@@ -1,0 +1,212 @@
+{
+  "Meta": {
+    "siteName": "Restaurant Oostkade",
+    "tagline": "Aan de haven van Oud-Beijerland",
+    "defaultTitle": "Restaurant Oostkade | Oud-Beijerland",
+    "defaultDescription": "Moderne keuken met een Aziatische twist aan de haven van Oud-Beijerland. Lunch, diner, business lunch en private dining."
+  },
+  "Nav": {
+    "home": "Home",
+    "menu": "Menukaart",
+    "drinks": "Drankenkaart",
+    "lunch": "Business lunch",
+    "events": "Private dining",
+    "reservations": "Reserveren",
+    "contact": "Contact",
+    "languageLabel": "Taal",
+    "openMenu": "Menu openen",
+    "closeMenu": "Menu sluiten"
+  },
+  "Home": {
+    "heroEyebrow": "Aan de haven van Oud-Beijerland",
+    "heroTitle": "Wereldse keuken,\nstadse sfeer.",
+    "heroLead": "Een moderne zaak met wereldse gerechten, vaak met een Aziatische twist. Welkom aan tafel.",
+    "heroCtaReserve": "Reserveer een tafel",
+    "heroCtaMenu": "Bekijk de menukaart",
+    "introTitle": "Ons verhaal",
+    "introBody": "Restaurant Oostkade ligt aan de haven van Oud-Beijerland. Sinds 2022 staat chef Yorick Schaeffer aan het roer. Onze keuken combineert klassieke technieken met wereldse smaken, vaak met een Aziatische twist. Verse producten, eerlijke smaken, en een sfeer die past bij elk moment, van zakelijke lunch tot diner met vrienden.",
+    "highlightsTitle": "Onze hoogtepunten",
+    "highlight1Title": "Business lunch",
+    "highlight1Body": "2, 3 of 4 gangen vanaf €29. Met wijnarrangement vanaf €14. Ideaal voor een productieve middag.",
+    "highlight1Cta": "Naar de lunch",
+    "highlight2Title": "Private dining",
+    "highlight2Body": "Plek voor 120 gasten. Verjaardagen, bedrijfsfeesten, catering op maat. Wij maken het bijzonder.",
+    "highlight2Cta": "Naar events",
+    "highlight3Title": "Aan de haven",
+    "highlight3Body": "Terras met uitzicht op het water. In de zomer onze favoriete plek, in de winter knus binnen.",
+    "highlight3Cta": "Naar contact",
+    "ctaStripTitle": "Plek voor vanavond?",
+    "ctaStripBody": "Reserveer online of bel ons direct.",
+    "ctaStripButton": "Reserveer nu"
+  },
+  "Impressions": {
+    "eyebrow": "Impressies",
+    "title": "Een blik in het restaurant",
+    "lead": "Een snelle indruk van de keuken, het terras en de sfeer van Oostkade."
+  },
+  "Reviews": {
+    "eyebrow": "Wat gasten zeggen",
+    "title": "In hun eigen woorden",
+    "hugo": {
+      "body": "Aangenaam verrast door de kwaliteit van het eten. Mooie combinatie van smaken en gerechten die er uniek uitzagen en zo ook smaakten."
+    },
+    "jvb": {
+      "body": "Geweldige plek. Een spannende kaart, prachtige wijnen, mooie cocktails en een schitterend terras."
+    },
+    "petra": {
+      "body": "Alles was ontzettend lekker en de service was fantastisch. De timing tussen de gangen was perfect en het team was super vriendelijk, ook tegen onze 80-jarige ouders."
+    },
+    "susanne": {
+      "body": "Een prachtig, eersteklas diner. Elk van de vijf gangen was smaakvol, gevarieerd en mooi gepresenteerd. Stijlvol, modern en verfijnd, en toch gezellig."
+    },
+    "rob": {
+      "body": "Wij gaan altijd voor het verrassingsmenu en zijn nog nooit teleurgesteld. Goede prijs-kwaliteit, royaal gevulde borden en een heerlijk dessert. Voor herhaling vatbaar."
+    },
+    "ate": {
+      "body": "Fantastisch menu, geweldige smaken en een fijne sfeer. Het verrassingsmenu is een echte aanrader, en de locatie is top."
+    },
+    "arie": {
+      "body": "Een fantastische culinaire ervaring op het terras. Hoorntjes met tonijn, taco's met zeebaars, een oester PS Martini en een geweldige drankenkaart."
+    },
+    "martijn": {
+      "body": "We hebben met 18 personen aan een lange tafel gegeten en alles was perfect georganiseerd. Heerlijk eten in één keer geserveerd, uitstekende service en een prachtige sfeer."
+    },
+    "lieke": {
+      "body": "Je voelt meteen de goede energie als je binnenkomt. Hippe, moderne inrichting met aandacht voor detail. De cocktails zijn fantastisch — dé plek voor een leuke avond uit."
+    },
+    "rosalie": {
+      "body": "Echt één van mijn favorieten. Fijne service, gastvrij personeel en eten waar ik altijd blij van word. De nieuwe eigenaar is super creatief en doet het geweldig."
+    }
+  },
+  "Menu": {
+    "title": "Menukaart",
+    "lead": "Onze kaart verandert mee met het seizoen. Vraag bij ons team naar de specials van de week.",
+    "sectionLunch": "Lunch",
+    "sectionStarters": "Voorgerechten",
+    "sectionMains": "Hoofdgerechten",
+    "sectionDesserts": "Desserts",
+    "sectionDrinks": "Dranken",
+    "downloadPdf": "Download menukaart (PDF)",
+    "note": "Heeft u een allergie? Meld het ons!",
+    "mustTry": "Must try",
+    "veggie": "Vegetarisch",
+    "tabDinner": "Dinerkaart",
+    "tabLunch": "Lunchkaart"
+  },
+  "Drinks": {
+    "title": "Drankenkaart",
+    "lead": "Onze drankenkaart met wijnen, bieren, cocktails, mocktails en huisspecials. Vraag ons team gerust om een aanbeveling.",
+    "note": "Op zoek naar iets speciaals? Vraag naar onze wijn specials."
+  },
+  "Lunch": {
+    "title": "Lunch en business lunch",
+    "lead": "Vlot, verzorgd, en altijd op tijd. Van een rustieke broodjeskaart tot een volwaardig 4-gangen menu.",
+    "businessTitle": "Business lunch",
+    "businessBody": "Onze business lunch is ontworpen voor productieve middagen. Kies 2, 3 of 4 gangen, optioneel met een passend wijnarrangement.",
+    "twoCourse": "2 gangen",
+    "threeCourse": "3 gangen",
+    "fourCourse": "4 gangen",
+    "winePairing": "Wijnarrangement vanaf €14",
+    "casualTitle": "Lunchkaart",
+    "casualHeading": "Of liever iets kleiners?",
+    "casualBody": "Onze lunchkaart biedt rustieke broodjes, flatbreads en salades met verse, seizoensgebonden ingrediënten. Diner gerechten zijn ook tijdens de lunch beschikbaar.",
+    "viewMenu": "Bekijk de lunchkaart",
+    "reserveCta": "Reserveer voor lunch",
+    "excerptEyebrow": "Een greep uit de kaart",
+    "excerptTitle": "Lunch favorieten",
+    "viewFullMenu": "Bekijk volledige menukaart"
+  },
+  "Events": {
+    "title": "Events & zakelijke bijeenkomsten",
+    "lead": "Iets te vieren? Wij verwelkomen u graag bij Restaurant Oostkade in Oud-Beijerland.",
+    "introTitle": "Vier uw moment aan de haven",
+    "introBody": "Of het nu gaat om een verjaardag, jubileum, bruiloft of een zakelijke bijeenkomst — bij Oostkade vindt u de perfecte setting voor zowel kleine gezelschappen als grote groepen. Geniet samen met uw gezelschap van onze smaakvolle gerechten en uitgebreide drankenkaart op onze mooie locatie aan de haven van Oud-Beijerland.",
+    "capacityTitle": "Tot 120 gasten",
+    "capacityBody": "Ons sfeervolle restaurant en het ruime terras kunnen wij volledig naar uw wensen inrichten. Het hele restaurant of een afgeschermd gedeelte, wij stemmen het af op uw wensen.",
+    "cateringTitle": "Catering op locatie",
+    "cateringBody": "Liever een feest of diner op uw eigen locatie? Onze keuken komt naar u toe. Van private dining tot complete catering — wij denken graag met u mee.",
+    "menusTitle": "Menu op maat",
+    "menusBody": "Sharing dining, walking dinner, of een klassiek 5-gangen menu. Alles is bespreekbaar. Samen creëren we een onvergetelijke beleving.",
+    "planTitle": "Plan uw event",
+    "planBody": "Wij horen graag wat uw wensen zijn. Bel ons of stuur het formulier hieronder, dan nemen wij binnen 48 uur contact op om de mogelijkheden samen te bespreken.",
+    "inquireTitle": "Vertel ons over uw event",
+    "inquireBody": "Stuur een bericht en wij nemen binnen 48 uur contact op.",
+    "form": {
+      "name": "Naam",
+      "email": "E-mailadres",
+      "phone": "Telefoonnummer",
+      "date": "Datum",
+      "guests": "Aantal gasten",
+      "type": "Type event",
+      "typePlaceholder": "Bijv. verjaardag, bedrijfsdiner, bruiloft",
+      "message": "Bericht",
+      "submit": "Verstuur aanvraag",
+      "successTitle": "Bedankt voor uw aanvraag",
+      "successBody": "Wij nemen binnen 24 uur contact met u op.",
+      "errorTitle": "Er ging iets mis",
+      "errorBody": "Probeer het opnieuw of bel ons direct op 0186-617170."
+    }
+  },
+  "Reservations": {
+    "title": "Reserveer een tafel",
+    "lead": "Reserveren gaat eenvoudig via de Zenchef-knop rechtsonder op de pagina. Kies uw datum, tijd en aantal personen en u ontvangt direct een bevestiging per e-mail.",
+    "widgetTitle": "Reserveer via Zenchef",
+    "widgetBody": "Klik op de boekingsknop rechtsonder op de pagina om uw tafel te reserveren. U kunt direct een datum, tijd en aantal personen kiezen.",
+    "groupsTitle": "Groepen vanaf 8 personen",
+    "groupsBody": "Voor grotere groepen of speciale wensen, bel ons direct op 0186-617170 of stuur een mail naar info@restaurantoostkade.nl.",
+    "hoursTitle": "Wanneer kunt u langskomen",
+    "form": {
+      "name": "Naam",
+      "email": "E-mailadres",
+      "phone": "Telefoonnummer",
+      "date": "Datum",
+      "time": "Tijd",
+      "guests": "Aantal personen",
+      "notes": "Opmerkingen (allergieën, gelegenheid)",
+      "submit": "Reserveer",
+      "successTitle": "Reservering ontvangen",
+      "successBody": "U ontvangt binnen enkele minuten een bevestiging per e-mail.",
+      "errorTitle": "Er ging iets mis",
+      "errorBody": "Probeer het opnieuw of bel ons op 0186-617170."
+    },
+    "phoneTitle": "Liever bellen?",
+    "phoneBody": "Bel ons direct op 0186-617170. Wij zijn bereikbaar tijdens openingstijden."
+  },
+  "Contact": {
+    "title": "Contact",
+    "addressLabel": "Adres",
+    "address": "Oostkade 24, 3261 KL Oud-Beijerland",
+    "phoneLabel": "Telefoon",
+    "phone": "0186-617170",
+    "emailLabel": "E-mail",
+    "email": "info@restaurantoostkade.nl",
+    "hoursLabel": "Openingstijden",
+    "hoursMondayClosed": "Maandag: gesloten",
+    "hoursTueSun": "Dinsdag t/m zondag: vanaf 12:00",
+    "hoursMon": "Maandag",
+    "hoursTue": "Dinsdag",
+    "hoursWed": "Woensdag",
+    "hoursThu": "Donderdag",
+    "hoursFri": "Vrijdag",
+    "hoursSat": "Zaterdag",
+    "hoursSun": "Zondag",
+    "hoursClosed": "gesloten",
+    "hoursMonTime": "gesloten",
+    "hoursTueTime": "12:00 — 22:00",
+    "hoursWedTime": "12:00 — 22:00",
+    "hoursThuTime": "12:00 — 22:00",
+    "hoursFriTime": "12:00 — 23:00",
+    "hoursSatTime": "12:00 — 23:00",
+    "hoursSunTime": "12:00 — 22:00",
+    "directionsCta": "Bekijk op Google Maps",
+    "socialsLabel": "Volg ons"
+  },
+  "Footer": {
+    "rights": "Alle rechten voorbehouden.",
+    "newsletter": "Blijf op de hoogte",
+    "newsletterLead": "Schrijf je in voor onze nieuwsbrief en mis geen specials of evenementen.",
+    "newsletterPlaceholder": "Jouw e-mailadres",
+    "newsletterSubmit": "Inschrijven",
+    "newsletterSuccess": "Bedankt voor je inschrijving."
+  }
+}

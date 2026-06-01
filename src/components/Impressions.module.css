@@ -1,0 +1,110 @@
+.section {
+  position: relative;
+  background: var(--color-surface);
+  padding-block: clamp(4rem, 9vw, 7rem);
+  overflow: hidden;
+}
+/* Marble paper overlay sourced from the menu PDF, softly applied. */
+.section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('/decor/marble-texture.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5;
+  pointer-events: none;
+  z-index: 0;
+}
+.section > * { position: relative; z-index: 1; }
+
+/* Botanical accents at corners */
+.section::after {
+  content: '';
+  position: absolute;
+  width: clamp(160px, 18vw, 280px);
+  height: clamp(160px, 18vw, 280px);
+  bottom: -20px;
+  left: -20px;
+  background-image: url('/decor/leaves-corner.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  opacity: 0.4;
+  pointer-events: none;
+  transform: scaleY(-1);
+  filter: invert(57%) sepia(35%) saturate(450%) hue-rotate(2deg) brightness(96%) contrast(86%);
+  z-index: 0;
+}
+
+.head {
+  text-align: center;
+  margin-bottom: var(--space-7);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.title {
+  color: var(--color-ink);
+}
+
+.lead {
+  max-width: 56ch;
+  color: var(--color-ink-soft);
+}
+
+/* Explicit-column masonry. Items are distributed server-side by aspect ratio
+   into balanced columns so the bottom edges stay roughly even. */
+.masonryDesktop,
+.masonryTablet,
+.masonryMobile {
+  display: none;
+  gap: var(--space-4);
+}
+.masonryDesktop {
+  grid-template-columns: repeat(3, 1fr);
+}
+.masonryTablet {
+  grid-template-columns: repeat(2, 1fr);
+}
+.masonryMobile {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 1101px) {
+  .masonryDesktop { display: grid; }
+}
+@media (min-width: 641px) and (max-width: 1100px) {
+  .masonryTablet { display: grid; }
+}
+@media (max-width: 640px) {
+  .masonryMobile { display: grid; }
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  min-width: 0; /* allow shrinking inside grid */
+}
+
+.tile {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  transition: transform var(--dur-slow) var(--ease), box-shadow var(--dur-slow) var(--ease);
+  display: block;
+}
+.tile:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-card);
+}
+
+.media {
+  display: block;
+  width: 100%;
+  height: auto;
+  /* No object-fit, no fixed dimensions — show the full image / video. */
+}

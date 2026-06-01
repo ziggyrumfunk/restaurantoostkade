@@ -129,17 +129,15 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} className={`${sans.variable} ${script.variable}`}>
-      <head>
-        {/* Pre-paint theme script — runs before React hydrates so there's no
-            flash of the wrong theme. Reads stored preference, falls back to
-            the OS color-scheme. Inline to avoid a network round-trip. */}
+      <body>
+        {/* Pre-paint theme script — runs synchronously before React hydrates
+            so there's no flash of the wrong theme. Lives in <body> (not
+            <head>) because App Router manages the head via metadata. */}
         <script
           dangerouslySetInnerHTML={{
             __html: `(function(){try{var s=localStorage.getItem('oostkade_theme');var t=s==='dark'||s==='light'?s:(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.dataset.theme=t;}catch(e){}})();`,
           }}
         />
-      </head>
-      <body>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <LoadingSplash />
           <a href="#main" className="skip-link">Skip to content</a>

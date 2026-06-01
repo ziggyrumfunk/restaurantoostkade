@@ -11,21 +11,21 @@ export function Highlights() {
       title: t('highlight1Title'),
       body: t('highlight1Body'),
       cta: t('highlight1Cta'),
-      img: '/placeholder-lunch.jpg',
+      img: '/lunch-hero.jpg',
     },
     {
       href: '/events',
       title: t('highlight2Title'),
       body: t('highlight2Body'),
       cta: t('highlight2Cta'),
-      img: '/placeholder-events.jpg',
+      img: '/events-hero.jpg',
     },
     {
       href: '/contact',
       title: t('highlight3Title'),
       body: t('highlight3Body'),
       cta: t('highlight3Cta'),
-      img: '/placeholder-terrace.jpg',
+      img: '/hero/terras-1.jpg',
     },
   ] as const;
 

@@ -2,14 +2,14 @@
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(var(--scrim-bg), 0.78);
+  background: rgba(247, 243, 236, 0.78);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   transition: background var(--dur) var(--ease), box-shadow var(--dur) var(--ease), border-color var(--dur) var(--ease);
   border-bottom: 1px solid transparent;
 }
 .scrolled {
-  background: rgba(var(--scrim-bg), 0.94);
+  background: rgba(247, 243, 236, 0.94);
   border-bottom-color: var(--color-line);
 }
 
@@ -27,11 +27,10 @@
   line-height: 1;
 }
 .logo {
-  /* Logo SVG ships with white fills. Invert to dark on light theme; in dark
-     mode keep it white. Controlled by --logo-invert (1 = invert, 0 = keep). */
+  /* Logo SVG ships with white fills. Invert to dark on the cream header. */
   width: 64px;
   height: 64px;
-  filter: brightness(var(--logo-invert));
+  filter: brightness(0);
   transition: filter var(--dur) var(--ease), opacity var(--dur) var(--ease);
 }
 .brand:hover .logo { opacity: 0.85; }
@@ -104,11 +103,9 @@
 .mobile {
   position: fixed;
   inset: 84px 0 0 0;
-  /* Explicit hex bg + 100 z-index + isolation so the drawer always sits as
-     its own solid layer above the page. Theme adapts via the [data-theme]
-     selector below. */
+  /* Explicit hex bg + high z-index + own stacking context so the drawer
+     always sits as its own solid layer above the page. */
   background-color: #f6efe1;
-  background-image: none;
   padding: var(--space-7) var(--gutter) var(--space-7);
   display: flex;
   flex-direction: column;
@@ -121,9 +118,6 @@
   isolation: isolate;
   will-change: opacity, transform;
 }
-:global([data-theme='dark']) .mobile {
-  background-color: #14110c;
-}
 
 /* When the mobile menu is open the header bar itself goes from translucent
    glass to fully opaque so page content can't peek through the top 84px. */
@@ -131,10 +125,6 @@
 .header.menuOpen {
   background-color: #f6efe1;
   border-bottom-color: var(--color-line);
-}
-:global([data-theme='dark']) .menuOpen.header,
-:global([data-theme='dark']) .header.menuOpen {
-  background-color: #14110c;
 }
 .menuOpen .mobile,
 .mobile[aria-hidden='false'] {

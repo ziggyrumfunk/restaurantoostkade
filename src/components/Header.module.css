@@ -104,8 +104,11 @@
 .mobile {
   position: fixed;
   inset: 84px 0 0 0;
-  /* Fully opaque — uses theme variable so it follows light/dark mode. */
-  background: var(--color-bg);
+  /* Explicit hex bg + 100 z-index + isolation so the drawer always sits as
+     its own solid layer above the page. Theme adapts via the [data-theme]
+     selector below. */
+  background-color: #f6efe1;
+  background-image: none;
   padding: var(--space-7) var(--gutter) var(--space-7);
   display: flex;
   flex-direction: column;
@@ -114,17 +117,27 @@
   pointer-events: none;
   transform: translateY(-12px);
   transition: opacity var(--dur) var(--ease), transform var(--dur) var(--ease);
-  z-index: 49; /* below the sticky header bar (z 50) but above all content */
+  z-index: 100;
+  isolation: isolate;
+  will-change: opacity, transform;
+}
+:global([data-theme='dark']) .mobile {
+  background-color: #14110c;
 }
 
 /* When the mobile menu is open the header bar itself goes from translucent
    glass to fully opaque so page content can't peek through the top 84px. */
 .menuOpen.header,
 .header.menuOpen {
-  background: var(--color-bg);
+  background-color: #f6efe1;
   border-bottom-color: var(--color-line);
 }
-.menuOpen .mobile {
+:global([data-theme='dark']) .menuOpen.header,
+:global([data-theme='dark']) .header.menuOpen {
+  background-color: #14110c;
+}
+.menuOpen .mobile,
+.mobile[aria-hidden='false'] {
   opacity: 1;
   pointer-events: auto;
   transform: none;

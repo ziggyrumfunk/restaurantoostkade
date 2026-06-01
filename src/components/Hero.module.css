@@ -34,6 +34,9 @@
   pointer-events: none;
   z-index: 0;
 }
+:global([data-theme='dark']) .hero::before {
+  background: rgba(20, 17, 12, 0.55);
+}
 
 /* Collage layer ------------------------------------------------- */
 .collage {
@@ -98,6 +101,14 @@
     rgba(247, 243, 236, 0) 75%
   );
 }
+:global([data-theme='dark']) .centerHalo {
+  background: radial-gradient(
+    ellipse 45% 55% at 50% 50%,
+    rgba(20, 17, 12, 0.95) 0%,
+    rgba(20, 17, 12, 0.6) 45%,
+    rgba(20, 17, 12, 0) 75%
+  );
+}
 
 /* Content layer ------------------------------------------------- */
 .content {
@@ -119,6 +130,9 @@
   margin-bottom: var(--space-5);
   animation: logoIn 1s var(--ease) both;
   animation-delay: 0.05s;
+}
+:global([data-theme='dark']) .logo {
+  filter: none;
 }
 
 @keyframes logoIn {

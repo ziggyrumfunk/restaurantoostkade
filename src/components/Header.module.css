@@ -13,6 +13,14 @@
   border-bottom-color: var(--color-line);
 }
 
+/* Dark theme: header tints switch to deep ink, text stays cream. */
+:global([data-theme='dark']) .header {
+  background: rgba(20, 17, 12, 0.78);
+}
+:global([data-theme='dark']) .scrolled {
+  background: rgba(20, 17, 12, 0.94);
+}
+
 .inner {
   display: flex;
   align-items: center;
@@ -32,6 +40,9 @@
   height: 64px;
   filter: brightness(0);
   transition: filter var(--dur) var(--ease), opacity var(--dur) var(--ease);
+}
+:global([data-theme='dark']) .logo {
+  filter: none;
 }
 .brand:hover .logo { opacity: 0.85; }
 
@@ -128,6 +139,15 @@
 .header.menuOpen {
   background-color: #f6efe1;
   border-bottom-color: var(--color-line);
+}
+
+/* Dark mode mobile drawer + opaque header */
+:global([data-theme='dark']) .mobile {
+  background-color: #14110c;
+}
+:global([data-theme='dark']) .menuOpen.header,
+:global([data-theme='dark']) .header.menuOpen {
+  background-color: #14110c;
 }
 
 .mobileOpen,

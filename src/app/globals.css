@@ -100,11 +100,8 @@ html { color-scheme: light; }
   filter: none !important;
 }
 
-/* Hero and Header cream-tinted overlays look right in light mode; dark
-   mode needs the same overlays but in deep ink. */
-[data-theme='dark'] header {
-  background: rgba(20, 17, 12, 0.78) !important;
-}
+/* Header/Hero theme overrides are handled in their respective CSS modules
+   via :global([data-theme='dark']) selectors so CSS-modules hashing works. */
 
 /* Reset & base */
 *, *::before, *::after { box-sizing: border-box; }
@@ -184,12 +181,18 @@ p.lead { font-size: var(--fs-md); line-height: var(--lh-loose); color: var(--col
 .section-tight {
   padding-block: clamp(2.5rem, 6vw, 5rem);
 }
+/* Dark sections — pinned to dark bg + cream text regardless of theme. In
+   light mode they stand out as a dark accent against cream. In dark mode
+   they blend with the page but remain readable. */
 .dark-section {
-  background: var(--color-contrast);
-  color: var(--color-bg);
+  background: #15110b;
+  color: #f6efe1;
 }
 .dark-section p { color: rgba(247, 243, 236, 0.78); }
-.dark-section .eyebrow { color: var(--color-accent-soft); }
+.dark-section .eyebrow { color: #f0e4cb; }
+.dark-section h1, .dark-section h2, .dark-section h3, .dark-section h4 {
+  color: #f6efe1;
+}
 
 /* Button — sharp rectangles to match the site's design direction. */
 .btn {

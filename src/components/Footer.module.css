@@ -1,6 +1,9 @@
 .footer {
-  background: var(--color-contrast);
-  color: var(--color-bg);
+  /* Pinned to a deep ink background + cream text in BOTH themes. In light
+     mode this contrasts the cream page; in dark mode it blends but remains
+     readable thanks to the explicit cream foreground. */
+  background: #15110b;
+  color: #f6efe1;
   padding-block: clamp(4rem, 8vw, 7rem) 0;
   margin-top: var(--space-10);
 }

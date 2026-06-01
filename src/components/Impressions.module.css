@@ -4,6 +4,18 @@
   padding-block: clamp(4rem, 9vw, 7rem);
   overflow: hidden;
 }
+
+@media (max-width: 640px) {
+  .section {
+    /* Much shorter on mobile since masonry becomes a horizontal swipe row. */
+    padding-block: clamp(2rem, 8vw, 4rem);
+  }
+  .section::before {
+    /* Texture spans a smaller area on mobile, so it doesn't blur out. */
+    background-size: 100% auto;
+    background-repeat: repeat-y;
+  }
+}
 /* Marble paper overlay sourced from the menu PDF, softly applied. */
 .section::before {
   content: '';
@@ -70,7 +82,24 @@
   grid-template-columns: repeat(2, 1fr);
 }
 .masonryMobile {
-  grid-template-columns: 1fr;
+  /* Horizontal scrolling row on mobile — much more compact than stacking
+     everything vertically. Snap so each tile centers as you swipe. */
+  display: none;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  gap: var(--space-3);
+  padding: 0 var(--gutter) var(--space-4);
+}
+.masonryMobile::-webkit-scrollbar { display: none; }
+.masonryMobile > * {
+  flex: 0 0 auto;
+  width: 78vw;
+  max-width: 320px;
+  scroll-snap-align: center;
 }
 
 @media (min-width: 1101px) {
@@ -80,7 +109,7 @@
   .masonryTablet { display: grid; }
 }
 @media (max-width: 640px) {
-  .masonryMobile { display: grid; }
+  .masonryMobile { display: flex; }
 }
 
 .column {

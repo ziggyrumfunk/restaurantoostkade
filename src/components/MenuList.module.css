@@ -50,10 +50,15 @@
 }
 .tabActive:hover { background: var(--color-ink); }
 
-/* Gold rectangle frame matching the menu card */
+/* Gold rectangle frame matching the menu card. The frame now has a bright
+   translucent panel inside it so menu content reads cleanly against the
+   warmer marble of the surrounding section. */
 .frame {
   position: relative;
   padding: clamp(2rem, 5vw, 4rem) clamp(1.25rem, 4vw, 3rem);
+  background: rgba(255, 252, 246, 0.72);
+  border-radius: 6px;
+  box-shadow: 0 1px 2px rgba(20, 18, 14, 0.04), 0 20px 60px rgba(20, 18, 14, 0.06);
 }
 .frame::before {
   content: '';

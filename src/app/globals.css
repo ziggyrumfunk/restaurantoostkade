@@ -318,6 +318,43 @@ p.lead { font-size: var(--fs-md); line-height: var(--lh-loose); color: var(--col
 .leaves-corner.bl { bottom: 0; left: 0; transform: scaleY(-1); }
 .leaves-corner.br { bottom: 0; right: 0; transform: scale(-1, -1); }
 
+/* -----------------------------------------------------------------------
+   Zenchef booking widget theming
+   The floating button lives in the page DOM (the booking modal itself is
+   inside an iframe and can't be styled). We target multiple class patterns
+   Zenchef has shipped so the button picks up our warm charcoal palette.
+   ----------------------------------------------------------------------- */
+.zc-widget-button,
+[class*='zc-widget'] button,
+button[class*='zenchef'],
+.zenchef-button {
+  background: var(--color-ink) !important;
+  color: var(--color-bg) !important;
+  border-color: var(--color-ink) !important;
+  font-family: var(--font-body) !important;
+  letter-spacing: 0.04em;
+  border-radius: 999px !important;
+  box-shadow:
+    0 2px 4px rgba(20, 18, 14, 0.2),
+    0 14px 32px rgba(20, 18, 14, 0.28) !important;
+  transition: background 200ms var(--ease), transform 200ms var(--ease) !important;
+}
+.zc-widget-button:hover,
+[class*='zc-widget'] button:hover,
+button[class*='zenchef']:hover,
+.zenchef-button:hover {
+  background: var(--color-accent-deep) !important;
+  border-color: var(--color-accent-deep) !important;
+  transform: translateY(-1px);
+}
+/* CSS custom properties some versions of the Zenchef SDK read. */
+:root {
+  --zc-primary-color: #1a1612;
+  --zc-primary-color-hover: #8a6432;
+  --zc-button-background: #1a1612;
+  --zc-button-color: #f6efe1;
+}
+
 /* Light buttons inside the dark footer — explicit colors so the .footer link
    colour override doesn't make them invisible. The footer tag + class
    selectors give us enough specificity without needing !important. */

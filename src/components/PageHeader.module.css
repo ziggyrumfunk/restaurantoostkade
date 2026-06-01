@@ -113,4 +113,25 @@
 @media (max-width: 720px) {
   /* On mobile, show fewer tiles so each is still recognizable */
   .stripTile:nth-of-type(n + 4) { display: none; }
+
+  /* Heavily darken the backdrop on mobile so the title doesn't compete with
+     photos. The radial spotlight stops working when the page is narrow. */
+  .scrim {
+    background:
+      linear-gradient(180deg,
+        rgba(15, 17, 11, 0.55) 0%,
+        rgba(15, 17, 11, 0.78) 50%,
+        rgba(15, 17, 11, 0.85) 100%);
+  }
+  .stripImg {
+    filter: brightness(0.4) saturate(0.85);
+  }
+  .withBackdrop {
+    min-height: 280px;
+    padding-top: clamp(4rem, 14vw, 6rem);
+    padding-bottom: clamp(2rem, 5vw, 3rem);
+  }
+  .withBackdrop .title {
+    font-size: clamp(2.5rem, 11vw, 3.5rem);
+  }
 }

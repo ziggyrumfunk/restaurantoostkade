@@ -209,6 +209,30 @@
 
 @media (max-width: 720px) {
   .hideMobile { display: none; }
+  .hero {
+    min-height: 640px;
+  }
+  /* Stack CTAs vertically on narrow screens, each full-width */
+  .actions {
+    flex-direction: column;
+    gap: var(--space-3);
+    width: 100%;
+    max-width: 280px;
+  }
+  .actions :global(.btn),
+  .ghost {
+    width: 100%;
+    justify-content: center;
+  }
+  /* Stronger central halo so text stays readable over photos */
+  .centerHalo {
+    background: radial-gradient(
+      ellipse 75% 65% at 50% 50%,
+      rgba(247, 243, 236, 0.98) 0%,
+      rgba(247, 243, 236, 0.85) 50%,
+      rgba(247, 243, 236, 0.2) 90%
+    );
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

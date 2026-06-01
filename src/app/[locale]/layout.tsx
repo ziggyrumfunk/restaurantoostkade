@@ -10,6 +10,7 @@ import { Footer } from '@/components/Footer';
 import { Reveal } from '@/components/Reveal';
 import { JsonLd } from '@/components/JsonLd';
 import { LoadingSplash } from '@/components/LoadingSplash';
+import { BackToTop } from '@/components/BackToTop';
 
 // Outfit is a modern geometric sans, close in feel to Glacial Indifference.
 // To use the exact Glacial Indifference: drop .woff2 files in public/fonts/
@@ -135,6 +136,7 @@ export default async function LocaleLayout({
           <main id="main">{children}</main>
           <Footer />
           <Reveal />
+          <BackToTop />
         </NextIntlClientProvider>
         <JsonLd />
 

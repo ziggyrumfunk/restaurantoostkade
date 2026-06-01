@@ -70,6 +70,42 @@
   --shadow-card: 0 1px 2px rgba(20, 18, 14, 0.04), 0 16px 48px rgba(20, 18, 14, 0.08);
 }
 
+/* Dark theme — only flips color tokens. Fonts, layout, and decor all stay
+   identical so we don't risk breaking critical resources. */
+[data-theme='dark'] {
+  --color-bg: #14110c;
+  --color-bg-elev: #1d1810;
+  --color-surface: #221b13;
+  --color-ink: #f3ead9;
+  --color-ink-soft: #c7b89e;
+  --color-ink-mute: #8c7d68;
+  --color-line: #5a4628;
+  --color-line-soft: #3c2f1d;
+  --color-accent: #d6b070;
+  --color-accent-deep: #b18a4f;
+  --color-accent-soft: #2b2114;
+  --color-contrast: #f6efe1;
+}
+
+/* Smooth crossfade on toggle. */
+body { transition: background-color 300ms var(--ease), color 300ms var(--ease); }
+
+/* Native browser UI follows the theme (form controls, scrollbars). */
+html { color-scheme: light; }
+[data-theme='dark'] { color-scheme: dark; }
+
+/* The Oostkade logo SVG ships with white fills. In light mode we invert it
+   to dark for headers / hero. In dark mode it stays white naturally. */
+[data-theme='dark'] img[src='/logo-white.svg'] {
+  filter: none !important;
+}
+
+/* Hero and Header cream-tinted overlays look right in light mode; dark
+   mode needs the same overlays but in deep ink. */
+[data-theme='dark'] header {
+  background: rgba(20, 17, 12, 0.78) !important;
+}
+
 /* Reset & base */
 *, *::before, *::after { box-sizing: border-box; }
 * { margin: 0; }

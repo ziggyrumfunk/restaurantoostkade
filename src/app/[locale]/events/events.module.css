@@ -155,18 +155,61 @@
   margin-inline: auto;
 }
 
-/* --- Dark form section --------------------------------------- */
+/* --- Dark CTA section ---------------------------------------- */
 .formSection {
   position: relative;
   overflow: hidden;
-  padding-block: clamp(3rem, 6vw, 5rem);
+  padding-block: clamp(3rem, 7vw, 6rem);
 }
-.formWrap {
+.ctaWrap {
   display: grid;
-  grid-template-columns: 1fr 1.2fr;
+  grid-template-columns: 1fr 1fr;
   gap: clamp(2rem, 6vw, 5rem);
-  align-items: start;
+  align-items: center;
 }
-@media (max-width: 900px) { .formWrap { grid-template-columns: 1fr; } }
-.formCopy { display: flex; flex-direction: column; gap: var(--space-4); }
-.formH2 { color: var(--color-bg); margin: 0; }
+@media (max-width: 900px) {
+  .ctaWrap { grid-template-columns: 1fr; }
+}
+.ctaCopy {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+.formH2 { color: #f6efe1; margin: 0; }
+
+.ctaButtons {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  align-items: flex-start;
+}
+@media (max-width: 900px) {
+  .ctaButtons { align-items: stretch; }
+}
+
+.primaryCta {
+  padding: 1.15rem 2.2rem !important;
+  font-size: var(--fs-md) !important;
+  letter-spacing: 0.08em !important;
+  box-shadow:
+    0 0 0 1px rgba(177, 138, 79, 0.4),
+    0 10px 30px rgba(0, 0, 0, 0.45),
+    0 20px 60px rgba(177, 138, 79, 0.25);
+  align-self: flex-start;
+}
+
+.callLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: var(--fs-md);
+  font-weight: 500;
+  color: #f0e4cb;
+  border-bottom: 1px solid rgba(247, 243, 236, 0.3);
+  padding-bottom: 4px;
+  transition: gap var(--dur) var(--ease), border-color var(--dur) var(--ease);
+}
+.callLink:hover {
+  gap: 14px;
+  border-bottom-color: #f0e4cb;
+}

@@ -25,11 +25,22 @@ const englishPathFor: Record<(typeof ROUTES)[number], string> = {
   '/contact': '/contact',
 };
 
+const germanPathFor: Record<(typeof ROUTES)[number], string> = {
+  '/': '/',
+  '/menu': '/speisekarte',
+  '/drinks': '/getraenke',
+  '/lunch': '/lunch',
+  '/events': '/private-dining',
+  '/reservations': '/reservierung',
+  '/contact': '/kontakt',
+};
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = [];
   for (const route of ROUTES) {
     const nlPath = dutchPathFor[route] === '/' ? '/' : dutchPathFor[route];
     const enPath = englishPathFor[route] === '/' ? '/en' : `/en${englishPathFor[route]}`;
+    const dePath = germanPathFor[route] === '/' ? '/de' : `/de${germanPathFor[route]}`;
     entries.push({
       url: `${SITE}${nlPath}`,
       lastModified: new Date(),
@@ -39,15 +50,26 @@ export default function sitemap(): MetadataRoute.Sitemap {
         languages: {
           nl: `${SITE}${nlPath}`,
           en: `${SITE}${enPath}`,
+          de: `${SITE}${dePath}`,
         },
       },
     });
   }
-  // Also list the english versions explicitly so they're indexable
+  // English versions
   for (const route of ROUTES) {
     const enPath = englishPathFor[route] === '/' ? '/en' : `/en${englishPathFor[route]}`;
     entries.push({
       url: `${SITE}${enPath}`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.6,
+    });
+  }
+  // German versions
+  for (const route of ROUTES) {
+    const dePath = germanPathFor[route] === '/' ? '/de' : `/de${germanPathFor[route]}`;
+    entries.push({
+      url: `${SITE}${dePath}`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.6,

@@ -37,7 +37,11 @@
     "highlight3Cta": "Naar contact",
     "ctaStripTitle": "Plek voor vanavond?",
     "ctaStripBody": "Reserveer online of bel ons direct.",
-    "ctaStripButton": "Reserveer nu"
+    "ctaStripButton": "Reserveer nu",
+    "socialEyebrow": "Volg ons",
+    "socialTitle": "Blijf op de hoogte",
+    "socialBody": "Volg ons op Instagram voor het laatste nieuws, specials en sfeerbeelden uit de keuken en van het terras.",
+    "socialCta": "Volg @restaurantoostkade"
   },
   "Impressions": {
     "eyebrow": "Impressies",
@@ -128,9 +132,13 @@
     "menusTitle": "Menu op maat",
     "menusBody": "Sharing dining, walking dinner, of een klassiek 5-gangen menu. Alles is bespreekbaar. Samen creëren we een onvergetelijke beleving.",
     "planTitle": "Plan uw event",
-    "planBody": "Wij horen graag wat uw wensen zijn. Bel ons of stuur het formulier hieronder, dan nemen wij binnen 48 uur contact op om de mogelijkheden samen te bespreken.",
+    "planBody": "Wij horen graag wat uw wensen zijn. Stuur ons een e-mail of bel ons direct, dan nemen wij binnen 48 uur contact op om de mogelijkheden samen te bespreken.",
     "inquireTitle": "Vertel ons over uw event",
-    "inquireBody": "Stuur een bericht en wij nemen binnen 48 uur contact op.",
+    "inquireBody": "Stuur een e-mail en wij nemen binnen 48 uur contact op.",
+    "emailCta": "Stuur ons een e-mail",
+    "callCta": "Bel ons direct",
+    "emailSubject": "Aanvraag private dining bij Restaurant Oostkade",
+    "emailBody": "Beste team van Restaurant Oostkade,\n\nIk zou graag meer informatie ontvangen over een event bij u.\n\nNaam: \nDatum: \nAantal gasten: \nType event: \n\nVriendelijke groet,",
     "form": {
       "name": "Naam",
       "email": "E-mailadres",

@@ -1,0 +1,220 @@
+{
+  "Meta": {
+    "siteName": "Restaurant Oostkade",
+    "tagline": "Am Hafen von Oud-Beijerland",
+    "defaultTitle": "Restaurant Oostkade | Oud-Beijerland",
+    "defaultDescription": "Moderne Küche mit asiatischem Twist am Hafen von Oud-Beijerland. Lunch, Dinner, Business Lunch und Private Dining."
+  },
+  "Nav": {
+    "home": "Home",
+    "menu": "Speisekarte",
+    "drinks": "Getränkekarte",
+    "lunch": "Business Lunch",
+    "events": "Private Dining",
+    "reservations": "Reservierung",
+    "contact": "Kontakt",
+    "languageLabel": "Sprache",
+    "openMenu": "Menü öffnen",
+    "closeMenu": "Menü schließen"
+  },
+  "Home": {
+    "heroEyebrow": "Am Hafen von Oud-Beijerland",
+    "heroTitle": "Weltküche,\nstädtische Atmosphäre.",
+    "heroLead": "Ein modernes Restaurant mit Gerichten aus aller Welt, oft mit einem asiatischen Twist. Willkommen an unserem Tisch.",
+    "heroCtaReserve": "Tisch reservieren",
+    "heroCtaMenu": "Speisekarte ansehen",
+    "introTitle": "Unsere Geschichte",
+    "introBody": "Restaurant Oostkade liegt am Hafen von Oud-Beijerland. Seit 2022 steht Küchenchef Yorick Schaeffer am Ruder. Unsere Küche verbindet klassische Technik mit Weltgeschmack, oft mit einem asiatischen Twist. Frische Produkte, ehrliche Küche und eine Atmosphäre, die zu jedem Moment passt — vom Business Lunch bis zum Dinner mit Freunden.",
+    "highlightsTitle": "Unsere Highlights",
+    "highlight1Title": "Business Lunch",
+    "highlight1Body": "2, 3 oder 4 Gänge ab €29. Mit Weinbegleitung ab €14. Perfekt für produktive Nachmittage.",
+    "highlight1Cta": "Zum Lunch",
+    "highlight2Title": "Private Dining",
+    "highlight2Body": "Platz für 120 Gäste. Geburtstage, Firmenfeiern, individuelles Catering. Wir machen es unvergesslich.",
+    "highlight2Cta": "Zu Events",
+    "highlight3Title": "Blick auf den Hafen",
+    "highlight3Body": "Terrasse mit Blick aufs Wasser. Im Sommer unser Lieblingsplatz, im Winter gemütlich drinnen.",
+    "highlight3Cta": "Zum Kontakt",
+    "ctaStripTitle": "Heute Abend einen Tisch?",
+    "ctaStripBody": "Online reservieren oder rufen Sie uns direkt an.",
+    "ctaStripButton": "Jetzt reservieren",
+    "socialEyebrow": "Folgen Sie uns",
+    "socialTitle": "Bleiben Sie informiert",
+    "socialBody": "Folgen Sie uns auf Instagram für aktuelle News, Specials und Eindrücke aus der Küche und von der Terrasse.",
+    "socialCta": "@restaurantoostkade folgen"
+  },
+  "Impressions": {
+    "eyebrow": "Eindrücke",
+    "title": "Ein Blick ins Restaurant",
+    "lead": "Ein kurzer Eindruck der Küche, der Terrasse und der Atmosphäre des Oostkade."
+  },
+  "Reviews": {
+    "eyebrow": "Was Gäste sagen",
+    "title": "In ihren eigenen Worten",
+    "hugo": {
+      "body": "Angenehm überrascht von der Qualität des Essens. Tolle Kombination von Aromen, und die Gerichte sahen einzigartig aus und schmeckten auch so."
+    },
+    "jvb": {
+      "body": "Ein toller Ort. Eine so gute, spannende Karte, super Weine, Cocktails und eine wunderschöne Terrasse."
+    },
+    "petra": {
+      "body": "Alles war unglaublich lecker und der Service war fantastisch. Das Timing zwischen den Gängen war perfekt und das Team war super freundlich, auch zu unseren 80-jährigen Eltern."
+    },
+    "susanne": {
+      "body": "Ein wunderbares, erstklassiges Abendessen. Jeder der fünf Gänge war geschmackvoll, abwechslungsreich und schön präsentiert. Stilvoll, modern und raffiniert und doch gemütlich."
+    },
+    "rob": {
+      "body": "Wir wählen immer das Überraschungsmenü und es enttäuscht nie. Tolles Preis-Leistungs-Verhältnis, großzügig gefüllte Teller und ein köstliches Dessert. Wir kommen wieder."
+    },
+    "ate": {
+      "body": "Fantastische Karte, wundervolle Aromen und eine schöne Atmosphäre. Das Überraschungsmenü ist sehr zu empfehlen, und die Lage ist fantastisch."
+    },
+    "arie": {
+      "body": "Ein fantastisches kulinarisches Erlebnis auf der Terrasse. Hörnchen mit Thunfisch, Tacos mit Wolfsbarsch, ein Austern-PS-Martini und eine passende Getränkekarte."
+    },
+    "martijn": {
+      "body": "Wir waren mit 18 Personen an einer langen Tafel und alles war perfekt organisiert. Köstliches Essen auf einmal serviert, exzellenter Service und tolle Atmosphäre drinnen und draußen."
+    },
+    "lieke": {
+      "body": "Die positive Energie spürt man, sobald man eintritt. Hippe, moderne Einrichtung mit Liebe zum Detail. Die Cocktails sind fantastisch — der Ort für einen schönen Abend."
+    },
+    "rosalie": {
+      "body": "Wirklich eines meiner Favoriten. Toller Service, freundliches Personal und Essen, das mich immer glücklich macht. Der neue Inhaber ist super kreativ und macht einen tollen Job."
+    }
+  },
+  "Menu": {
+    "title": "Speisekarte",
+    "lead": "Unsere Karte ändert sich mit den Jahreszeiten. Fragen Sie unser Team nach den Specials der Woche.",
+    "sectionLunch": "Lunch",
+    "sectionStarters": "Vorspeisen",
+    "sectionMains": "Hauptgerichte",
+    "sectionDesserts": "Desserts",
+    "sectionDrinks": "Getränke",
+    "downloadPdf": "Speisekarte herunterladen (PDF)",
+    "note": "Haben Sie eine Allergie? Bitte teilen Sie es uns mit!",
+    "mustTry": "Empfehlung",
+    "veggie": "Vegetarisch",
+    "tabDinner": "Dinnerkarte",
+    "tabLunch": "Lunchkarte"
+  },
+  "Drinks": {
+    "title": "Getränkekarte",
+    "lead": "Unsere Getränkekarte mit Weinen, Bieren, Cocktails, Mocktails und Hausspecials. Fragen Sie unser Team nach einer Empfehlung.",
+    "note": "Auf der Suche nach etwas Besonderem? Fragen Sie nach unseren Wein-Specials."
+  },
+  "Lunch": {
+    "title": "Lunch und Business Lunch",
+    "lead": "Schnell, gepflegt und immer pünktlich. Vom rustikalen Sandwich-Menü bis zum vollen 4-Gänge-Menü.",
+    "businessTitle": "Business Lunch",
+    "businessBody": "Unser Business Lunch ist für produktive Nachmittage konzipiert. Wählen Sie 2, 3 oder 4 Gänge, optional mit passender Weinbegleitung.",
+    "twoCourse": "2 Gänge",
+    "threeCourse": "3 Gänge",
+    "fourCourse": "4 Gänge",
+    "winePairing": "Weinbegleitung ab €14",
+    "casualTitle": "Lunchkarte",
+    "casualHeading": "Oder lieber etwas Leichteres?",
+    "casualBody": "Unsere Lunchkarte bietet rustikale Sandwiches, Flatbreads und Salate mit frischen, saisonalen Zutaten. Die Dinnergerichte sind auch beim Lunch verfügbar.",
+    "viewMenu": "Lunchkarte ansehen",
+    "reserveCta": "Für Lunch reservieren",
+    "excerptEyebrow": "Aus der Karte",
+    "excerptTitle": "Lunch-Favoriten",
+    "viewFullMenu": "Vollständige Karte ansehen"
+  },
+  "Events": {
+    "title": "Events & geschäftliche Anlässe",
+    "lead": "Etwas zu feiern? Wir heißen Sie gerne willkommen bei Restaurant Oostkade in Oud-Beijerland.",
+    "introTitle": "Feiern Sie am Hafen",
+    "introBody": "Ob Geburtstag, Jubiläum, Hochzeit oder geschäftliches Treffen — bei Oostkade finden Sie die perfekte Kulisse für kleine und große Gruppen. Genießen Sie zusammen mit Ihrer Gesellschaft unsere geschmackvollen Gerichte und unsere umfangreiche Getränkekarte an unserem schönen Standort am Hafen von Oud-Beijerland.",
+    "capacityTitle": "Bis zu 120 Gäste",
+    "capacityBody": "Unser stimmungsvolles Restaurant und die geräumige Terrasse können wir vollständig nach Ihren Wünschen einrichten. Das ganze Restaurant oder ein abgegrenzter Bereich — wir richten es nach Ihren Wünschen ein.",
+    "cateringTitle": "Catering vor Ort",
+    "cateringBody": "Lieber eine Feier oder ein Dinner an Ihrem eigenen Standort? Unsere Küche kommt zu Ihnen. Von Private Dining bis zu komplettem Catering — wir denken gerne mit Ihnen mit.",
+    "menusTitle": "Maßgeschneidertes Menü",
+    "menusBody": "Sharing Dining, Walking Dinner oder ein klassisches 5-Gänge-Menü. Alles ist möglich. Gemeinsam schaffen wir ein unvergessliches Erlebnis.",
+    "planTitle": "Planen Sie Ihr Event",
+    "planBody": "Wir hören gerne, was Ihre Wünsche sind. Schreiben Sie uns eine E-Mail oder rufen Sie direkt an, dann melden wir uns innerhalb von 48 Stunden, um die Möglichkeiten gemeinsam zu besprechen.",
+    "inquireTitle": "Erzählen Sie uns von Ihrem Event",
+    "inquireBody": "Schreiben Sie uns eine E-Mail und wir melden uns innerhalb von 48 Stunden.",
+    "emailCta": "Schreiben Sie uns eine E-Mail",
+    "callCta": "Rufen Sie uns direkt an",
+    "emailSubject": "Anfrage Private Dining bei Restaurant Oostkade",
+    "emailBody": "Liebes Team von Restaurant Oostkade,\n\nIch hätte gerne mehr Informationen zu einer Veranstaltung bei Ihnen.\n\nName: \nDatum: \nAnzahl Gäste: \nArt der Veranstaltung: \n\nMit freundlichen Grüßen,",
+    "form": {
+      "name": "Name",
+      "email": "E-Mail",
+      "phone": "Telefon",
+      "date": "Datum",
+      "guests": "Anzahl Gäste",
+      "type": "Art der Veranstaltung",
+      "typePlaceholder": "z.B. Geburtstag, Geschäftsessen, Hochzeit",
+      "message": "Nachricht",
+      "submit": "Anfrage senden",
+      "successTitle": "Vielen Dank für Ihre Anfrage",
+      "successBody": "Wir melden uns innerhalb von 24 Stunden.",
+      "errorTitle": "Etwas ist schiefgelaufen",
+      "errorBody": "Bitte versuchen Sie es erneut oder rufen Sie uns an unter 0186-617170."
+    }
+  },
+  "Reservations": {
+    "title": "Tisch reservieren",
+    "lead": "Reservieren ist einfach über die Zenchef-Schaltfläche unten rechts auf der Seite. Wählen Sie Datum, Uhrzeit und Personenzahl und Sie erhalten sofort eine Bestätigung per E-Mail.",
+    "widgetTitle": "Über Zenchef reservieren",
+    "widgetBody": "Klicken Sie auf die Buchungsschaltfläche unten rechts auf der Seite, um Ihren Tisch zu reservieren. Wählen Sie in wenigen Klicks Datum, Uhrzeit und Personenzahl.",
+    "groupsTitle": "Gruppen ab 8 Personen",
+    "groupsBody": "Für größere Gruppen oder besondere Wünsche rufen Sie uns bitte direkt unter 0186-617170 an oder schreiben Sie eine E-Mail an info@restaurantoostkade.nl.",
+    "hoursTitle": "Wann Sie vorbeikommen können",
+    "form": {
+      "name": "Name",
+      "email": "E-Mail",
+      "phone": "Telefon",
+      "date": "Datum",
+      "time": "Uhrzeit",
+      "guests": "Anzahl Gäste",
+      "notes": "Anmerkungen (Allergien, Anlass)",
+      "submit": "Reservieren",
+      "successTitle": "Reservierung erhalten",
+      "successBody": "Sie erhalten innerhalb weniger Minuten eine Bestätigung per E-Mail.",
+      "errorTitle": "Etwas ist schiefgelaufen",
+      "errorBody": "Bitte versuchen Sie es erneut oder rufen Sie uns an unter 0186-617170."
+    },
+    "phoneTitle": "Lieber anrufen?",
+    "phoneBody": "Rufen Sie uns direkt an unter 0186-617170. Wir sind während der Öffnungszeiten erreichbar."
+  },
+  "Contact": {
+    "title": "Kontakt",
+    "addressLabel": "Adresse",
+    "address": "Oostkade 24, 3261 KL Oud-Beijerland",
+    "phoneLabel": "Telefon",
+    "phone": "0186-617170",
+    "emailLabel": "E-Mail",
+    "email": "info@restaurantoostkade.nl",
+    "hoursLabel": "Öffnungszeiten",
+    "hoursMondayClosed": "Montag: geschlossen",
+    "hoursTueSun": "Dienstag bis Sonntag: ab 12:00",
+    "hoursMon": "Montag",
+    "hoursTue": "Dienstag",
+    "hoursWed": "Mittwoch",
+    "hoursThu": "Donnerstag",
+    "hoursFri": "Freitag",
+    "hoursSat": "Samstag",
+    "hoursSun": "Sonntag",
+    "hoursClosed": "geschlossen",
+    "hoursMonTime": "geschlossen",
+    "hoursTueTime": "12:00 — 22:00",
+    "hoursWedTime": "12:00 — 22:00",
+    "hoursThuTime": "12:00 — 22:00",
+    "hoursFriTime": "12:00 — 23:00",
+    "hoursSatTime": "12:00 — 23:00",
+    "hoursSunTime": "12:00 — 22:00",
+    "directionsCta": "Auf Google Maps ansehen",
+    "socialsLabel": "Folgen Sie uns"
+  },
+  "Footer": {
+    "rights": "Alle Rechte vorbehalten.",
+    "newsletter": "Bleiben Sie informiert",
+    "newsletterLead": "Abonnieren Sie unseren Newsletter und verpassen Sie keine Specials oder Events.",
+    "newsletterPlaceholder": "Ihre E-Mail-Adresse",
+    "newsletterSubmit": "Abonnieren",
+    "newsletterSuccess": "Vielen Dank für Ihr Abonnement."
+  }
+}

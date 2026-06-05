@@ -1,41 +1,52 @@
 .hero {
   position: relative;
-  /* Fill the viewport (small viewport height for mobile address bar safety),
-     with a floor so very short screens still have room for the photos. */
   height: 100svh;
   min-height: 720px;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  color: var(--color-ink);
-  background-color: var(--color-bg);
-  /* Layered backdrop: warm bronze radial halo + faint marble paper texture so
-     the hero doesn't read as flat cream. */
-  background-image:
-    radial-gradient(ellipse 70% 60% at 50% 35%, rgba(177, 138, 79, 0.18) 0%, rgba(247, 243, 236, 0) 70%),
-    radial-gradient(ellipse 50% 50% at 15% 80%, rgba(177, 138, 79, 0.10) 0%, rgba(247, 243, 236, 0) 70%),
-    radial-gradient(ellipse 50% 50% at 85% 80%, rgba(177, 138, 79, 0.10) 0%, rgba(247, 243, 236, 0) 70%),
-    url('/decor/marble-texture.jpg');
-  background-size: auto, auto, auto, cover;
-  background-position: center, center, center, center;
-  background-blend-mode: normal, normal, normal, luminosity;
-  margin-top: -84px; /* slide under sticky header */
+  /* Always dark hero — the photo strip backdrop sits underneath the parallax
+     tiles. Hero text always reads cream-on-dark in both themes. */
+  color: #f6efe1;
+  background-color: #15110b;
+  margin-top: -84px;
   padding-top: 84px;
   padding-bottom: var(--space-6);
 }
-.hero::before {
-  /* Cream wash so the marble texture stays very subtle. Sits behind the
-     collage by giving the collage explicit z-index above it. */
-  content: '';
+
+/* --- Photo strip backdrop ----------------------------------- */
+.bgStrip {
   position: absolute;
   inset: 0;
-  background: rgba(246, 239, 225, 0.55);
-  pointer-events: none;
   z-index: 0;
+  pointer-events: none;
 }
-:global([data-theme='dark']) .hero::before {
-  background: rgba(20, 17, 12, 0.55);
+.bgStripInner {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  width: 100%;
+  height: 100%;
+}
+.bgStripTile {
+  position: relative;
+  overflow: hidden;
+}
+.bgStripImg {
+  object-fit: cover;
+  /* Reasonably bright so photo colors come through, but still atmospheric. */
+  filter: brightness(0.55) saturate(1.05);
+}
+.bgStripScrim {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 55% 70% at 50% 50%, rgba(15, 17, 11, 0.25) 0%, rgba(15, 17, 11, 0.55) 60%, rgba(15, 17, 11, 0.75) 100%),
+    linear-gradient(180deg, rgba(15, 17, 11, 0.25) 0%, rgba(15, 17, 11, 0) 35%, rgba(15, 17, 11, 0) 65%, rgba(15, 17, 11, 0.55) 100%);
+}
+@media (max-width: 720px) {
+  .bgStripTile:nth-of-type(n + 4) { display: none; }
 }
 
 /* Collage layer ------------------------------------------------- */
@@ -90,23 +101,17 @@
    It fades the surrounding cream into a slightly creamier glow behind the
    logo and headline. */
 .centerHalo {
+  /* Subtle dark spotlight so the logo + headline stay sharp on the photo
+     strip. Both themes use the same dark halo since the hero is pinned dark. */
   position: absolute;
   inset: 0;
   z-index: 2;
   pointer-events: none;
   background: radial-gradient(
-    ellipse 45% 55% at 50% 50%,
-    rgba(247, 243, 236, 0.95) 0%,
-    rgba(247, 243, 236, 0.6) 45%,
-    rgba(247, 243, 236, 0) 75%
-  );
-}
-:global([data-theme='dark']) .centerHalo {
-  background: radial-gradient(
-    ellipse 45% 55% at 50% 50%,
-    rgba(20, 17, 12, 0.95) 0%,
-    rgba(20, 17, 12, 0.6) 45%,
-    rgba(20, 17, 12, 0) 75%
+    ellipse 42% 50% at 50% 50%,
+    rgba(15, 13, 9, 0.55) 0%,
+    rgba(15, 13, 9, 0.25) 50%,
+    rgba(15, 13, 9, 0) 80%
   );
 }
 
@@ -125,14 +130,11 @@
 .logo {
   width: clamp(120px, 14vw, 200px);
   height: auto;
-  /* Logo ships white. Invert to dark on the cream background. */
-  filter: brightness(0);
+  /* Hero is pinned dark in both themes, so logo stays white (no inversion). */
+  filter: none;
   margin-bottom: var(--space-5);
   animation: logoIn 1s var(--ease) both;
   animation-delay: 0.05s;
-}
-:global([data-theme='dark']) .logo {
-  filter: none;
 }
 
 @keyframes logoIn {
@@ -141,26 +143,28 @@
 }
 
 .eyebrow {
-  color: var(--color-accent);
+  color: #f0e4cb;
   display: inline-block;
   margin-bottom: var(--space-4);
 }
 
 .title {
-  color: var(--color-ink);
+  color: #f6efe1;
   font-size: clamp(2.5rem, 6vw, 4.75rem);
   line-height: 1;
   letter-spacing: -0.03em;
   font-weight: 500;
   max-width: 20ch;
   white-space: pre-line;
+  text-shadow: 0 2px 30px rgba(0, 0, 0, 0.45);
 }
 
 .lead {
   margin-top: var(--space-5);
   max-width: 46ch;
   font-size: var(--fs-md);
-  color: var(--color-ink-soft);
+  color: rgba(246, 239, 225, 0.88);
+  text-shadow: 0 1px 16px rgba(0, 0, 0, 0.45);
 }
 
 .actions {
@@ -177,19 +181,19 @@
   align-items: center;
   padding: 0.95rem 1.4rem;
   border-radius: 0;
-  border: 1px solid var(--color-ink);
+  border: 1px solid #f6efe1;
   background: transparent;
   font-size: var(--fs-sm);
   font-weight: 500;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--color-ink);
+  color: #f6efe1;
   transition: background var(--dur) var(--ease), color var(--dur) var(--ease), transform var(--dur) var(--ease);
   white-space: nowrap;
 }
 .ghost:hover {
-  background: var(--color-ink);
-  color: var(--color-bg);
+  background: #f6efe1;
+  color: #15110b;
   transform: translateY(-1px);
 }
 

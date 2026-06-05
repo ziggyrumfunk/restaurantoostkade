@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { PageHeader } from '@/components/PageHeader';
-import { EventInquiryForm } from '@/components/EventInquiryForm';
 import styles from './events.module.css';
 
 export async function generateMetadata({
@@ -116,14 +115,26 @@ export default async function EventsPage({
         </div>
       </section>
 
-      {/* Dark form section */}
+      {/* Dark CTA section — email + phone */}
       <section className={`dark-section ${styles.formSection}`}>
-        <div className={`container ${styles.formWrap}`}>
-          <div className={styles.formCopy}>
+        <div className={`container ${styles.ctaWrap}`}>
+          <div className={styles.ctaCopy}>
             <span className="eyebrow">{t('inquireTitle')}</span>
             <h2 className={`${styles.formH2} handwritten`}>{t('inquireBody')}</h2>
           </div>
-          <EventInquiryForm />
+          <div className={styles.ctaButtons}>
+            <a
+              className={`btn btn-light ${styles.primaryCta}`}
+              href={`mailto:info@restaurantoostkade.nl?subject=${encodeURIComponent(
+                t('emailSubject')
+              )}&body=${encodeURIComponent(t('emailBody'))}`}
+            >
+              {t('emailCta')}
+            </a>
+            <a className={styles.callLink} href="tel:+31186617170">
+              {t('callCta')} →
+            </a>
+          </div>
         </div>
       </section>
     </>

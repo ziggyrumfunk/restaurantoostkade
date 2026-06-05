@@ -13,21 +13,21 @@ const STORAGE_KEY = 'oostkade_theme';
  * flash of light theme on first load is an acceptable trade-off.
  */
 export function ThemeToggle() {
-  const [theme, setTheme] = useState<Theme>('light');
+  // Dark is the default — both SSR (data-theme="dark" on <html>) and client.
+  const [theme, setTheme] = useState<Theme>('dark');
   const [mounted, setMounted] = useState(false);
 
-  // On mount, read stored preference (or OS pref) and apply.
+  // On mount, only flip to light if the user has explicitly chosen it.
+  // Don't follow `prefers-color-scheme` since dark is the brand default.
   useEffect(() => {
-    let initial: Theme = 'light';
+    let initial: Theme = 'dark';
     try {
       const stored = window.localStorage.getItem(STORAGE_KEY);
       if (stored === 'light' || stored === 'dark') {
         initial = stored;
-      } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        initial = 'dark';
       }
     } catch {
-      /* localStorage blocked — fall back to light */
+      /* localStorage blocked — stay dark */
     }
     document.documentElement.dataset.theme = initial;
     setTheme(initial);

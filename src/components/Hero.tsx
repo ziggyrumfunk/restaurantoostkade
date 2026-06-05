@@ -125,6 +125,33 @@ export function Hero() {
 
   return (
     <section ref={heroRef} className={styles.hero}>
+      {/* Photo strip backdrop — same treatment as Menu / Drinks page headers.
+          Replaces the marble paper texture so the hero feels more atmospheric. */}
+      <div className={styles.bgStrip} aria-hidden="true">
+        <div className={styles.bgStripInner}>
+          {[
+            '/hero/food-1.jpg',
+            '/hero/interior-1.jpg',
+            '/hero/food-center.jpg',
+            '/hero/terras-1.jpg',
+            '/hero/food-4.jpg',
+            '/hero/drinks-1.jpg',
+          ].map((src) => (
+            <div key={`bg-${src}`} className={styles.bgStripTile}>
+              <Image
+                src={src}
+                alt=""
+                fill
+                sizes="17vw"
+                className={styles.bgStripImg}
+                priority
+              />
+            </div>
+          ))}
+        </div>
+        <div className={styles.bgStripScrim} />
+      </div>
+
       <div className={styles.collage} aria-hidden="true">
         {TILES.map((tile, i) => (
           <div
@@ -169,7 +196,7 @@ export function Hero() {
         <h1 className={styles.title}>{t('heroTitle')}</h1>
         <p className={styles.lead}>{t('heroLead')}</p>
         <div className={styles.actions}>
-          <Link href="/reservations" className="btn">{t('heroCtaReserve')}</Link>
+          <Link href="/reservations" className="btn btn-light">{t('heroCtaReserve')}</Link>
           <Link href="/menu" className={styles.ghost}>{t('heroCtaMenu')}</Link>
         </div>
       </div>

@@ -67,9 +67,10 @@ export async function generateMetadata({
       title: t('defaultTitle'),
       description: t('defaultDescription'),
       siteName: t('siteName'),
-      locale: locale === 'nl' ? 'nl_NL' : 'en_US',
+      locale:
+        locale === 'nl' ? 'nl_NL' : locale === 'de' ? 'de_DE' : 'en_US',
       type: 'website',
-      url: locale === 'nl' ? '/' : '/en',
+      url: locale === 'nl' ? '/' : `/${locale}`,
       images: [
         {
           url: '/og.jpg',
@@ -86,10 +87,11 @@ export async function generateMetadata({
       images: ['/og.jpg'],
     },
     alternates: {
-      canonical: locale === 'nl' ? '/' : '/en',
+      canonical: locale === 'nl' ? '/' : `/${locale}`,
       languages: {
         nl: '/',
         en: '/en',
+        de: '/de',
         'x-default': '/',
       },
     },
@@ -128,7 +130,12 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale} className={`${sans.variable} ${script.variable}`}>
+    <html
+      lang={locale}
+      className={`${sans.variable} ${script.variable}`}
+      data-theme="dark"
+      suppressHydrationWarning
+    >
       <body>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <LoadingSplash />

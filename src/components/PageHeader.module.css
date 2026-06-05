@@ -99,17 +99,17 @@
 }
 .stripImg {
   object-fit: cover;
-  filter: brightness(0.55) saturate(0.95);
+  /* Brighter — let photo colors pop more while keeping text readable. */
+  filter: brightness(0.78) saturate(1.05);
 }
 
-/* Cream-to-dark wash on top of the photo strip, with a brighter spotlight
-   behind the headline so it stays sharp. */
+/* Lighter scrim — softer spotlight, more color through. */
 .scrim {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 55% 90% at 25% 50%, rgba(15, 17, 11, 0.55) 0%, rgba(15, 17, 11, 0.85) 70%, rgba(15, 17, 11, 0.95) 100%),
-    linear-gradient(180deg, rgba(15, 17, 11, 0.35) 0%, rgba(15, 17, 11, 0) 35%, rgba(15, 17, 11, 0) 60%, rgba(15, 17, 11, 0.55) 100%);
+    radial-gradient(ellipse 55% 90% at 25% 50%, rgba(15, 17, 11, 0.30) 0%, rgba(15, 17, 11, 0.62) 70%, rgba(15, 17, 11, 0.80) 100%),
+    linear-gradient(180deg, rgba(15, 17, 11, 0.25) 0%, rgba(15, 17, 11, 0) 35%, rgba(15, 17, 11, 0) 60%, rgba(15, 17, 11, 0.40) 100%);
 }
 
 @media (max-width: 720px) {

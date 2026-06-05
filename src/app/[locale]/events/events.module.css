@@ -177,39 +177,28 @@
 }
 .formH2 { color: #f6efe1; margin: 0; }
 
-.ctaButtons {
+.contactList {
   display: flex;
   flex-direction: column;
   gap: var(--space-4);
   align-items: flex-start;
 }
 @media (max-width: 900px) {
-  .ctaButtons { align-items: stretch; }
+  .contactList { align-items: stretch; }
 }
 
-.primaryCta {
-  padding: 1.15rem 2.2rem !important;
-  font-size: var(--fs-md) !important;
-  letter-spacing: 0.08em !important;
-  box-shadow:
-    0 0 0 1px rgba(177, 138, 79, 0.4),
-    0 10px 30px rgba(0, 0, 0, 0.45),
-    0 20px 60px rgba(177, 138, 79, 0.25);
-  align-self: flex-start;
-}
-
-.callLink {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-size: var(--fs-md);
-  font-weight: 500;
-  color: #f0e4cb;
+.contactLink {
+  display: inline-block;
+  font-family: var(--font-script);
+  color: #f6efe1;
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  line-height: 1.2;
+  letter-spacing: 0;
   border-bottom: 1px solid rgba(247, 243, 236, 0.3);
-  padding-bottom: 4px;
-  transition: gap var(--dur) var(--ease), border-color var(--dur) var(--ease);
+  padding-bottom: 6px;
+  transition: color var(--dur) var(--ease), border-color var(--dur) var(--ease);
 }
-.callLink:hover {
-  gap: 14px;
-  border-bottom-color: #f0e4cb;
+.contactLink:hover {
+  color: var(--color-accent);
+  border-bottom-color: var(--color-accent);
 }

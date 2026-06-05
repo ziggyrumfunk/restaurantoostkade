@@ -115,24 +115,19 @@ export default async function EventsPage({
         </div>
       </section>
 
-      {/* Dark CTA section — email + phone */}
+      {/* Dark CTA section — email + phone shown directly as text */}
       <section className={`dark-section ${styles.formSection}`}>
         <div className={`container ${styles.ctaWrap}`}>
           <div className={styles.ctaCopy}>
             <span className="eyebrow">{t('inquireTitle')}</span>
             <h2 className={`${styles.formH2} handwritten`}>{t('inquireBody')}</h2>
           </div>
-          <div className={styles.ctaButtons}>
-            <a
-              className={`btn btn-light ${styles.primaryCta}`}
-              href={`mailto:info@restaurantoostkade.nl?subject=${encodeURIComponent(
-                t('emailSubject')
-              )}&body=${encodeURIComponent(t('emailBody'))}`}
-            >
-              {t('emailCta')}
+          <div className={styles.contactList}>
+            <a className={styles.contactLink} href="mailto:info@restaurantoostkade.nl">
+              info@restaurantoostkade.nl
             </a>
-            <a className={styles.callLink} href="tel:+31186617170">
-              {t('callCta')} →
+            <a className={styles.contactLink} href="tel:+31186617170">
+              0186 — 617 170
             </a>
           </div>
         </div>

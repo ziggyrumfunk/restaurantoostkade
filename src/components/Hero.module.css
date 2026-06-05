@@ -6,47 +6,17 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  /* Always dark hero — the photo strip backdrop sits underneath the parallax
-     tiles. Hero text always reads cream-on-dark in both themes. */
+  /* Pinned-dark hero. Clean deep-ink base + warm bronze atmosphere from
+     radial gradients. Parallax tiles do all the photographic storytelling. */
   color: #f6efe1;
   background-color: #15110b;
+  background-image:
+    radial-gradient(ellipse 60% 50% at 50% 30%, rgba(177, 138, 79, 0.18) 0%, rgba(15, 17, 11, 0) 70%),
+    radial-gradient(ellipse 60% 60% at 15% 90%, rgba(177, 138, 79, 0.10) 0%, rgba(15, 17, 11, 0) 70%),
+    radial-gradient(ellipse 60% 60% at 85% 90%, rgba(177, 138, 79, 0.10) 0%, rgba(15, 17, 11, 0) 70%);
   margin-top: -84px;
   padding-top: 84px;
   padding-bottom: var(--space-6);
-}
-
-/* --- Photo strip backdrop ----------------------------------- */
-.bgStrip {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-}
-.bgStripInner {
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: 1fr;
-  width: 100%;
-  height: 100%;
-}
-.bgStripTile {
-  position: relative;
-  overflow: hidden;
-}
-.bgStripImg {
-  object-fit: cover;
-  /* Reasonably bright so photo colors come through, but still atmospheric. */
-  filter: brightness(0.55) saturate(1.05);
-}
-.bgStripScrim {
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(ellipse 55% 70% at 50% 50%, rgba(15, 17, 11, 0.25) 0%, rgba(15, 17, 11, 0.55) 60%, rgba(15, 17, 11, 0.75) 100%),
-    linear-gradient(180deg, rgba(15, 17, 11, 0.25) 0%, rgba(15, 17, 11, 0) 35%, rgba(15, 17, 11, 0) 65%, rgba(15, 17, 11, 0.55) 100%);
-}
-@media (max-width: 720px) {
-  .bgStripTile:nth-of-type(n + 4) { display: none; }
 }
 
 /* Collage layer ------------------------------------------------- */
@@ -62,11 +32,11 @@
   aspect-ratio: 4 / 5;
   border-radius: 0;
   overflow: hidden;
-  /* Soft natural shadow on the cream background. */
+  /* Strong shadow + thin gold edge — pops nicely on the dark hero bg. */
   box-shadow:
-    0 1px 2px rgba(20, 18, 14, 0.08),
-    0 18px 40px rgba(20, 18, 14, 0.14),
-    0 4px 14px rgba(20, 18, 14, 0.08);
+    0 0 0 1px rgba(177, 138, 79, 0.25),
+    0 2px 6px rgba(0, 0, 0, 0.5),
+    0 24px 60px rgba(0, 0, 0, 0.5);
   --mx: 0px;
   --my: 0px;
   --rot: 0deg;
@@ -101,16 +71,16 @@
    It fades the surrounding cream into a slightly creamier glow behind the
    logo and headline. */
 .centerHalo {
-  /* Subtle dark spotlight so the logo + headline stay sharp on the photo
-     strip. Both themes use the same dark halo since the hero is pinned dark. */
+  /* Soft dark spotlight behind the logo + title. Keeps text crisp without
+     fully covering the parallax photos. */
   position: absolute;
   inset: 0;
   z-index: 2;
   pointer-events: none;
   background: radial-gradient(
-    ellipse 42% 50% at 50% 50%,
-    rgba(15, 13, 9, 0.55) 0%,
-    rgba(15, 13, 9, 0.25) 50%,
+    ellipse 38% 45% at 50% 50%,
+    rgba(15, 13, 9, 0.75) 0%,
+    rgba(15, 13, 9, 0.35) 50%,
     rgba(15, 13, 9, 0) 80%
   );
 }

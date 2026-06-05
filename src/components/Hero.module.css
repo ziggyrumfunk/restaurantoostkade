@@ -6,17 +6,36 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  /* Pinned-dark hero. Clean deep-ink base + warm bronze atmosphere from
-     radial gradients. Parallax tiles do all the photographic storytelling. */
-  color: #f6efe1;
-  background-color: #15110b;
+  color: var(--color-ink);
+  background-color: var(--color-bg);
+  /* Warm bronze radial halos work in both themes. */
   background-image:
-    radial-gradient(ellipse 60% 50% at 50% 30%, rgba(177, 138, 79, 0.18) 0%, rgba(15, 17, 11, 0) 70%),
-    radial-gradient(ellipse 60% 60% at 15% 90%, rgba(177, 138, 79, 0.10) 0%, rgba(15, 17, 11, 0) 70%),
-    radial-gradient(ellipse 60% 60% at 85% 90%, rgba(177, 138, 79, 0.10) 0%, rgba(15, 17, 11, 0) 70%);
+    radial-gradient(ellipse 60% 50% at 50% 30%, rgba(177, 138, 79, 0.18) 0%, rgba(0, 0, 0, 0) 70%),
+    radial-gradient(ellipse 60% 60% at 15% 90%, rgba(177, 138, 79, 0.10) 0%, rgba(0, 0, 0, 0) 70%),
+    radial-gradient(ellipse 60% 60% at 85% 90%, rgba(177, 138, 79, 0.10) 0%, rgba(0, 0, 0, 0) 70%);
   margin-top: -84px;
   padding-top: 84px;
   padding-bottom: var(--space-6);
+}
+
+/* Subtle marble texture layer — gives the bg life so it doesn't feel empty.
+   Cream marble in light mode, very darkened (multiply) in dark mode. */
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('/decor/marble-texture.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.35;
+  pointer-events: none;
+  z-index: 0;
+  mix-blend-mode: luminosity;
+}
+:global([data-theme='dark']) .hero::after {
+  opacity: 0.18;
+  filter: brightness(0.18) contrast(1.2);
+  mix-blend-mode: normal;
 }
 
 /* Collage layer ------------------------------------------------- */
@@ -32,11 +51,11 @@
   aspect-ratio: 4 / 5;
   border-radius: 0;
   overflow: hidden;
-  /* Strong shadow + thin gold edge — pops nicely on the dark hero bg. */
+  /* Soft natural shadow on cream; stronger on dark. */
   box-shadow:
-    0 0 0 1px rgba(177, 138, 79, 0.25),
-    0 2px 6px rgba(0, 0, 0, 0.5),
-    0 24px 60px rgba(0, 0, 0, 0.5);
+    0 1px 2px rgba(20, 18, 14, 0.08),
+    0 18px 40px rgba(20, 18, 14, 0.18),
+    0 4px 14px rgba(20, 18, 14, 0.10);
   --mx: 0px;
   --my: 0px;
   --rot: 0deg;
@@ -71,16 +90,23 @@
    It fades the surrounding cream into a slightly creamier glow behind the
    logo and headline. */
 .centerHalo {
-  /* Soft dark spotlight behind the logo + title. Keeps text crisp without
-     fully covering the parallax photos. */
+  /* Soft spotlight behind logo + title. Cream in light mode, dark in dark mode. */
   position: absolute;
   inset: 0;
   z-index: 2;
   pointer-events: none;
   background: radial-gradient(
+    ellipse 42% 50% at 50% 50%,
+    rgba(247, 243, 236, 0.95) 0%,
+    rgba(247, 243, 236, 0.55) 45%,
+    rgba(247, 243, 236, 0) 80%
+  );
+}
+:global([data-theme='dark']) .centerHalo {
+  background: radial-gradient(
     ellipse 38% 45% at 50% 50%,
-    rgba(15, 13, 9, 0.75) 0%,
-    rgba(15, 13, 9, 0.35) 50%,
+    rgba(15, 13, 9, 0.78) 0%,
+    rgba(15, 13, 9, 0.4) 50%,
     rgba(15, 13, 9, 0) 80%
   );
 }
@@ -100,11 +126,14 @@
 .logo {
   width: clamp(120px, 14vw, 200px);
   height: auto;
-  /* Hero is pinned dark in both themes, so logo stays white (no inversion). */
-  filter: none;
+  /* Logo ships white. Invert to dark on cream (light theme), keep white on dark. */
+  filter: brightness(0);
   margin-bottom: var(--space-5);
   animation: logoIn 1s var(--ease) both;
   animation-delay: 0.05s;
+}
+:global([data-theme='dark']) .logo {
+  filter: none;
 }
 
 @keyframes logoIn {
@@ -113,29 +142,30 @@
 }
 
 .eyebrow {
-  color: #f0e4cb;
+  color: var(--color-accent);
   display: inline-block;
   margin-bottom: var(--space-4);
 }
 
 .title {
-  color: #f6efe1;
+  color: var(--color-ink);
   font-size: clamp(2.5rem, 6vw, 4.75rem);
   line-height: 1;
   letter-spacing: -0.03em;
   font-weight: 500;
   max-width: 20ch;
   white-space: pre-line;
-  text-shadow: 0 2px 30px rgba(0, 0, 0, 0.45);
 }
 
 .lead {
   margin-top: var(--space-5);
   max-width: 46ch;
   font-size: var(--fs-md);
-  color: rgba(246, 239, 225, 0.88);
-  text-shadow: 0 1px 16px rgba(0, 0, 0, 0.45);
+  color: var(--color-ink-soft);
 }
+
+:global([data-theme='dark']) .title { text-shadow: 0 2px 30px rgba(0, 0, 0, 0.6); }
+:global([data-theme='dark']) .lead { text-shadow: 0 1px 16px rgba(0, 0, 0, 0.5); }
 
 .actions {
   margin-top: var(--space-6);
@@ -151,19 +181,19 @@
   align-items: center;
   padding: 0.95rem 1.4rem;
   border-radius: 0;
-  border: 1px solid #f6efe1;
+  border: 1px solid var(--color-ink);
   background: transparent;
   font-size: var(--fs-sm);
   font-weight: 500;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: #f6efe1;
+  color: var(--color-ink);
   transition: background var(--dur) var(--ease), color var(--dur) var(--ease), transform var(--dur) var(--ease);
   white-space: nowrap;
 }
 .ghost:hover {
-  background: #f6efe1;
-  color: #15110b;
+  background: var(--color-ink);
+  color: var(--color-bg);
   transform: translateY(-1px);
 }
 

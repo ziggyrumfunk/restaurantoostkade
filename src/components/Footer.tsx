@@ -92,17 +92,17 @@ export function Footer() {
         </div>
 
         <div className={styles.col}>
-          <h4 className={styles.colTitle}>{t('Footer.newsletter')}</h4>
-          <p className={styles.lineBody}>{t('Footer.newsletterLead')}</p>
-          <form className={styles.newsletter} action="#" method="post">
-            <input
-              type="email"
-              required
-              placeholder={t('Footer.newsletterPlaceholder')}
-              aria-label={t('Footer.newsletterPlaceholder')}
-            />
-            <button type="submit">{t('Footer.newsletterSubmit')}</button>
-          </form>
+          <h4 className={styles.colTitle}>{t('Footer.followTitle')}</h4>
+          <p className={styles.lineBody}>{t('Footer.followLead')}</p>
+          <a
+            href="https://www.instagram.com/restaurantoostkade"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.followLink}
+          >
+            <InstagramIcon />
+            <span>@restaurantoostkade</span>
+          </a>
         </div>
       </div>
 

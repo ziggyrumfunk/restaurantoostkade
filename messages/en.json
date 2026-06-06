@@ -211,10 +211,7 @@
   },
   "Footer": {
     "rights": "All rights reserved.",
-    "newsletter": "Stay in the loop",
-    "newsletterLead": "Subscribe to our newsletter for specials and events.",
-    "newsletterPlaceholder": "Your email address",
-    "newsletterSubmit": "Subscribe",
-    "newsletterSuccess": "Thanks for subscribing."
+    "followTitle": "Follow us",
+    "followLead": "Follow us on Instagram for the latest news, specials and behind-the-scenes glimpses from the kitchen and the terrace."
   }
 }

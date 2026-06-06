@@ -211,10 +211,7 @@
   },
   "Footer": {
     "rights": "Alle Rechte vorbehalten.",
-    "newsletter": "Bleiben Sie informiert",
-    "newsletterLead": "Abonnieren Sie unseren Newsletter und verpassen Sie keine Specials oder Events.",
-    "newsletterPlaceholder": "Ihre E-Mail-Adresse",
-    "newsletterSubmit": "Abonnieren",
-    "newsletterSuccess": "Vielen Dank für Ihr Abonnement."
+    "followTitle": "Folgen Sie uns",
+    "followLead": "Folgen Sie uns auf Instagram für aktuelle News, Specials und Eindrücke aus der Küche und von der Terrasse."
   }
 }

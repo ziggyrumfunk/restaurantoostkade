@@ -211,10 +211,7 @@
   },
   "Footer": {
     "rights": "Alle rechten voorbehouden.",
-    "newsletter": "Blijf op de hoogte",
-    "newsletterLead": "Schrijf je in voor onze nieuwsbrief en mis geen specials of evenementen.",
-    "newsletterPlaceholder": "Jouw e-mailadres",
-    "newsletterSubmit": "Inschrijven",
-    "newsletterSuccess": "Bedankt voor je inschrijving."
+    "followTitle": "Volg ons",
+    "followLead": "Volg ons op Instagram voor het laatste nieuws, specials en sfeerbeelden uit de keuken en van het terras."
   }
 }

@@ -170,7 +170,7 @@ export function Hero() {
         <p className={styles.lead}>{t('heroLead')}</p>
         <div className={styles.actions}>
           <Link href="/reservations" className="btn">{t('heroCtaReserve')}</Link>
-          <Link href="/menu" className={styles.ghost}>{t('heroCtaMenu')}</Link>
+          <Link href="/menu" className="btn">{t('heroCtaMenu')}</Link>
         </div>
       </div>
 

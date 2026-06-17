@@ -1,0 +1,156 @@
+/* Father's Day promo modal. Theme-aware via design tokens; sharp corners to
+   match the site. Shown once per session, auto-expires (see PromoPopup.tsx). */
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1200;
+  display: grid;
+  place-items: center;
+  padding: var(--space-4);
+  background: rgba(10, 8, 5, 0.62);
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+  animation: overlayIn 280ms var(--ease) both;
+}
+
+.overlay.leaving {
+  animation: overlayOut 300ms var(--ease) both;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  width: 100%;
+  max-width: 840px;
+  max-height: calc(100svh - 2 * var(--space-5));
+  background: var(--color-bg-elev);
+  color: var(--color-ink);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
+  overflow: hidden;
+  animation: cardIn 360ms var(--ease) both;
+}
+
+/* Image column (left on desktop). */
+.media {
+  position: relative;
+  flex: 0 0 42%;
+  min-height: 380px;
+  background: var(--color-surface);
+}
+
+.image {
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Text column (right on desktop). */
+.content {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: var(--space-4);
+  padding: clamp(1.75rem, 4vw, 3rem);
+}
+
+.eyebrow {
+  font-family: var(--font-body);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  color: var(--color-accent);
+}
+
+.title {
+  font-family: var(--font-script);
+  font-weight: 400;
+  line-height: 1.02;
+  letter-spacing: 0.005em;
+  font-size: clamp(2.25rem, 5vw, 3.25rem);
+  color: var(--color-ink);
+}
+
+.body {
+  font-size: var(--fs-md);
+  line-height: var(--lh-loose);
+  color: var(--color-ink-soft);
+  max-width: 42ch;
+}
+
+.content :global(.btn) {
+  margin-top: var(--space-2);
+}
+
+/* Close button — sits in the top-right corner of the card. */
+.close {
+  position: absolute;
+  top: var(--space-3);
+  right: var(--space-3);
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  color: var(--color-ink);
+  background: var(--color-bg-elev);
+  border: 1px solid var(--color-line);
+  transition: background var(--dur) var(--ease), color var(--dur) var(--ease),
+    transform var(--dur) var(--ease);
+}
+
+.close:hover {
+  background: var(--color-ink);
+  color: var(--color-bg);
+  transform: translateY(-1px);
+}
+
+/* Stack on small screens: image as a banner on top, text below. */
+@media (max-width: 760px) {
+  .card {
+    flex-direction: column;
+    max-width: 420px;
+    max-height: calc(100svh - 2 * var(--space-4));
+    overflow-y: auto;
+  }
+  .media {
+    flex: none;
+    width: 100%;
+    min-height: 0;
+    aspect-ratio: 4 / 3;
+  }
+  .content {
+    align-items: center;
+    text-align: center;
+    gap: var(--space-3);
+    padding: clamp(1.5rem, 6vw, 2rem);
+  }
+  .body {
+    font-size: var(--fs-base);
+  }
+}
+
+@keyframes overlayIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes overlayOut {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
+
+@keyframes cardIn {
+  from { opacity: 0; transform: translateY(16px) scale(0.98); }
+  to   { opacity: 1; transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .overlay,
+  .overlay.leaving,
+  .card {
+    animation: none;
+  }
+}

@@ -1,4 +1,12 @@
 {
+  "Promo": {
+    "date": "Sonntag, 21. Juni",
+    "title": "Es ist Vatertag",
+    "body": "Zeit, Papa so richtig zu verwöhnen. Wir machen mit einem speziellen Daddy-Menü mit, und jeder Vater bekommt das erste Bier aufs Haus.",
+    "cta": "Tisch reservieren",
+    "close": "Schließen",
+    "imageAlt": "Vatertag im Restaurant Oostkade"
+  },
   "Meta": {
     "siteName": "Restaurant Oostkade",
     "tagline": "Am Hafen von Oud-Beijerland",

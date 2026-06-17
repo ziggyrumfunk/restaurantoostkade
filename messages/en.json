@@ -1,4 +1,12 @@
 {
+  "Promo": {
+    "date": "Sunday 21 June",
+    "title": "It's Father's Day",
+    "body": "Time to spoil dad. We're joining in with a special Daddy Menu, and every father gets his first beer on the house.",
+    "cta": "Reserve a table",
+    "close": "Close",
+    "imageAlt": "Father's Day at Restaurant Oostkade"
+  },
   "Meta": {
     "siteName": "Restaurant Oostkade",
     "tagline": "On the harbour of Oud-Beijerland",

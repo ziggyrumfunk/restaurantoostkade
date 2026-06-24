@@ -36,15 +36,15 @@ export async function JsonLd() {
     openingHoursSpecification: [
       {
         '@type': 'OpeningHoursSpecification',
-        dayOfWeek: ['Tuesday', 'Wednesday', 'Thursday', 'Sunday'],
+        dayOfWeek: ['Tuesday', 'Wednesday', 'Sunday'],
         opens: '12:00',
-        closes: '22:00',
+        closes: '23:00',
       },
       {
         '@type': 'OpeningHoursSpecification',
-        dayOfWeek: ['Friday', 'Saturday'],
+        dayOfWeek: ['Thursday', 'Friday', 'Saturday'],
         opens: '12:00',
-        closes: '23:00',
+        closes: '00:00',
       },
     ],
     menu: `${SITE}/menukaart`,

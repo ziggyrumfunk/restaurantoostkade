@@ -19,18 +19,22 @@ type Slot = {
 // All media rendered at native aspect ratio. Mix of portrait/landscape +
 // portrait videos gives the masonry visual rhythm.
 const SLOTS: Slot[] = [
-  { kind: 'photo', src: '/impressions/photo-1.jpg',      w: 1365, h: 2048, alt: '' },
-  { kind: 'video', src: '/impressions/general.mp4',      w: 540,  h: 960,  poster: '/impressions/general.jpg' },
-  { kind: 'photo', src: '/impressions/photo-2.jpg',      w: 2048, h: 1365, alt: '' },
-  { kind: 'photo', src: '/impressions/photo-3.jpg',      w: 1365, h: 2048, alt: '' },
-  { kind: 'video', src: '/impressions/tuna-tartare.mp4', w: 540,  h: 960,  poster: '/impressions/tuna-tartare.jpg' },
-  { kind: 'photo', src: '/impressions/photo-4.jpg',      w: 2048, h: 1365, alt: '' },
-  { kind: 'photo', src: '/impressions/photo-10.jpg',     w: 1365, h: 2048, alt: '' },
-  { kind: 'photo', src: '/impressions/photo-7.jpg',      w: 2048, h: 1365, alt: '' },
-  { kind: 'photo', src: '/impressions/photo-5.jpg',      w: 2048, h: 1365, alt: '' },
-  { kind: 'video', src: '/impressions/dorade.mp4',       w: 540,  h: 960,  poster: '/impressions/dorade.jpg' },
-  { kind: 'photo', src: '/impressions/photo-9.jpg',      w: 2048, h: 1365, alt: '' },
-  { kind: 'photo', src: '/impressions/photo-8.jpg',      w: 2048, h: 1365, alt: '' },
+  { kind: 'photo', src: '/impressions/photo-1.jpg',                 w: 1365, h: 2048, alt: '' },
+  { kind: 'video', src: '/impressions/general.mp4',                 w: 540,  h: 960,  poster: '/impressions/general.jpg' },
+  { kind: 'photo', src: '/impressions/photo-2.jpg',                 w: 2048, h: 1365, alt: '' },
+  { kind: 'photo', src: '/menu-juli/oostkade-menu-juli-04.jpg',     w: 1365, h: 2048, alt: '' },
+  { kind: 'photo', src: '/impressions/photo-3.jpg',                 w: 1365, h: 2048, alt: '' },
+  { kind: 'video', src: '/impressions/tuna-tartare.mp4',            w: 540,  h: 960,  poster: '/impressions/tuna-tartare.jpg' },
+  { kind: 'photo', src: '/impressions/photo-4.jpg',                 w: 2048, h: 1365, alt: '' },
+  { kind: 'photo', src: '/menu-juli/oostkade-menu-juli-16.jpg',     w: 1365, h: 2048, alt: '' },
+  { kind: 'photo', src: '/impressions/photo-10.jpg',                w: 1365, h: 2048, alt: '' },
+  { kind: 'photo', src: '/impressions/photo-7.jpg',                 w: 2048, h: 1365, alt: '' },
+  { kind: 'photo', src: '/menu-juli/oostkade-menu-juli-09.jpg',     w: 1365, h: 2048, alt: '' },
+  { kind: 'photo', src: '/impressions/photo-5.jpg',                 w: 2048, h: 1365, alt: '' },
+  { kind: 'video', src: '/impressions/dorade.mp4',                  w: 540,  h: 960,  poster: '/impressions/dorade.jpg' },
+  { kind: 'photo', src: '/impressions/photo-9.jpg',                 w: 2048, h: 1365, alt: '' },
+  { kind: 'photo', src: '/menu-juli/oostkade-menu-juli-12.jpg',     w: 1365, h: 2048, alt: '' },
+  { kind: 'photo', src: '/impressions/photo-8.jpg',                 w: 2048, h: 1365, alt: '' },
 ];
 
 /**

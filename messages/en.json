@@ -1,11 +1,17 @@
 {
   "Promo": {
-    "date": "Sunday 21 June",
-    "title": "It's Father's Day",
-    "body": "Time to spoil dad. We're joining in with a special Daddy Menu, and every father gets his first beer on the house.",
-    "cta": "Reserve a table",
+    "date": "Lunch and dinner",
+    "title": "A new menu",
+    "body": "Our menu has been renewed, for lunch and dinner. From ceviche with strawberry to grilled prawns and creamy truffle pasta. Come by and taste it for yourself.",
+    "cta": "View the menu",
     "close": "Close",
-    "imageAlt": "Father's Day at Restaurant Oostkade"
+    "imageAlt": "Nine dishes from the new menu at Restaurant Oostkade"
+  },
+  "ImpressionsPage": {
+    "tab": "Impressions",
+    "eyebrow": "A look inside",
+    "title": "Taste the atmosphere",
+    "lead": "The kitchen, the terrace on the harbour and what lands on our tables. Get a feel for Oostkade before you join us."
   },
   "Meta": {
     "siteName": "Restaurant Oostkade",

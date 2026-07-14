@@ -1,5 +1,6 @@
-/* Father's Day promo modal. Theme-aware via design tokens; sharp corners to
-   match the site. Shown once per session, auto-expires (see PromoPopup.tsx). */
+/* Promo modal (currently: new menu announcement with a 3x3 dish collage).
+   Theme-aware via design tokens; sharp corners to match the site. Shown once
+   per session, auto-expires (see PromoPopup.tsx). */
 
 .overlay {
   position: fixed;
@@ -31,12 +32,20 @@
   animation: cardIn 360ms var(--ease) both;
 }
 
-/* Image column (left on desktop). */
+/* Collage column (left on desktop): 3x3 grid of dish photos. */
 .media {
-  position: relative;
-  flex: 0 0 42%;
-  min-height: 380px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 3px;
+  flex: 0 0 46%;
+  min-height: 420px;
   background: var(--color-surface);
+}
+
+.tile {
+  position: relative;
+  overflow: hidden;
 }
 
 .image {

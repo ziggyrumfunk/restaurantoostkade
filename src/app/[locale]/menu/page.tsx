@@ -34,12 +34,12 @@ export default async function MenuPage({
         title={t('title')}
         lead={t('lead')}
         backdrop={[
-          '/hero/food-1.jpg',
-          '/hero/food-2.jpg',
-          '/hero/food-3.jpg',
-          '/hero/food-4.jpg',
-          '/hero/food-5.jpg',
-          '/hero/food-center.jpg',
+          '/menu-juli/oostkade-menu-juli-01.jpg',
+          '/menu-juli/oostkade-menu-juli-13.jpg',
+          '/menu-juli/oostkade-menu-juli-03.jpg',
+          '/menu-juli/oostkade-menu-juli-15.jpg',
+          '/menu-juli/oostkade-menu-juli-14.jpg',
+          '/menu-juli/oostkade-menu-juli-17.jpg',
         ]}
       />
       <MenuList />

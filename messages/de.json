@@ -1,11 +1,17 @@
 {
   "Promo": {
-    "date": "Sonntag, 21. Juni",
-    "title": "Es ist Vatertag",
-    "body": "Zeit, Papa so richtig zu verwöhnen. Wir machen mit einem speziellen Daddy-Menü mit, und jeder Vater bekommt das erste Bier aufs Haus.",
-    "cta": "Tisch reservieren",
+    "date": "Lunch und Dinner",
+    "title": "Neue Speisekarte",
+    "body": "Unsere Karte ist erneuert, für Lunch und Dinner. Von Ceviche mit Erdbeere bis zu gegrillten Garnelen und cremiger Trüffelpasta. Kommen Sie vorbei und probieren Sie selbst.",
+    "cta": "Zur Speisekarte",
     "close": "Schließen",
-    "imageAlt": "Vatertag im Restaurant Oostkade"
+    "imageAlt": "Neun Gerichte der neuen Speisekarte im Restaurant Oostkade"
+  },
+  "ImpressionsPage": {
+    "tab": "Impressionen",
+    "eyebrow": "Einblick",
+    "title": "Atmosphäre erleben",
+    "lead": "Die Küche, die Terrasse am Hafen und was bei uns auf den Tisch kommt. Bekommen Sie schon einmal einen Eindruck, bevor Sie Platz nehmen."
   },
   "Meta": {
     "siteName": "Restaurant Oostkade",

@@ -131,7 +131,7 @@ export default async function LunchPage({
             <Image src="/lunch-staff.jpg" alt="" width={2048} height={1365} sizes="33vw" className={styles.img} />
           </div>
           <div className={styles.stripTile}>
-            <Image src="/events-interior-1.jpg" alt="" width={2048} height={1365} sizes="33vw" className={styles.img} />
+            <Image src="/menu-juli/oostkade-menu-juli-07.jpg" alt="" width={2048} height={1365} sizes="33vw" className={styles.img} />
           </div>
         </div>
       </section>

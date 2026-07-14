@@ -1,11 +1,17 @@
 {
   "Promo": {
-    "date": "Zondag 21 juni",
-    "title": "Het is Vaderdag",
-    "body": "Tijd om papa eens lekker te verwennen. Wij doen graag mee met een speciaal Daddy Menu, en iedere vader krijgt het eerste biertje van het huis.",
-    "cta": "Reserveer een tafel",
+    "date": "Lunch en diner",
+    "title": "Nieuwe menukaart",
+    "body": "Onze kaart is vernieuwd, voor lunch en diner. Van ceviche met aardbei tot gamba's van de grill en romige truffelpasta. Kom langs en proef het zelf.",
+    "cta": "Bekijk de menukaart",
     "close": "Sluiten",
-    "imageAlt": "Vaderdag bij Restaurant Oostkade"
+    "imageAlt": "Negen gerechten van de nieuwe menukaart van Restaurant Oostkade"
+  },
+  "ImpressionsPage": {
+    "tab": "Sfeerimpressie",
+    "eyebrow": "Binnenkijken",
+    "title": "Proef de sfeer",
+    "lead": "De keuken, het terras aan de haven en wat er bij ons op tafel komt. Krijg alvast een indruk voordat je aanschuift."
   },
   "Meta": {
     "siteName": "Restaurant Oostkade",

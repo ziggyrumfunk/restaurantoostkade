@@ -1,0 +1,38 @@
+/* Masonry wall of photos and videos. CSS columns keep it simple: items flow
+   top to bottom per column, break-inside stops them from being split. */
+
+.wallSection {
+  padding-top: var(--space-5);
+}
+
+.wall {
+  columns: 3;
+  column-gap: var(--space-4);
+}
+
+.item {
+  break-inside: avoid;
+  margin-bottom: var(--space-4);
+}
+
+.media {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 1100px) {
+  .wall {
+    columns: 2;
+  }
+}
+
+@media (max-width: 720px) {
+  .wall {
+    columns: 2;
+    column-gap: 10px;
+  }
+  .item {
+    margin-bottom: 10px;
+  }
+}

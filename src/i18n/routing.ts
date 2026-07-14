@@ -24,6 +24,11 @@ export const routing = defineRouting({
       en: '/lunch',
       de: '/lunch',
     },
+    '/impressions': {
+      nl: '/sfeer',
+      en: '/impressions',
+      de: '/impressionen',
+    },
     '/events': {
       nl: '/private-dining',
       en: '/private-dining',

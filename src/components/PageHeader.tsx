@@ -6,12 +6,15 @@ export function PageHeader({
   title,
   lead,
   backdrop,
+  children,
 }: {
   eyebrow?: string;
   title: string;
   lead?: string;
   /** Optional photo collage strip rendered as the page header background. */
   backdrop?: string[];
+  /** Optional extra content rendered below the lead (e.g. a location row). */
+  children?: React.ReactNode;
 }) {
   const tiles = backdrop?.slice(0, 6);
   return (
@@ -39,6 +42,7 @@ export function PageHeader({
         <h1 className={`${styles.title} handwritten`}>{title}</h1>
         <span className={styles.divider} aria-hidden="true" />
         {lead && <p className="lead">{lead}</p>}
+        {children}
       </div>
     </header>
   );

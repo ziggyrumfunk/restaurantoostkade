@@ -1,46 +1,108 @@
-/* Vertical tab pinned to the left edge, lower half of the screen. Text runs
-   bottom-to-top like a book spine; the play icon is counter-rotated so it
-   still points into the page (hinting at video content). */
+/* Floating collage card: 2x2 photo grid with a play badge and a label bar.
+   Floats a little off the left edge, lower half of the screen. */
 
-.tab {
+.card {
   position: fixed;
-  left: 0;
-  top: 56%;
+  left: 18px;
+  top: 55%;
   z-index: 70;
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  writing-mode: vertical-rl;
-  transform: rotate(180deg);
-  padding: 16px 11px;
+  display: block;
+  width: 132px;
+  background: var(--color-bg-elev);
+  border: 1px solid var(--color-line);
+  box-shadow:
+    0 2px 4px rgba(20, 18, 14, 0.18),
+    0 16px 36px rgba(20, 18, 14, 0.32);
+  text-decoration: none;
+  animation: cardIn 480ms var(--ease) 900ms both;
+  transition: transform 200ms var(--ease), box-shadow 200ms var(--ease);
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 4px 8px rgba(20, 18, 14, 0.2),
+    0 22px 44px rgba(20, 18, 14, 0.4);
+}
+
+.collage {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+}
+
+.thumb {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+}
+
+.thumbImg {
+  object-fit: cover;
+}
+
+/* Play badge centered over the collage — hints there's video inside. */
+.play {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: #fff;
+}
+
+.play svg {
+  box-sizing: content-box;
+  padding: 9px;
+  background: rgba(12, 10, 6, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+}
+
+.label {
+  display: block;
+  padding: 9px 8px;
   background: var(--color-ink);
   color: var(--color-bg);
   font-family: var(--font-body);
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 600;
+  text-align: center;
   text-transform: uppercase;
-  letter-spacing: 0.16em;
-  text-decoration: none;
-  box-shadow:
-    0 2px 4px rgba(20, 18, 14, 0.15),
-    0 10px 24px rgba(20, 18, 14, 0.25);
-  transition: background 200ms var(--ease);
+  letter-spacing: 0.1em;
 }
 
-.tab:hover {
-  background: var(--color-accent-deep);
-}
-
-.icon {
-  transform: rotate(180deg);
-  flex: none;
+@keyframes cardIn {
+  from {
+    opacity: 0;
+    transform: translateX(-14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 @media (max-width: 720px) {
-  .tab {
-    top: 54%;
-    padding: 13px 9px;
-    font-size: 10px;
-    gap: 8px;
+  .card {
+    width: 102px;
+    left: 12px;
+    top: 56%;
+  }
+  .label {
+    font-size: 9px;
+    padding: 8px 6px;
+    letter-spacing: 0.08em;
+  }
+  .play svg {
+    padding: 7px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card {
+    animation: none;
   }
 }

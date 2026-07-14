@@ -69,7 +69,37 @@ export default async function ImpressionsPage({
   const t = await getTranslations('ImpressionsPage');
   return (
     <>
-      <PageHeader eyebrow={t('eyebrow')} title={t('title')} lead={t('lead')} />
+      <PageHeader eyebrow={t('eyebrow')} title={t('title')} lead={t('lead')}>
+        <div className={styles.location}>
+          <span className={styles.pin} aria-hidden="true">
+            <svg
+              viewBox="0 0 24 24"
+              width="17"
+              height="17"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.8"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+          </span>
+          <span className={styles.address}>{t('location')}</span>
+          <a
+            className="link-arrow"
+            href="https://maps.google.com/?q=Oostkade+24+Oud-Beijerland"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {t('locationCta')}
+            <svg viewBox="0 0 16 16" fill="none" aria-hidden>
+              <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </a>
+        </div>
+      </PageHeader>
 
       <section className={`section ${styles.wallSection}`}>
         <div className={`container ${styles.wall}`}>

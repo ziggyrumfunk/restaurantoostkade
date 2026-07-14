@@ -1,6 +1,24 @@
 /* Masonry wall of photos and videos. CSS columns keep it simple: items flow
    top to bottom per column, break-inside stops them from being split. */
 
+/* Location row in the page header: pin, address, directions link. */
+.location {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 16px;
+  margin-top: var(--space-2);
+}
+
+.pin {
+  display: inline-flex;
+  color: var(--color-accent);
+}
+
+.address {
+  font-weight: 500;
+}
+
 .wallSection {
   padding-top: var(--space-5);
 }

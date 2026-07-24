@@ -14,11 +14,22 @@
     0 2px 4px rgba(20, 18, 14, 0.18),
     0 16px 36px rgba(20, 18, 14, 0.32);
   text-decoration: none;
-  animation: cardIn 480ms var(--ease) 900ms both;
-  transition: transform 200ms var(--ease), box-shadow 200ms var(--ease);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(-14px);
+  transition:
+    opacity 300ms var(--ease),
+    transform 300ms var(--ease),
+    box-shadow 200ms var(--ease);
 }
 
-.card:hover {
+.visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: none;
+}
+
+.visible:hover {
   transform: translateY(-3px);
   box-shadow:
     0 4px 8px rgba(20, 18, 14, 0.2),
@@ -74,17 +85,6 @@
   letter-spacing: 0.1em;
 }
 
-@keyframes cardIn {
-  from {
-    opacity: 0;
-    transform: translateX(-14px);
-  }
-  to {
-    opacity: 1;
-    transform: none;
-  }
-}
-
 @media (max-width: 720px) {
   .card {
     width: 102px;
@@ -103,6 +103,6 @@
 
 @media (prefers-reduced-motion: reduce) {
   .card {
-    animation: none;
+    transition: none;
   }
 }

@@ -4,8 +4,10 @@ import styles from './IntroSplit.module.css';
 
 export function IntroSplit() {
   const t = useTranslations('Home');
+  // The id is used by ImpressionsTab: the floating card appears once the
+  // visitor has scrolled down to this section.
   return (
-    <section className={`section ${styles.split}`}>
+    <section id="ons-verhaal" className={`section ${styles.split}`}>
       <div className={`container ${styles.grid}`}>
         <div className={`${styles.copy} reveal`}>
           <span className="eyebrow">Oostkade 24</span>

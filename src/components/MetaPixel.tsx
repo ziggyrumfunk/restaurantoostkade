@@ -8,9 +8,10 @@ import {
   type Consent,
 } from '@/lib/consent';
 
-// Set NEXT_PUBLIC_META_PIXEL_ID (Vercel env + .env.local) to activate.
-// Empty or missing = the pixel never loads and this component does nothing.
-const PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID ?? '';
+// "Oostkade Tracking" pixel from Meta Events Manager. A pixel ID is public
+// (it appears in the page source of any site using one), so it can live in
+// code; NEXT_PUBLIC_META_PIXEL_ID overrides it if ever needed.
+const PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID ?? '907878392081385';
 
 type Fbq = {
   (...args: unknown[]): void;

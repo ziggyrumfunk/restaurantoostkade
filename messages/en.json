@@ -15,6 +15,13 @@
     "location": "Oostkade 24, 3261 KL Oud-Beijerland",
     "locationCta": "Get directions"
   },
+  "Consent": {
+    "label": "Cookies",
+    "body": "We use cookies to measure whether our ads and website are doing their job. They are only set if you agree.",
+    "accept": "Accept",
+    "decline": "No thanks",
+    "settings": "Cookies"
+  },
   "Meta": {
     "siteName": "Restaurant Oostkade",
     "tagline": "On the harbour of Oud-Beijerland",

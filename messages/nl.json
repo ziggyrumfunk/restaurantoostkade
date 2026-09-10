@@ -15,6 +15,13 @@
     "location": "Oostkade 24, 3261 KL Oud-Beijerland",
     "locationCta": "Route plannen"
   },
+  "Consent": {
+    "label": "Cookies",
+    "body": "Wij gebruiken cookies om te meten of onze advertenties en website goed werken. We plaatsen ze alleen als je akkoord gaat.",
+    "accept": "Akkoord",
+    "decline": "Liever niet",
+    "settings": "Cookies"
+  },
   "Meta": {
     "siteName": "Restaurant Oostkade",
     "tagline": "Aan de haven van Oud-Beijerland",

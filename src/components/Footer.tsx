@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/routing';
+import { CookieSettingsButton } from './CookieSettingsButton';
 import styles from './Footer.module.css';
 
 function InstagramIcon() {
@@ -115,6 +116,7 @@ export function Footer() {
           <Link href="/lunch">{t('Nav.lunch')}</Link>
           <Link href="/events">{t('Nav.events')}</Link>
           <Link href="/contact">{t('Nav.contact')}</Link>
+          <CookieSettingsButton className={styles.cookieBtn} />
         </nav>
         <div className={styles.credit}>
           Website by{' '}

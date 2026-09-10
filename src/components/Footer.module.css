@@ -134,6 +134,19 @@
 .bottomNav { display: flex; gap: var(--space-5); }
 .bottomNav a { font-size: var(--fs-xs); text-transform: uppercase; letter-spacing: 0.15em; }
 
+/* Cookie-preferences button, styled to match the bottom-nav links. */
+.cookieBtn {
+  background: none;
+  border: 0;
+  padding: 0;
+  color: rgba(247, 243, 236, 0.78);
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  cursor: pointer;
+}
+.cookieBtn:hover { color: #f6efe1; }
+
 .credit {
   font-size: var(--fs-xs);
   color: rgba(247, 243, 236, 0.45);

@@ -14,6 +14,8 @@ import { BackToTop } from '@/components/BackToTop';
 import { MobileParallaxZoom } from '@/components/MobileParallaxZoom';
 import { PromoPopup } from '@/components/PromoPopup';
 import { ImpressionsTab } from '@/components/ImpressionsTab';
+import { ConsentBanner } from '@/components/ConsentBanner';
+import { MetaPixel } from '@/components/MetaPixel';
 
 // Outfit is a modern geometric sans, close in feel to Glacial Indifference.
 // To use the exact Glacial Indifference: drop .woff2 files in public/fonts/
@@ -150,6 +152,8 @@ export default async function LocaleLayout({
           <ImpressionsTab />
           <MobileParallaxZoom />
           <PromoPopup />
+          <ConsentBanner />
+          <MetaPixel />
         </NextIntlClientProvider>
         <JsonLd />
 

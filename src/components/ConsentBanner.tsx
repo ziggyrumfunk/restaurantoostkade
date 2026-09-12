@@ -14,14 +14,19 @@ import styles from './ConsentBanner.module.css';
 const SHOW_DELAY = 600;
 
 /**
- * Blocking cookie-consent modal: first-time visitors must pick Accept or
- * Decline before using the site (both equally easy — required in the EU).
- * Reopened via the footer's cookie button; in that case a choice already
- * exists, so Escape / clicking outside closes it without changes.
+ * Blocking cookie-consent modal, two layers. Main view: explanation with a
+ * big Accept-all button and a modest Settings link. Settings view: flip
+ * switches per cookie category (necessary always on, marketing optional)
+ * with a Save button — so declining stays genuinely possible, as EU rules
+ * require. First-time visitors must choose before using the site; reopening
+ * via the footer (choice already stored) can be dismissed with Escape or a
+ * click outside.
  */
 export function ConsentBanner() {
   const t = useTranslations('Consent');
   const [visible, setVisible] = useState(false);
+  const [view, setView] = useState<'main' | 'settings'>('main');
+  const [marketingOn, setMarketingOn] = useState(false);
   const acceptRef = useRef<HTMLButtonElement | null>(null);
   // Whether the visitor already made a choice earlier (footer reopen).
   const hasChoice = useRef(false);
@@ -32,7 +37,12 @@ export function ConsentBanner() {
       timer = window.setTimeout(() => setVisible(true), SHOW_DELAY);
     }
     const onOpen = () => {
-      hasChoice.current = getStoredConsent() !== null;
+      const stored = getStoredConsent();
+      hasChoice.current = stored !== null;
+      setMarketingOn(stored === 'accepted');
+      // Coming from the footer means adjusting an earlier choice — open the
+      // switches directly instead of the intro text.
+      setView(stored !== null ? 'settings' : 'main');
       setVisible(true);
     };
     window.addEventListener(CONSENT_OPEN_EVENT, onOpen);
@@ -42,8 +52,8 @@ export function ConsentBanner() {
     };
   }, []);
 
-  // While open: focus Accept, lock body scroll, Escape closes only when a
-  // choice already exists.
+  // While open: focus the primary button, lock body scroll, Escape closes
+  // only when a choice already exists.
   useEffect(() => {
     if (!visible) return;
     acceptRef.current?.focus();
@@ -64,10 +74,11 @@ export function ConsentBanner() {
 
   if (!visible) return null;
 
-  const choose = (value: Consent) => {
+  const finish = (value: Consent) => {
     storeConsent(value);
     hasChoice.current = true;
     setVisible(false);
+    setView('main');
   };
 
   return (
@@ -82,24 +93,78 @@ export function ConsentBanner() {
     >
       <div className={styles.card} onClick={(e) => e.stopPropagation()}>
         <span className={styles.eyebrow} id="consent-title">{t('label')}</span>
-        <p className={styles.body}>{t('body')}</p>
-        <div className={styles.actions}>
-          <button
-            ref={acceptRef}
-            type="button"
-            className={`btn ${styles.btn}`}
-            onClick={() => choose('accepted')}
-          >
-            {t('accept')}
-          </button>
-          <button
-            type="button"
-            className={`btn btn-ghost ${styles.btn}`}
-            onClick={() => choose('declined')}
-          >
-            {t('decline')}
-          </button>
-        </div>
+
+        {view === 'main' ? (
+          <>
+            <p className={styles.body}>{t('body')}</p>
+            <div className={styles.actions}>
+              <button
+                ref={acceptRef}
+                type="button"
+                className={`btn ${styles.btn}`}
+                onClick={() => finish('accepted')}
+              >
+                {t('accept')}
+              </button>
+              <button
+                type="button"
+                className={styles.linkBtn}
+                onClick={() => {
+                  setMarketingOn(getStoredConsent() === 'accepted');
+                  setView('settings');
+                }}
+              >
+                {t('openSettings')}
+              </button>
+            </div>
+          </>
+        ) : (
+          <>
+            <div className={styles.rows}>
+              <div className={styles.row}>
+                <div className={styles.rowText}>
+                  <span className={styles.rowTitle}>{t('necessaryTitle')}</span>
+                  <span className={styles.rowDesc}>{t('necessaryDesc')}</span>
+                </div>
+                <div className={styles.rowControl}>
+                  <span className={styles.alwaysOn}>{t('alwaysOn')}</span>
+                  <label className={styles.switch}>
+                    <input type="checkbox" checked disabled readOnly />
+                    <span className={styles.track} aria-hidden="true" />
+                  </label>
+                </div>
+              </div>
+
+              <div className={styles.row}>
+                <div className={styles.rowText}>
+                  <span className={styles.rowTitle}>{t('marketingTitle')}</span>
+                  <span className={styles.rowDesc}>{t('marketingDesc')}</span>
+                </div>
+                <div className={styles.rowControl}>
+                  <label className={styles.switch}>
+                    <input
+                      type="checkbox"
+                      checked={marketingOn}
+                      onChange={(e) => setMarketingOn(e.target.checked)}
+                      aria-label={t('marketingTitle')}
+                    />
+                    <span className={styles.track} aria-hidden="true" />
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div className={styles.actions}>
+              <button
+                type="button"
+                className={`btn ${styles.btn}`}
+                onClick={() => finish(marketingOn ? 'accepted' : 'declined')}
+              >
+                {t('save')}
+              </button>
+            </div>
+          </>
+        )}
       </div>
     </div>
   );

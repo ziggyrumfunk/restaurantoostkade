@@ -17,9 +17,15 @@
   },
   "Consent": {
     "label": "Cookies",
-    "body": "Wir verwenden Cookies, um zu messen, ob unsere Anzeigen und unsere Website gut funktionieren. Sie werden nur gesetzt, wenn Sie zustimmen.",
-    "accept": "Einverstanden",
-    "decline": "Lieber nicht",
+    "body": "Wir verwenden Cookies, damit unsere Website richtig funktioniert und um zu messen, ob unsere Anzeigen und unsere Website ihre Arbeit tun. Funktionale Cookies sind zum Beispiel für die Tischreservierung nötig. Marketing-Cookies setzen wir nur, wenn Sie das möchten. Ihre Wahl können Sie jederzeit über den Link unten auf der Website ändern.",
+    "accept": "Alle akzeptieren",
+    "openSettings": "Einstellungen",
+    "save": "Einstellungen speichern",
+    "necessaryTitle": "Notwendig",
+    "necessaryDesc": "Für die Grundfunktionen der Website und die Tischreservierung.",
+    "alwaysOn": "Immer an",
+    "marketingTitle": "Marketing und Statistiken",
+    "marketingDesc": "Misst, ob unsere Anzeigen und unsere Website funktionieren (Meta Pixel).",
     "settings": "Cookies"
   },
   "Meta": {

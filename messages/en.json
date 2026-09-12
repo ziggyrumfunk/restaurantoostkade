@@ -17,9 +17,15 @@
   },
   "Consent": {
     "label": "Cookies",
-    "body": "We use cookies to measure whether our ads and website are doing their job. They are only set if you agree.",
-    "accept": "Accept",
-    "decline": "No thanks",
+    "body": "We use cookies to make our website work properly and to measure whether our ads and website are doing their job. Functional cookies are needed for things like reserving a table. Marketing cookies are only set if you choose to allow them. You can change your choice at any time via the link at the bottom of the site.",
+    "accept": "Accept all",
+    "openSettings": "Settings",
+    "save": "Save preferences",
+    "necessaryTitle": "Necessary",
+    "necessaryDesc": "For the site's basic functions and reserving a table.",
+    "alwaysOn": "Always on",
+    "marketingTitle": "Marketing and statistics",
+    "marketingDesc": "Measures whether our ads and website work (Meta Pixel).",
     "settings": "Cookies"
   },
   "Meta": {

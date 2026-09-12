@@ -17,9 +17,15 @@
   },
   "Consent": {
     "label": "Cookies",
-    "body": "Wij gebruiken cookies om te meten of onze advertenties en website goed werken. We plaatsen ze alleen als je akkoord gaat.",
-    "accept": "Akkoord",
-    "decline": "Liever niet",
+    "body": "Wij gebruiken cookies om onze website goed te laten werken en om te meten of onze advertenties en website hun werk doen. Functionele cookies zijn nodig voor bijvoorbeeld het reserveren van een tafel. Marketingcookies plaatsen we alleen als je daarvoor kiest. Je keuze pas je later altijd aan via de link onderaan de site.",
+    "accept": "Alles accepteren",
+    "openSettings": "Instellingen",
+    "save": "Voorkeuren opslaan",
+    "necessaryTitle": "Noodzakelijk",
+    "necessaryDesc": "Voor de basisfuncties van de site en het reserveren van een tafel.",
+    "alwaysOn": "Altijd aan",
+    "marketingTitle": "Marketing en statistieken",
+    "marketingDesc": "Meet of onze advertenties en website werken (Meta Pixel).",
     "settings": "Cookies"
   },
   "Meta": {

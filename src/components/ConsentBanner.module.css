@@ -53,10 +53,143 @@
   margin-top: var(--space-2);
 }
 
-/* Slightly smaller than the site default so the pair fits on one row. */
+/* Big black primary (Accept all / Save). */
 .btn {
-  padding: 11px 22px;
+  padding: 13px 26px;
   font-size: var(--fs-xs);
+}
+
+/* Modest text-link button that opens the settings view. */
+.linkBtn {
+  background: none;
+  border: 0;
+  padding: 4px 0;
+  color: var(--color-ink-soft);
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border-bottom: 1px solid var(--color-line);
+  cursor: pointer;
+  transition: color var(--dur) var(--ease), border-color var(--dur) var(--ease);
+}
+
+.linkBtn:hover {
+  color: var(--color-ink);
+  border-bottom-color: var(--color-ink);
+}
+
+/* --- Settings view: category rows with flip switches ------------- */
+.rows {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding-block: var(--space-3);
+  border-bottom: 1px dashed var(--color-line);
+}
+
+.row:last-child {
+  border-bottom: 0;
+}
+
+.rowText {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.rowTitle {
+  font-weight: 600;
+  font-size: var(--fs-sm);
+  color: var(--color-ink);
+}
+
+.rowDesc {
+  font-size: var(--fs-xs);
+  line-height: 1.5;
+  color: var(--color-ink-soft);
+}
+
+.rowControl {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: none;
+}
+
+.alwaysOn {
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-ink-soft);
+}
+
+/* Flip switch: a styled checkbox. The input stays real (and focusable) on
+   top of the track so keyboard and screen readers work normally. */
+.switch {
+  position: relative;
+  width: 46px;
+  height: 26px;
+  flex: none;
+}
+
+.switch input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.switch input:disabled {
+  cursor: default;
+}
+
+.track {
+  position: absolute;
+  inset: 0;
+  background: var(--color-line);
+  border-radius: 999px;
+  transition: background var(--dur) var(--ease);
+  pointer-events: none;
+}
+
+.track::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--color-bg-elev);
+  box-shadow: 0 1px 3px rgba(20, 18, 14, 0.35);
+  transition: transform var(--dur) var(--ease);
+}
+
+.switch input:checked + .track {
+  background: var(--color-ink);
+}
+
+.switch input:checked + .track::after {
+  transform: translateX(20px);
+}
+
+.switch input:disabled + .track {
+  opacity: 0.45;
+}
+
+.switch input:focus-visible + .track {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
 }
 
 @keyframes overlayIn {

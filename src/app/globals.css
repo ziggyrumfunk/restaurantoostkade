@@ -112,6 +112,10 @@ html {
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
 }
+/* The page must never scroll sideways (stray wide elements on mobile).
+   `clip` instead of `hidden`: it forbids the scroll without creating a
+   scroll container, so position:sticky keeps working. */
+html, body { overflow-x: clip; }
 body {
   background: var(--color-bg);
   color: var(--color-ink);

@@ -131,7 +131,12 @@
   flex-wrap: wrap;
 }
 .legal { font-size: var(--fs-xs); color: rgba(247, 243, 236, 0.55); }
-.bottomNav { display: flex; gap: var(--space-5); }
+.bottomNav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-3) var(--space-5);
+}
 .bottomNav a { font-size: var(--fs-xs); text-transform: uppercase; letter-spacing: 0.15em; }
 
 /* Cookie-preferences button, styled to match the bottom-nav links. */

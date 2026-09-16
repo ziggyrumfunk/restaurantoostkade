@@ -96,6 +96,29 @@ export function MetaPixel() {
     window.fbq?.('track', 'PageView');
   }, [pathname]);
 
+  // Completed reservations: the Zenchef widget announces
+  // "zcf-bookings-booking_created" to the host page via postMessage (verified
+  // live 16 Sep 2026). Firing Schedule from OUR page instead of relying on
+  // Zenchef's pixel inside their iframe gives Meta the ad-click context, so
+  // conversions actually get attributed to campaigns.
+  useEffect(() => {
+    if (!PIXEL_ID) return;
+    const seen = new Set<string>();
+    const onMessage = (e: MessageEvent) => {
+      if (!/\.zenchef\.com$/.test(String(e.origin).replace(/^https?:\/\//, ''))) return;
+      const payload = e.data as
+        | { type?: string; data?: { booking_id?: number | string } }
+        | undefined;
+      if (payload?.type !== 'zcf-bookings-booking_created') return;
+      const id = String(payload.data?.booking_id ?? 'unknown');
+      if (seen.has(id) || !window.fbq) return;
+      seen.add(id);
+      window.fbq('track', 'Schedule');
+    };
+    window.addEventListener('message', onMessage);
+    return () => window.removeEventListener('message', onMessage);
+  }, []);
+
   // Clicking into the Zenchef widget counts as reservation intent. The whole
   // widget (including its floating launcher button) is an iframe, so clicks
   // on it never reach our document. But when focus moves into an iframe the

@@ -7,6 +7,10 @@ export const routing = defineRouting({
   localePrefix: {
     mode: 'as-needed', // / -> nl, /en -> en, /de -> de
   },
+  // The URL alone decides the language. With detection on, phones set to
+  // English were redirected away from Dutch pages, including ad landings.
+  // Visitors switch language with the language switcher.
+  localeDetection: false,
   pathnames: {
     '/': '/',
     '/menu': {

@@ -10,14 +10,14 @@ export async function JsonLd() {
     '@id': `${SITE}/#restaurant`,
     name: 'Restaurant Oostkade',
     alternateName: 'Oostkade',
-    image: [`${SITE}/og.jpg`, `${SITE}/logo-white.svg`],
-    logo: `${SITE}/logo-white.svg`,
+    image: [`${SITE}/og.jpg`, `${SITE}/menu-juli/oostkade-menu-juli-07.jpg`],
+    logo: `${SITE}/logo-dark.png`,
     url: SITE,
     telephone: '+31-186-617170',
     email: 'info@restaurantoostkade.nl',
     priceRange: '€€',
     servesCuisine: ['European', 'Asian fusion', 'Modern'],
-    acceptsReservations: 'True',
+    acceptsReservations: `${SITE}/reserveren`,
     description: t('defaultDescription'),
     address: {
       '@type': 'PostalAddress',
@@ -67,13 +67,8 @@ export async function JsonLd() {
       'https://www.instagram.com/restaurantoostkade',
       'https://www.facebook.com/Oostkade/',
     ],
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.8',
-      reviewCount: '10',
-      bestRating: '5',
-      worstRating: '1',
-    },
+    // No aggregateRating: Google forbids self-declared ratings for a
+    // business's own page and copying reviews from other sites into markup.
   };
   return (
     <script

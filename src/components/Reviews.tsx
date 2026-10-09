@@ -16,7 +16,7 @@ const REVIEWS = [
 
 function Stars() {
   return (
-    <span className={styles.stars} aria-label="5 out of 5">
+    <span className={styles.stars} role="img" aria-label="5 out of 5">
       {Array.from({ length: 5 }).map((_, i) => (
         <svg key={i} viewBox="0 0 24 24" width="14" height="14" aria-hidden="true">
           <path

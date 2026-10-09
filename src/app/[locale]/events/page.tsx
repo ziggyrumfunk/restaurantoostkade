@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { pageMetadata } from '@/lib/seo';
 import { PageHeader } from '@/components/PageHeader';
 import styles from './events.module.css';
 
@@ -10,14 +11,7 @@ export async function generateMetadata({
 }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'Events' });
-  return {
-    title: t('title'),
-    description: t('lead'),
-    alternates: {
-      canonical: locale === 'nl' ? '/private-dining' : '/en/private-dining',
-      languages: { nl: '/private-dining', en: '/en/private-dining', de: '/de/private-dining' },
-    },
-  };
+  return pageMetadata({ route: '/events', locale, title: t('title'), description: t('lead') });
 }
 
 export default async function EventsPage({

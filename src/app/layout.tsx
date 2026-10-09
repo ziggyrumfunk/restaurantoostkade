@@ -1,8 +1,11 @@
 import type { Metadata, Viewport } from 'next';
 import './globals.css';
 
+// Base for every relative URL in metadata (canonical, hreflang, og:image).
+// The fallback must be the production domain: NEXT_PUBLIC_SITE_URL is not set
+// on Vercel, and a localhost fallback put localhost URLs on the live site.
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'https://restaurantoostkade.nl'),
 };
 
 export const viewport: Viewport = {

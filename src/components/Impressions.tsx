@@ -70,14 +70,43 @@ function Tile({ slot, priority }: { slot: Slot; priority?: boolean }) {
       />
     );
   }
+  return <LazyVideo slot={slot} />;
+}
+
+/**
+ * Plays only while on screen. This section renders three layouts (desktop,
+ * tablet, mobile marquee) and CSS hides two of them; with autoPlay every copy
+ * downloaded its video, about 8 MB per visit on a phone. A hidden copy never
+ * intersects the viewport, so it never loads.
+ */
+function LazyVideo({ slot }: { slot: Slot }) {
+  const ref = useRef<HTMLVideoElement | null>(null);
+
+  useEffect(() => {
+    const video = ref.current;
+    if (!video) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    video.muted = true; // required for play() without a user gesture
+
+    const io = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) video.play().catch(() => {});
+        else video.pause();
+      },
+      { rootMargin: '200px 0px' }
+    );
+    io.observe(video);
+    return () => io.disconnect();
+  }, []);
+
   return (
     <video
+      ref={ref}
       className={styles.media}
-      autoPlay
       muted
       loop
       playsInline
-      preload="metadata"
+      preload="none"
       poster={slot.poster}
       width={slot.w}
       height={slot.h}

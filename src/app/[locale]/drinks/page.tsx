@@ -1,4 +1,5 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { pageMetadata } from '@/lib/seo';
 import { PageHeader } from '@/components/PageHeader';
 import { DrinksList } from '@/components/DrinksList';
 
@@ -9,14 +10,7 @@ export async function generateMetadata({
 }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'Drinks' });
-  return {
-    title: t('title'),
-    description: t('lead'),
-    alternates: {
-      canonical: locale === 'nl' ? '/dranken' : '/en/drinks',
-      languages: { nl: '/dranken', en: '/en/drinks', de: '/de/getraenke' },
-    },
-  };
+  return pageMetadata({ route: '/drinks', locale, title: t('title'), description: t('lead') });
 }
 
 export default async function DrinksPage({

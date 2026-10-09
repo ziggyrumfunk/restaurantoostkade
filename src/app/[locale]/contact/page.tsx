@@ -1,4 +1,5 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { pageMetadata } from '@/lib/seo';
 import { PageHeader } from '@/components/PageHeader';
 import styles from './contact.module.css';
 
@@ -9,14 +10,12 @@ export async function generateMetadata({
 }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'Contact' });
-  return {
+  return pageMetadata({
+    route: '/contact',
+    locale,
     title: t('title'),
-    description: `Restaurant Oostkade — ${t('address')}. ${t('phone')}. ${t('email')}.`,
-    alternates: {
-      canonical: '/contact',
-      languages: { nl: '/contact', en: '/en/contact', de: '/de/kontakt' },
-    },
-  };
+    description: `Restaurant Oostkade, ${t('address')}. ${t('phone')}. ${t('email')}.`,
+  });
 }
 
 export default async function ContactPage({

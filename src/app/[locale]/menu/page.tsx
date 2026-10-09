@@ -1,4 +1,5 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { pageMetadata } from '@/lib/seo';
 import { PageHeader } from '@/components/PageHeader';
 import { MenuList } from '@/components/MenuList';
 
@@ -9,14 +10,12 @@ export async function generateMetadata({
 }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'Menu' });
-  return {
+  return pageMetadata({
+    route: '/menu',
+    locale,
     title: t('title'),
-    description: t('lead'),
-    alternates: {
-      canonical: locale === 'nl' ? '/menukaart' : '/en/menu',
-      languages: { nl: '/menukaart', en: '/en/menu', de: '/de/speisekarte' },
-    },
-  };
+    description: t('metaDescription'),
+  });
 }
 
 export default async function MenuPage({

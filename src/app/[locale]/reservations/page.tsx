@@ -1,4 +1,5 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { pageMetadata } from '@/lib/seo';
 import { PageHeader } from '@/components/PageHeader';
 import styles from './reservations.module.css';
 
@@ -9,14 +10,7 @@ export async function generateMetadata({
 }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'Reservations' });
-  return {
-    title: t('title'),
-    description: t('lead'),
-    alternates: {
-      canonical: locale === 'nl' ? '/reserveren' : '/en/reservations',
-      languages: { nl: '/reserveren', en: '/en/reservations', de: '/de/reservierung' },
-    },
-  };
+  return pageMetadata({ route: '/reservations', locale, title: t('title'), description: t('lead') });
 }
 
 export default async function ReservationsPage({

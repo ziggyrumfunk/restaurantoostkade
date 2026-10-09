@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { pageMetadata } from '@/lib/seo';
 import { PageHeader } from '@/components/PageHeader';
 import { CtaStrip } from '@/components/CtaStrip';
 import styles from './impressions.module.css';
@@ -49,14 +50,7 @@ export async function generateMetadata({
 }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'ImpressionsPage' });
-  return {
-    title: t('title'),
-    description: t('lead'),
-    alternates: {
-      canonical: locale === 'nl' ? '/sfeer' : '/en/impressions',
-      languages: { nl: '/sfeer', en: '/en/impressions', de: '/de/impressionen' },
-    },
-  };
+  return pageMetadata({ route: '/impressions', locale, title: t('title'), description: t('lead') });
 }
 
 export default async function ImpressionsPage({

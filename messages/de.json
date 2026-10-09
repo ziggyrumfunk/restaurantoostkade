@@ -32,7 +32,7 @@
     "siteName": "Restaurant Oostkade",
     "tagline": "Am Hafen von Oud-Beijerland",
     "defaultTitle": "Restaurant Oostkade | Oud-Beijerland, Hoeksche Waard",
-    "defaultDescription": "Modernes Restaurant am Hafen von Oud-Beijerland, im Herzen der Hoeksche Waard. Weltküche mit asiatischem Twist. Lunch, Dinner, Borrel und Private Dining. Reservieren Sie online einen Tisch."
+    "defaultDescription": "Restaurant am Hafen von Oud-Beijerland, in der Hoeksche Waard. Weltküche mit asiatischem Twist. Lunch, Dinner, Drinks und Private Dining."
   },
   "Nav": {
     "home": "Home",
@@ -114,6 +114,7 @@
   "Menu": {
     "title": "Speisekarte",
     "lead": "Unsere Karte ändert sich mit den Jahreszeiten. Fragen Sie unser Team nach den Specials der Woche.",
+    "metaDescription": "Die Speisekarte von Restaurant Oostkade in Oud-Beijerland: Lunch und Dinner, Sushi, Weltküche mit asiatischem Twist und ein Chef's Menu.",
     "sectionLunch": "Lunch",
     "sectionStarters": "Vorspeisen",
     "sectionMains": "Hauptgerichte",

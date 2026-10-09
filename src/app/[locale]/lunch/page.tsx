@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { pageMetadata } from '@/lib/seo';
 import { Link } from '@/i18n/routing';
 import { PageHeader } from '@/components/PageHeader';
 import { LUNCH } from '@/lib/menuData';
@@ -12,14 +13,7 @@ export async function generateMetadata({
 }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'Lunch' });
-  return {
-    title: t('title'),
-    description: t('lead'),
-    alternates: {
-      canonical: locale === 'nl' ? '/lunch' : '/en/lunch',
-      languages: { nl: '/lunch', en: '/en/lunch', de: '/de/lunch' },
-    },
-  };
+  return pageMetadata({ route: '/lunch', locale, title: t('title'), description: t('lead') });
 }
 
 // Pick a representative excerpt from the full lunch menu — we don't want to

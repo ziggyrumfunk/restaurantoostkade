@@ -5,6 +5,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server';
 import { Outfit, Italiana } from 'next/font/google';
 import { routing } from '@/i18n/routing';
+import { pageAlternates } from '@/lib/seo';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Reveal } from '@/components/Reveal';
@@ -47,14 +48,9 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'Meta' });
   return {
-    // Base for all relative URLs in metadata (canonical, hreflang, og:image).
-    // Without this, production pages pointed canonicals at localhost:3000.
-    metadataBase: new URL(
-      process.env.NEXT_PUBLIC_SITE_URL ?? 'https://restaurantoostkade.nl'
-    ),
     title: {
       default: t('defaultTitle'),
-      template: `%s | ${t('siteName')}`,
+      template: `%s | ${t('siteName')}, Oud-Beijerland`,
     },
     description: t('defaultDescription'),
     keywords: [
@@ -100,21 +96,14 @@ export async function generateMetadata({
       description: t('defaultDescription'),
       images: ['/og.jpg'],
     },
-    alternates: {
-      canonical: locale === 'nl' ? '/' : `/${locale}`,
-      languages: {
-        nl: '/',
-        en: '/en',
-        de: '/de',
-        'x-default': '/',
-      },
-    },
+    alternates: pageAlternates('/', locale),
+    // Google requires favicons in multiples of 48px; iOS needs a PNG.
     icons: {
       icon: [
-        { url: '/favicon.ico', sizes: 'any' },
-        { url: '/logo-white.svg', type: 'image/svg+xml' },
+        { url: '/favicon.ico', sizes: '48x48' },
+        { url: '/icon-192.png', type: 'image/png', sizes: '192x192' },
       ],
-      apple: '/logo-white.svg',
+      apple: '/apple-touch-icon.png',
     },
     robots: {
       index: true,

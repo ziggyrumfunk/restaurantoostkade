@@ -14,7 +14,7 @@ export async function generateMetadata({
     description: t('lead'),
     alternates: {
       canonical: locale === 'nl' ? '/reserveren' : '/en/reservations',
-      languages: { nl: '/reserveren', en: '/en/reservations' },
+      languages: { nl: '/reserveren', en: '/en/reservations', de: '/de/reservierung' },
     },
   };
 }

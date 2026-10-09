@@ -14,7 +14,7 @@ export async function generateMetadata({
     description: `Restaurant Oostkade — ${t('address')}. ${t('phone')}. ${t('email')}.`,
     alternates: {
       canonical: '/contact',
-      languages: { nl: '/contact', en: '/en/contact' },
+      languages: { nl: '/contact', en: '/en/contact', de: '/de/kontakt' },
     },
   };
 }

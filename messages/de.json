@@ -31,8 +31,8 @@
   "Meta": {
     "siteName": "Restaurant Oostkade",
     "tagline": "Am Hafen von Oud-Beijerland",
-    "defaultTitle": "Restaurant Oostkade | Oud-Beijerland",
-    "defaultDescription": "Moderne Küche mit asiatischem Twist am Hafen von Oud-Beijerland. Lunch, Dinner, Business Lunch und Private Dining."
+    "defaultTitle": "Restaurant Oostkade | Oud-Beijerland, Hoeksche Waard",
+    "defaultDescription": "Modernes Restaurant am Hafen von Oud-Beijerland, im Herzen der Hoeksche Waard. Weltküche mit asiatischem Twist. Lunch, Dinner, Borrel und Private Dining. Reservieren Sie online einen Tisch."
   },
   "Nav": {
     "home": "Home",
@@ -53,7 +53,7 @@
     "heroCtaReserve": "Tisch reservieren",
     "heroCtaMenu": "Speisekarte ansehen",
     "introTitle": "Unsere Geschichte",
-    "introBody": "Restaurant Oostkade liegt am Hafen von Oud-Beijerland. Seit 2022 steht Küchenchef Yorick Schaeffer am Ruder. Unsere Küche verbindet klassische Technik mit Weltgeschmack, oft mit einem asiatischen Twist. Frische Produkte, ehrliche Küche und eine Atmosphäre, die zu jedem Moment passt — vom Business Lunch bis zum Dinner mit Freunden.",
+    "introBody": "Restaurant Oostkade liegt am Hafen von Oud-Beijerland, mitten in der Hoeksche Waard. Seit 2022 steht Küchenchef Yorick Schaeffer am Ruder. Unsere Küche verbindet klassische Technik mit Weltgeschmack, oft mit einem asiatischen Twist. Frische Produkte, ehrliche Küche und eine Atmosphäre, die zu jedem Moment passt — vom Business Lunch bis zum Dinner mit Freunden.",
     "highlightsTitle": "Unsere Highlights",
     "highlight1Title": "Business Lunch",
     "highlight1Body": "2, 3 oder 4 Gänge ab €29. Mit Weinbegleitung ab €14. Perfekt für produktive Nachmittage.",

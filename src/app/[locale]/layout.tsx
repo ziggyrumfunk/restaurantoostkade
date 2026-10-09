@@ -47,6 +47,11 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'Meta' });
   return {
+    // Base for all relative URLs in metadata (canonical, hreflang, og:image).
+    // Without this, production pages pointed canonicals at localhost:3000.
+    metadataBase: new URL(
+      process.env.NEXT_PUBLIC_SITE_URL ?? 'https://restaurantoostkade.nl'
+    ),
     title: {
       default: t('defaultTitle'),
       template: `%s | ${t('siteName')}`,
@@ -55,7 +60,12 @@ export async function generateMetadata({
     keywords: [
       'Restaurant Oostkade',
       'Oud-Beijerland',
+      'Hoeksche Waard',
+      'restaurant Hoeksche Waard',
+      'uit eten Hoeksche Waard',
+      'restaurant Oud-Beijerland',
       'haven',
+      'terras',
       'private dining',
       'business lunch',
       'wereldse keuken',

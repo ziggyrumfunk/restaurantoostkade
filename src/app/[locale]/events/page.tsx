@@ -15,7 +15,7 @@ export async function generateMetadata({
     description: t('lead'),
     alternates: {
       canonical: locale === 'nl' ? '/private-dining' : '/en/private-dining',
-      languages: { nl: '/private-dining', en: '/en/private-dining' },
+      languages: { nl: '/private-dining', en: '/en/private-dining', de: '/de/private-dining' },
     },
   };
 }

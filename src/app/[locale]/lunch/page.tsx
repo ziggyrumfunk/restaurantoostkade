@@ -17,7 +17,7 @@ export async function generateMetadata({
     description: t('lead'),
     alternates: {
       canonical: locale === 'nl' ? '/lunch' : '/en/lunch',
-      languages: { nl: '/lunch', en: '/en/lunch' },
+      languages: { nl: '/lunch', en: '/en/lunch', de: '/de/lunch' },
     },
   };
 }

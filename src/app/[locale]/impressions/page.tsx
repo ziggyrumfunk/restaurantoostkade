@@ -54,7 +54,7 @@ export async function generateMetadata({
     description: t('lead'),
     alternates: {
       canonical: locale === 'nl' ? '/sfeer' : '/en/impressions',
-      languages: { nl: '/sfeer', en: '/en/impressions' },
+      languages: { nl: '/sfeer', en: '/en/impressions', de: '/de/impressionen' },
     },
   };
 }

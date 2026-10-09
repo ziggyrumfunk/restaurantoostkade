@@ -33,6 +33,16 @@ export async function JsonLd() {
       longitude: 4.4144,
     },
     hasMap: 'https://maps.google.com/?q=Oostkade+24+Oud-Beijerland',
+    areaServed: [
+      { '@type': 'AdministrativeArea', name: 'Hoeksche Waard' },
+      { '@type': 'City', name: 'Oud-Beijerland' },
+      { '@type': 'City', name: 'Spijkenisse' },
+      { '@type': 'City', name: 'Barendrecht' },
+      { '@type': 'City', name: 'Numansdorp' },
+      { '@type': 'City', name: 'Klaaswaal' },
+    ],
+    keywords:
+      'restaurant Hoeksche Waard, restaurant Oud-Beijerland, uit eten Hoeksche Waard, lunch Oud-Beijerland, terras aan de haven, private dining Hoeksche Waard',
     openingHoursSpecification: [
       {
         '@type': 'OpeningHoursSpecification',

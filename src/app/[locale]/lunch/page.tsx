@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { pageMetadata } from '@/lib/seo';
 import { Link } from '@/i18n/routing';
+import { ReserveButton } from '@/components/ReserveButton';
 import { PageHeader } from '@/components/PageHeader';
 import { LUNCH } from '@/lib/menuData';
 import styles from './lunch.module.css';
@@ -46,7 +47,7 @@ export default async function LunchPage({
               <li><strong>{t('fourCourse')}</strong><span className={styles.dots} aria-hidden /><span className={styles.price}>€49</span></li>
               <li className={styles.wine}><em>{t('winePairing')}</em></li>
             </ul>
-            <Link href="/reservations" className="btn">{t('reserveCta')}</Link>
+            <ReserveButton className="btn">{t('reserveCta')}</ReserveButton>
           </div>
           <div className={`${styles.media} reveal`}>
             <Image

@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
-import { Link } from '@/i18n/routing';
+import { ReserveButton } from './ReserveButton';
 import styles from './CtaStrip.module.css';
 
 // Backdrop tiles — darkened photo collage behind the headline.
@@ -35,9 +35,9 @@ export function CtaStrip() {
           <h2 className={`${styles.title} handwritten`}>{t('ctaStripTitle')}</h2>
           <p className={styles.body}>{t('ctaStripBody')}</p>
         </div>
-        <Link href="/reservations" className={`btn btn-light ${styles.cta}`}>
+        <ReserveButton className={`btn btn-light ${styles.cta}`}>
           {t('ctaStripButton')}
-        </Link>
+        </ReserveButton>
       </div>
     </section>
   );

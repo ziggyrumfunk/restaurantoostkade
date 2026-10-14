@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/routing';
 import { CookieSettingsButton } from './CookieSettingsButton';
+import { ReserveButton } from './ReserveButton';
 import styles from './Footer.module.css';
 
 function InstagramIcon() {
@@ -42,9 +43,9 @@ export function Footer() {
             className={styles.logoMark}
           />
           <p className={styles.tagline}>{t('Meta.tagline')}</p>
-          <Link href="/reservations" className={`btn btn-light ${styles.footerCta}`}>
+          <ReserveButton className={`btn btn-light ${styles.footerCta}`}>
             {t('Nav.reservations')}
-          </Link>
+          </ReserveButton>
         </div>
 
         <div className={styles.col}>

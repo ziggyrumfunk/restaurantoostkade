@@ -187,9 +187,10 @@
   },
   "Reservations": {
     "title": "Reserve a table",
-    "lead": "Booking is easy via the Zenchef button at the bottom right of the page. Pick your date, time and number of guests — you'll receive an email confirmation right away.",
+    "lead": "Booking is easy online. Pick your date, time and number of guests and you receive an email confirmation right away.",
     "widgetTitle": "Book via Zenchef",
-    "widgetBody": "Click the booking button at the bottom right of the page to reserve your table. Pick a date, time and number of guests in a few clicks.",
+    "widgetBody": "Pick a date, time and number of guests. You receive an email confirmation right away.",
+    "widgetCta": "Book now",
     "groupsTitle": "Groups of 10 or more",
     "groupsBody": "For larger groups or special requests, please call us directly on 0186-617170 or email info@restaurantoostkade.nl.",
     "hoursTitle": "When you can visit",

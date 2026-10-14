@@ -1,5 +1,6 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { pageMetadata } from '@/lib/seo';
+import { ReserveButton } from '@/components/ReserveButton';
 import { PageHeader } from '@/components/PageHeader';
 import styles from './reservations.module.css';
 
@@ -50,6 +51,7 @@ export default async function ReservationsPage({
             <span className="eyebrow">{t('widgetTitle')}</span>
             <h2 className={`${styles.h2} handwritten`}>{t('widgetTitle')}</h2>
             <p>{t('widgetBody')}</p>
+            <ReserveButton className="btn">{t('widgetCta')}</ReserveButton>
           </div>
 
           <aside className={styles.aside}>

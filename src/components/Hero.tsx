@@ -4,6 +4,7 @@ import { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/routing';
+import { ReserveButton } from './ReserveButton';
 import styles from './Hero.module.css';
 
 type Tile = {
@@ -169,7 +170,7 @@ export function Hero() {
         <h1 className={styles.title}>{t('heroTitle')}</h1>
         <p className={styles.lead}>{t('heroLead')}</p>
         <div className={styles.actions}>
-          <Link href="/reservations" className="btn">{t('heroCtaReserve')}</Link>
+          <ReserveButton className="btn">{t('heroCtaReserve')}</ReserveButton>
           <Link href="/menu" className="btn">{t('heroCtaMenu')}</Link>
         </div>
       </div>

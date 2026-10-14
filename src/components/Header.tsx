@@ -6,6 +6,7 @@ import { useTranslations } from 'next-intl';
 import { Link, usePathname } from '@/i18n/routing';
 import { LanguageSwitcher } from './LanguageSwitcher';
 import { ThemeToggle } from './ThemeToggle';
+import { ReserveButton } from './ReserveButton';
 import styles from './Header.module.css';
 
 export function Header() {
@@ -74,9 +75,9 @@ export function Header() {
           <div className={styles.actions}>
             <ThemeToggle />
             <LanguageSwitcher />
-            <Link href="/reservations" className={`btn ${styles.reserveBtn}`}>
+            <ReserveButton className={`btn ${styles.reserveBtn}`}>
               {t('reservations')}
-            </Link>
+            </ReserveButton>
             <button
               type="button"
               className={styles.burger}
@@ -106,9 +107,9 @@ export function Header() {
             </li>
           ))}
           <li>
-            <Link href="/reservations" className={styles.mobileLink}>
+            <ReserveButton className={styles.mobileLink} onClick={() => setOpen(false)}>
               {t('reservations')}
-            </Link>
+            </ReserveButton>
           </li>
         </ul>
         <div className={styles.mobileFooter}>

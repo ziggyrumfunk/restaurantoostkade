@@ -101,6 +101,26 @@ export const DINNER: MenuSection[] = [
       { name: 'Indonesian Style Fries', desc: 'Verse friet | Indonesische verse pindasaus | mayonaise | lente-ui | rempejek', price: '8' },
     ],
   },
+  {
+    title: 'Dessert',
+    items: [
+      { name: 'Dame Blanche', desc: 'Vanille ijs | slagroom | chocolade saus', price: '11' },
+      { name: 'Crème Brûlée', desc: 'Vanille crème brûlée | tonkabonen ijs | crumble', price: '12' },
+      { name: 'Hot Chocolate Lava Cake', desc: 'Bosvruchten ijs | witte chocolade | rood fruit | tuile', price: '13.5' },
+      { name: 'Sundae Caramel', desc: 'Slagroom | amandel | caramel | vanille ijs', price: '11.5' },
+      { name: 'Friandises', desc: 'Incl. koffie of thee naar keuze | choco chip cookie | wentelteefje | karamelkoek', price: '11.5' },
+      { name: 'Kaasplateau', desc: 'Wisselend kaasassortiment van De Hoeksche Gebroeders met tomatenjam en kletzenbrood', price: '16.5' },
+      { name: 'Grand Dessert (2 personen)', desc: 'Combinatie van onze desserts', price: '32' },
+      { name: 'Bol ijs', desc: 'Keuze uit vanille, bosvruchten, tonkabonen of citroen ijs', price: '3' },
+    ],
+  },
+  {
+    title: 'Liquid Dessert',
+    items: [
+      { name: 'Espresso Martini', desc: 'Shot espresso | kahlua | vanille | vodka', price: '12' },
+      { name: 'Baileys Tiramisu', desc: 'Espresso | amaretto | cacao | eiwit | slagroom', price: '13' },
+    ],
+  },
 ];
 
 // ------------------------------------------------------------- Lunch -------
@@ -209,6 +229,26 @@ export const LUNCH: MenuSection[] = [
       { name: 'Truffel Parmezaan Fries', desc: 'Verse friet | truffel mayonaise | parmezaan | bieslook', price: '7' },
       { name: 'Hoekse Krieltjes', desc: 'Gebakken aardappeltjes met schil', price: '10' },
       { name: 'Indonesian Style Fries', desc: 'Verse friet | Indonesische verse pindasaus | mayonaise | lente-ui | rempejek', price: '8' },
+    ],
+  },
+  {
+    title: 'Dessert',
+    items: [
+      { name: 'Dame Blanche', desc: 'Vanille ijs | slagroom | chocolade saus', price: '11' },
+      { name: 'Crème Brûlée', desc: 'Vanille crème brûlée | tonkabonen ijs | crumble', price: '12' },
+      { name: 'Hot Chocolate Lava Cake', desc: 'Bosvruchten ijs | witte chocolade | rood fruit | tuile', price: '13.5' },
+      { name: 'Sundae Caramel', desc: 'Slagroom | amandel | caramel | vanille ijs', price: '11.5' },
+      { name: 'Friandises', desc: 'Incl. koffie of thee naar keuze | choco chip cookie | wentelteefje | karamelkoek', price: '11.5' },
+      { name: 'Kaasplateau', desc: 'Wisselend kaasassortiment van De Hoeksche Gebroeders met tomatenjam en kletzenbrood', price: '16.5' },
+      { name: 'Grand Dessert (2 personen)', desc: 'Combinatie van onze desserts', price: '32' },
+      { name: 'Bol ijs', desc: 'Keuze uit vanille, bosvruchten, tonkabonen of citroen ijs', price: '3' },
+    ],
+  },
+  {
+    title: 'Liquid Dessert',
+    items: [
+      { name: 'Espresso Martini', desc: 'Shot espresso | kahlua | vanille | vodka', price: '12' },
+      { name: 'Baileys Tiramisu', desc: 'Espresso | amaretto | cacao | eiwit | slagroom', price: '13' },
     ],
   },
 ];

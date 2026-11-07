@@ -16,7 +16,7 @@ import styles from './iglo.module.css';
 const EMAIL = 'info@restaurantoostkade.nl';
 
 const GLANCE = ['When', 'Days', 'Group', 'Price'] as const;
-const FACTS = ['factParty', 'factWeekend', 'factMenu'] as const;
+const FACTS = ['factParty', 'factWeekend', 'factDeposit', 'factMenu'] as const;
 const EXTRAS = ['extraBirthday', 'extraRomantic', 'extraFountain'] as const;
 
 export async function generateMetadata({

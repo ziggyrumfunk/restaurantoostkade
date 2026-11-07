@@ -44,8 +44,6 @@
     "glanceGroup": "2 to 8 people",
     "glancePriceLabel": "Menu",
     "glancePrice": "From €47.50 p.p.",
-    "tableAlt": "Set round table with candlelight and sheepskins over the chairs, inside a transparent igloo",
-    "domeAlt": "Dome of a transparent igloo full of glowing lights, in front of the restaurant windows",
     "brunchImageAlt": "Brioche with steak tartare and Parmesan on a white cake stand, next to a glass of white wine",
     "dinner4ImageAlt": "Bowl of smoked beetroot, blackberries and fresh herbs, held above the table",
     "dinner5ImageAlt": "Grilled prawns with a grilled lemon half on a platter",
@@ -61,7 +59,9 @@
     "extraRomanticPrice": "€30 p.p.",
     "extraFountain": "Chocolate fountain",
     "extraFountainDesc": "From 5 people",
-    "extraFountainPrice": "€17.50 p.p."
+    "extraFountainPrice": "€17.50 p.p.",
+    "facadeAlt": "Two transparent igloos with string lights on the terrace, in front of the brick Oostkade building at dusk",
+    "closeAlt": "Close view of two transparent igloos with set round tables, candlelight and sheepskins over the chairs"
   },
   "ImpressionsPage": {
     "tab": "Impressions",

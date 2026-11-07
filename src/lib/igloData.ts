@@ -5,9 +5,9 @@
 
 export const IGLO_IMAGE = { url: '/iglo/oostkade-iglo-01.webp', width: 1600, height: 900 };
 
-/** Detail crops of the igloo visual, cut clear of the lettering baked into it. */
-export const IGLO_TABLE_IMAGE = { url: '/iglo/oostkade-iglo-tafel.webp', width: 910, height: 385 };
-export const IGLO_DOME_IMAGE = { url: '/iglo/oostkade-iglo-koepel.webp', width: 820, height: 415 };
+/** The igloos in front of the building, and from close by. */
+export const IGLO_FACADE_IMAGE = '/iglo/oostkade-iglo-terras-01.webp';
+export const IGLO_CLOSE_IMAGE = { url: '/iglo/oostkade-iglo-terras-02.jpg', width: 1536, height: 1024 };
 
 /** A full shared table, behind the booking section. */
 export const IGLO_TABLE_SPREAD = '/menu-juli/oostkade-menu-juli-07.jpg';
@@ -44,7 +44,7 @@ export const IGLO_MENUS: IgloMenu[] = [
         dishes: [
           { name: 'Brioche Steak Tartare' },
           { name: 'Kreeftensoep' },
-          { name: 'Mini oude kaaskroketjes' },
+          { name: 'Minikroketjes van oude kaas' },
           { name: 'Eggs Benedict' },
           { name: 'Truffeltosti' },
           { name: 'Truffelfriet met Parmezaan' },

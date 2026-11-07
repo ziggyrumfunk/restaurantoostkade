@@ -68,7 +68,7 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.16em;
-  color: var(--color-accent);
+  color: var(--color-accent-deep);
 }
 .glance dd {
   margin: var(--space-2) 0 0;
@@ -92,10 +92,9 @@
 .introText p {
   line-height: var(--lh-loose);
 }
-.introLead {
-  font-family: var(--font-script);
-  font-size: clamp(1.5rem, 2.4vw, 2rem);
-  line-height: 1.35 !important;
+.introText .introLead {
+  font-size: clamp(1.25rem, 1.8vw, 1.5rem);
+  line-height: 1.55;
   color: var(--color-ink);
   margin-bottom: var(--space-4);
 }
@@ -105,17 +104,20 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.16em;
-  color: var(--color-accent);
+  color: var(--color-accent-deep);
 }
-.introImages {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-4);
+.facade {
+  aspect-ratio: 4 / 5;
   min-width: 0;
 }
-.introImages > :last-child {
-  width: 78%;
-  align-self: flex-end;
+.facade img {
+  height: 100%;
+  object-fit: cover;
+  /* Keeps the igloos in frame and loses some of the empty pavement. */
+  object-position: 50% 48%;
+}
+.closeWrap {
+  margin-top: clamp(1.5rem, 3vw, 2.5rem);
 }
 
 /* Image frame: the picture settles slowly as the frame scrolls into view. */
@@ -200,7 +202,7 @@
   margin-top: var(--space-3);
   font-size: var(--fs-lg);
   font-weight: 600;
-  color: var(--color-accent);
+  color: var(--color-accent-deep);
 }
 .menuTime {
   margin-top: var(--space-1);
@@ -221,8 +223,12 @@
   line-height: 1.5;
   text-transform: uppercase;
   letter-spacing: 0.14em;
-  color: var(--color-accent);
+  color: var(--color-accent-deep);
   overflow-wrap: anywhere;
+}
+/* The sand background in light mode needs a darker gold at this small size. */
+:global([data-theme='light']) .groupTitle {
+  color: #76552a;
 }
 .dishes {
   list-style: none;
@@ -301,7 +307,7 @@
 .extras li .extraPrice {
   flex: none;
   font-weight: 600;
-  color: var(--color-accent);
+  color: var(--color-accent-deep);
 }
 
 /* Closing band, pinned to dark with cream text over the photo. */
@@ -343,6 +349,25 @@
 }
 .bookingInner .actions {
   justify-content: center;
+}
+/* This band stays dark in light mode too, so its buttons can't follow the theme. */
+.bookingInner :global(.btn) {
+  background: #f6efe1;
+  border-color: #f6efe1;
+  color: #15110b;
+}
+.bookingInner :global(.btn:hover) {
+  background: #f0e4cb;
+  border-color: #f0e4cb;
+  color: #15110b;
+}
+.bookingInner :global(.btn-ghost) {
+  background: transparent;
+  color: #f6efe1;
+}
+.bookingInner :global(.btn-ghost:hover) {
+  background: #f6efe1;
+  color: #15110b;
 }
 
 @media (max-width: 900px) {

@@ -44,8 +44,6 @@
     "glanceGroup": "2 bis 8 Personen",
     "glancePriceLabel": "Menü",
     "glancePrice": "Ab 47,50 € p. P.",
-    "tableAlt": "Gedeckter runder Tisch mit Kerzenlicht und Schaffellen über den Stühlen, in einem durchsichtigen Iglu",
-    "domeAlt": "Kuppel eines durchsichtigen Iglus voller leuchtender Lichter, vor den Fenstern des Restaurants",
     "brunchImageAlt": "Brioche mit Steak Tartare und Parmesan auf einer weißen Etagere, neben einem Glas Weißwein",
     "dinner4ImageAlt": "Schale mit geräucherter Roter Bete, Brombeeren und frischen Kräutern, über dem Tisch gehalten",
     "dinner5ImageAlt": "Gegrillte Garnelen mit einer gegrillten Zitronenhälfte auf einer Platte",
@@ -61,7 +59,9 @@
     "extraRomanticPrice": "30 € p. P.",
     "extraFountain": "Schokoladenbrunnen",
     "extraFountainDesc": "Ab 5 Personen",
-    "extraFountainPrice": "17,50 € p. P."
+    "extraFountainPrice": "17,50 € p. P.",
+    "facadeAlt": "Zwei durchsichtige Iglus mit Lichterketten auf der Terrasse, vor der Backsteinfassade von Oostkade in der Dämmerung",
+    "closeAlt": "Zwei durchsichtige Iglus aus der Nähe, mit gedeckten runden Tischen, Kerzenlicht und Schaffellen über den Stühlen"
   },
   "ImpressionsPage": {
     "tab": "Impressionen",

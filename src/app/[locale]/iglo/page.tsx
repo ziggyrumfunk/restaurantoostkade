@@ -3,11 +3,11 @@ import Image from 'next/image';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { pageMetadata } from '@/lib/seo';
 import {
-  IGLO_DOME_IMAGE,
+  IGLO_CLOSE_IMAGE,
+  IGLO_FACADE_IMAGE,
   IGLO_FIRST_DAY,
   IGLO_IMAGE,
   IGLO_MENUS,
-  IGLO_TABLE_IMAGE,
   IGLO_TABLE_SPREAD,
 } from '@/lib/igloData';
 import { ReserveButton } from '@/components/ReserveButton';
@@ -88,25 +88,24 @@ export default async function IgloPage({
             <h2 className={styles.h3}>{t('formatTitle')}</h2>
             <p>{t('formatBody')}</p>
           </div>
-          <div className={styles.introImages}>
-            <div className={`${styles.frame} reveal`}>
-              <Image
-                src={IGLO_TABLE_IMAGE.url}
-                alt={t('tableAlt')}
-                width={IGLO_TABLE_IMAGE.width}
-                height={IGLO_TABLE_IMAGE.height}
-                sizes="(max-width: 900px) 100vw, 640px"
-              />
-            </div>
-            <div className={`${styles.frame} reveal`}>
-              <Image
-                src={IGLO_DOME_IMAGE.url}
-                alt={t('domeAlt')}
-                width={IGLO_DOME_IMAGE.width}
-                height={IGLO_DOME_IMAGE.height}
-                sizes="(max-width: 900px) 100vw, 640px"
-              />
-            </div>
+          <div className={`${styles.frame} ${styles.facade} reveal`}>
+            <Image
+              src={IGLO_FACADE_IMAGE}
+              alt={t('facadeAlt')}
+              fill
+              sizes="(max-width: 900px) 100vw, 640px"
+            />
+          </div>
+        </div>
+        <div className={`container ${styles.closeWrap}`}>
+          <div className={`${styles.frame} reveal`}>
+            <Image
+              src={IGLO_CLOSE_IMAGE.url}
+              alt={t('closeAlt')}
+              width={IGLO_CLOSE_IMAGE.width}
+              height={IGLO_CLOSE_IMAGE.height}
+              sizes="(max-width: 1280px) 100vw, 1200px"
+            />
           </div>
         </div>
       </section>

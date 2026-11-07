@@ -157,13 +157,13 @@ export default async function LocaleLayout({
         <JsonLd />
 
         {/* Zenchef booking widget — floating reserve button bottom-right.
-            data-open="0" prevents the booking modal from auto-popping on
-            page load (annoying for browsing visitors). Increase if you want
-            it to auto-open after N milliseconds. */}
+            data-open="false" keeps the booking panel closed on page load
+            (annoying for browsing visitors). A number means auto-open after
+            N milliseconds, so "0" opens it straight away. */}
         <div
           className="zc-widget-config"
           data-restaurant="371789"
-          data-open="0"
+          data-open="false"
           data-language={locale}
         />
         {/* Use a different id on the wrapper than the SDK's own id ('zenchef-sdk').

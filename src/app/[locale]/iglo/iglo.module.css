@@ -1,0 +1,198 @@
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: var(--space-2);
+}
+
+/* The visual has "Iglo Experience" in the image, so it is never cropped. */
+.bannerImg {
+  display: block;
+  width: 100%;
+  height: auto;
+  box-shadow: var(--shadow-soft);
+}
+
+.h2 {
+  margin: 0;
+  color: var(--color-ink);
+}
+
+.introGrid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: center;
+}
+.copy {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  min-width: 0;
+}
+.copy p:not(:global(.lead)) {
+  color: var(--color-ink-soft);
+  line-height: var(--lh-loose);
+}
+
+.prices {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+.prices li {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-3);
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid var(--color-line-soft);
+}
+.prices strong {
+  font-weight: 600;
+  font-size: var(--fs-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-ink);
+}
+.dots {
+  flex: 1;
+  min-width: 12px;
+  border-bottom: 1px dotted var(--color-line);
+  transform: translateY(-3px);
+}
+.price {
+  font-weight: 600;
+  color: var(--color-ink);
+  white-space: nowrap;
+}
+
+.menus {
+  background: var(--color-surface);
+}
+.menusTitle {
+  margin-bottom: clamp(1.5rem, 3vw, 2.5rem);
+}
+.menuGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(1.25rem, 2.5vw, 2rem);
+  align-items: start;
+}
+.menu {
+  min-width: 0;
+  background: var(--color-bg-elev);
+  border: 1px solid var(--color-line);
+  padding: clamp(1.5rem, 3vw, 2.25rem);
+}
+.menuTitle {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: var(--fs-md);
+  font-weight: 600;
+  color: var(--color-ink);
+}
+.menuPrice {
+  margin: 4px 0 0;
+  font-size: var(--fs-sm);
+  color: var(--color-accent);
+  font-weight: 600;
+}
+.group {
+  margin-top: var(--space-4);
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--color-line-soft);
+}
+.groupTitle {
+  margin: 0 0 var(--space-2);
+  font-family: var(--font-body);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--color-accent);
+}
+.dishes {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+.dish {
+  display: block;
+  color: var(--color-ink);
+  font-weight: 500;
+}
+.desc {
+  display: block;
+  font-size: var(--fs-sm);
+  color: var(--color-ink-soft);
+}
+.allergy {
+  margin: var(--space-4) 0 0;
+  font-style: italic;
+  font-size: var(--fs-sm);
+  color: var(--color-ink-soft);
+}
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: start;
+}
+.infoGrid > * {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  min-width: 0;
+}
+.infoGrid p {
+  color: var(--color-ink-soft);
+  line-height: var(--lh-loose);
+}
+.facts {
+  margin: 0;
+  padding-left: 1.2em;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  color: var(--color-ink-soft);
+  line-height: var(--lh-loose);
+}
+
+.bookingSection {
+  padding-top: 0;
+}
+.booking {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-3);
+}
+.booking p {
+  max-width: 62ch;
+  color: var(--color-ink-soft);
+  line-height: var(--lh-loose);
+}
+.booking p a {
+  color: var(--color-ink);
+  text-decoration: underline;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 1000px) {
+  .menuGrid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 760px) {
+  .introGrid,
+  .infoGrid {
+    grid-template-columns: 1fr;
+  }
+}

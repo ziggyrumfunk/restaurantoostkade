@@ -1,11 +1,45 @@
 {
   "Promo": {
-    "date": "Lunch en diner",
-    "title": "Nieuwe menukaart",
-    "body": "Onze kaart is vernieuwd, voor lunch en diner. Van ceviche met aardbei tot gamba's van de grill en romige truffelpasta. Kom langs en proef het zelf.",
-    "cta": "Bekijk de menukaart",
+    "date": "Vanaf 1 december",
+    "title": "Dineren in een iglo",
+    "body": "Deze winter staan er vier verwarmde iglo's op ons terras aan de haven. Reserveer online door een datum vanaf 1 december te kiezen, of mail naar <mail>info@restaurantoostkade.nl</mail>.",
+    "cta": "Reserveer je iglo",
+    "more": "Bekijk de iglo's",
     "close": "Sluiten",
-    "imageAlt": "Negen gerechten van de nieuwe menukaart van Restaurant Oostkade"
+    "imageAlt": "Twee doorzichtige iglo's met lichtjes, gedekte tafels en schapenvachten op het terras van Oostkade, met de tekst Iglo Experience"
+  },
+  "Iglo": {
+    "title": "Dineren in een iglo",
+    "lead": "Vanaf 1 december op ons terras aan de haven",
+    "metaDescription": "Deze winter dineer je bij Oostkade in een verwarmde iglo aan de haven van Oud-Beijerland. Sharing brunch of diner voor 2 tot 8 personen, vanaf 1 december.",
+    "reserveCta": "Reserveer je iglo",
+    "mailCta": "Mail ons",
+    "imageAlt": "Twee doorzichtige iglo's met lichtjes, gedekte tafels en schapenvachten op het terras van Oostkade, met de tekst Iglo Experience",
+    "intro": "Deze winter staan er vier verwarmde iglo's op ons terras. Daar zit je met je eigen gezelschap aan tafel, onder de lichtjes en uit de wind. Ideaal voor een avond met vrienden, een familiediner of een etentje met collega's.",
+    "formatTitle": "Brunch of diner",
+    "formatBody": "Van 12:00 tot 15:00 serveren we de sharing brunch, vanaf 17:00 een sharing diner van vier of vijf gangen. Alle gerechten komen in het midden van de tafel, zodat iedereen van alles kan proeven.",
+    "menusTitle": "De menu's",
+    "brunchTitle": "Sharing brunch",
+    "brunchPrice": "€47,50 p.p.",
+    "dinner4Title": "Sharing diner, 4 gangen",
+    "dinner4Price": "€64,50 p.p.",
+    "dinner5Title": "Sharing diner, 5 gangen",
+    "dinner5Price": "€74,50 p.p.",
+    "course": "Gang {n}",
+    "dessert": "Dessert",
+    "dessertPlatter": "dessertplateau",
+    "luxuryDessertPlatter": "luxe dessertplateau",
+    "allergy": "Heb je een allergie? Laat het ons weten.",
+    "goodToKnowTitle": "Goed om te weten",
+    "fact1": "Elke iglo is voor één gezelschap van 2 tot 8 personen.",
+    "fact2": "Doordeweeks reserveer je al vanaf 2 personen. In het weekend kan dat bij één iglo, voor de andere drie geldt een minimum van 4 personen.",
+    "fact3": "De iglo's staan er van 1 december t/m 28 februari, van dinsdag t/m zondag.",
+    "fact4": "De brunch start tussen 12:00 en 12:45, het diner tussen 17:00 en 18:30.",
+    "fact5": "Laat bij je reservering in de opmerkingen weten welk menu je wilt.",
+    "extrasTitle": "Iets te vieren?",
+    "extrasBody": "Maak er iets extra's van met een verjaardagspakket met ballonnen en slingers (€25 p.p.) of een romantisch pakket met rozenblaadjes en hartjesballonnen (€30 p.p.). Zin in nog meer zoet? Vanaf 5 personen kun je er een chocoladefontein bij nemen voor €17,50 p.p.",
+    "bookingTitle": "Reserveren",
+    "bookingBody": "Reserveer je iglo online: kies een datum vanaf 1 december en een tijd, en daarna de Iglo Experience. Liever mailen? Stuur een bericht naar <mail>info@restaurantoostkade.nl</mail>."
   },
   "ImpressionsPage": {
     "tab": "Sfeerimpressie",
@@ -44,7 +78,8 @@
     "contact": "Contact",
     "languageLabel": "Taal",
     "openMenu": "Menu openen",
-    "closeMenu": "Menu sluiten"
+    "closeMenu": "Menu sluiten",
+    "iglo": "Iglo's"
   },
   "Home": {
     "heroEyebrow": "Aan de haven van Oud-Beijerland",

@@ -444,3 +444,9 @@ footer a.btn-light:hover {
   z-index: 1000;
 }
 .skip-link:focus { left: var(--space-3); }
+
+/* The Zenchef widget opens itself at the top z-index, which would cover the
+   cookie modal and promo popup. Hidden while one of those is open. */
+.zc-hidden iframe[src*='bookings.zenchef.com'] {
+  visibility: hidden;
+}

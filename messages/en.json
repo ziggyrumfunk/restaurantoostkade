@@ -1,11 +1,45 @@
 {
   "Promo": {
-    "date": "Lunch and dinner",
-    "title": "A new menu",
-    "body": "Our menu has been renewed, for lunch and dinner. From ceviche with strawberry to grilled prawns and creamy truffle pasta. Come by and taste it for yourself.",
-    "cta": "View the menu",
+    "date": "From 1 December",
+    "title": "Dine in an igloo",
+    "body": "This winter, four heated igloos are coming to our terrace by the harbour. Book online by choosing a date from 1 December, or email <mail>info@restaurantoostkade.nl</mail>.",
+    "cta": "Book your igloo",
+    "more": "See the igloos",
     "close": "Close",
-    "imageAlt": "Nine dishes from the new menu at Restaurant Oostkade"
+    "imageAlt": "Two transparent igloos with string lights, set tables and sheepskins on the Oostkade terrace, with the text Iglo Experience"
+  },
+  "Iglo": {
+    "title": "Dine in an igloo",
+    "lead": "From 1 December on our terrace by the harbour",
+    "metaDescription": "This winter, dine at Oostkade in a heated igloo on the harbour of Oud-Beijerland. Sharing brunch or dinner for 2 to 8 people, from 1 December.",
+    "reserveCta": "Book your igloo",
+    "mailCta": "Email us",
+    "imageAlt": "Two transparent igloos with string lights, set tables and sheepskins on the Oostkade terrace, with the text Iglo Experience",
+    "intro": "This winter, four heated igloos are coming to our terrace. You sit at the table with your own group, under the lights and out of the wind. Perfect for an evening with friends, a family dinner or a meal with colleagues.",
+    "formatTitle": "Brunch or dinner",
+    "formatBody": "From 12:00 to 15:00 we serve the sharing brunch, and from 17:00 a sharing dinner of four or five courses. All dishes go in the middle of the table, so everyone gets to taste a bit of everything.",
+    "menusTitle": "The menus",
+    "brunchTitle": "Sharing brunch",
+    "brunchPrice": "€47.50 p.p.",
+    "dinner4Title": "Sharing dinner, 4 courses",
+    "dinner4Price": "€64.50 p.p.",
+    "dinner5Title": "Sharing dinner, 5 courses",
+    "dinner5Price": "€74.50 p.p.",
+    "course": "Course {n}",
+    "dessert": "Dessert",
+    "dessertPlatter": "dessert platter",
+    "luxuryDessertPlatter": "luxury dessert platter",
+    "allergy": "Do you have an allergy? Let us know.",
+    "goodToKnowTitle": "Good to know",
+    "fact1": "Each igloo is for one group of 2 to 8 people.",
+    "fact2": "On weekdays you can book from 2 people. On weekends that's possible in one igloo, the other three have a minimum of 4 people.",
+    "fact3": "The igloos are available from 1 December to 28 February, Tuesday to Sunday.",
+    "fact4": "Brunch starts between 12:00 and 12:45, dinner between 17:00 and 18:30.",
+    "fact5": "Let us know in the comments of your booking which menu you'd like.",
+    "extrasTitle": "Something to celebrate?",
+    "extrasBody": "Make it extra special with a birthday package with balloons and garlands (€25 p.p.) or a romantic package with rose petals and heart balloons (€30 p.p.). Fancy something sweeter? From 5 people, you can add a chocolate fountain for €17.50 p.p.",
+    "bookingTitle": "Booking",
+    "bookingBody": "Book your igloo online: choose a date from 1 December and a time, then the Iglo Experience. Prefer email? Send a message to <mail>info@restaurantoostkade.nl</mail>."
   },
   "ImpressionsPage": {
     "tab": "Impressions",
@@ -44,7 +78,8 @@
     "contact": "Contact",
     "languageLabel": "Language",
     "openMenu": "Open menu",
-    "closeMenu": "Close menu"
+    "closeMenu": "Close menu",
+    "iglo": "Igloos"
   },
   "Home": {
     "heroEyebrow": "On the harbour of Oud-Beijerland",

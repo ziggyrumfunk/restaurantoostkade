@@ -1,11 +1,45 @@
 {
   "Promo": {
-    "date": "Lunch und Dinner",
-    "title": "Neue Speisekarte",
-    "body": "Unsere Karte ist erneuert, für Lunch und Dinner. Von Ceviche mit Erdbeere bis zu gegrillten Garnelen und cremiger Trüffelpasta. Kommen Sie vorbei und probieren Sie selbst.",
-    "cta": "Zur Speisekarte",
+    "date": "Ab dem 1. Dezember",
+    "title": "Essen im Iglu",
+    "body": "In diesem Winter stehen vier beheizte Iglus auf unserer Terrasse am Hafen. Reservieren Sie online, indem Sie ein Datum ab dem 1. Dezember wählen, oder schreiben Sie an <mail>info@restaurantoostkade.nl</mail>.",
+    "cta": "Iglu reservieren",
+    "more": "Zu den Iglus",
     "close": "Schließen",
-    "imageAlt": "Neun Gerichte der neuen Speisekarte im Restaurant Oostkade"
+    "imageAlt": "Zwei durchsichtige Iglus mit Lichterketten, gedeckten Tischen und Schaffellen auf der Terrasse von Oostkade, mit dem Text Iglo Experience"
+  },
+  "Iglo": {
+    "title": "Essen im Iglu",
+    "lead": "Ab dem 1. Dezember auf unserer Terrasse am Hafen",
+    "metaDescription": "Diesen Winter essen Sie bei Oostkade in einem beheizten Iglu am Hafen von Oud-Beijerland. Sharing Brunch oder Dinner für 2 bis 8 Personen, ab dem 1. Dezember.",
+    "reserveCta": "Iglu reservieren",
+    "mailCta": "E-Mail senden",
+    "imageAlt": "Zwei durchsichtige Iglus mit Lichterketten, gedeckten Tischen und Schaffellen auf der Terrasse von Oostkade, mit dem Text Iglo Experience",
+    "intro": "In diesem Winter stehen vier beheizte Iglus auf unserer Terrasse. Dort sitzen Sie mit Ihrer eigenen Gruppe am Tisch, unter den Lichtern und geschützt vor dem Wind. Ideal für einen Abend mit Freunden, ein Familienessen oder ein Essen mit Kollegen.",
+    "formatTitle": "Brunch oder Dinner",
+    "formatBody": "Von 12:00 bis 15:00 Uhr servieren wir den Sharing Brunch, ab 17:00 Uhr ein Sharing Dinner mit vier oder fünf Gängen. Alle Gerichte kommen in die Mitte des Tisches, sodass jeder von allem probieren kann.",
+    "menusTitle": "Die Menüs",
+    "brunchTitle": "Sharing Brunch",
+    "brunchPrice": "47,50 € p. P.",
+    "dinner4Title": "Sharing Dinner, 4 Gänge",
+    "dinner4Price": "64,50 € p. P.",
+    "dinner5Title": "Sharing Dinner, 5 Gänge",
+    "dinner5Price": "74,50 € p. P.",
+    "course": "Gang {n}",
+    "dessert": "Dessert",
+    "dessertPlatter": "Dessertplatte",
+    "luxuryDessertPlatter": "Luxus-Dessertplatte",
+    "allergy": "Haben Sie eine Allergie? Sagen Sie uns Bescheid.",
+    "goodToKnowTitle": "Gut zu wissen",
+    "fact1": "Jedes Iglu ist für eine Gruppe von 2 bis 8 Personen.",
+    "fact2": "Unter der Woche können Sie ab 2 Personen reservieren. Am Wochenende geht das in einem Iglu, für die anderen drei gilt ein Minimum von 4 Personen.",
+    "fact3": "Die Iglus stehen vom 1. Dezember bis zum 28. Februar bereit, von Dienstag bis Sonntag.",
+    "fact4": "Der Brunch beginnt zwischen 12:00 und 12:45 Uhr, das Dinner zwischen 17:00 und 18:30 Uhr.",
+    "fact5": "Teilen Sie uns bei der Reservierung in den Anmerkungen mit, welches Menü Sie möchten.",
+    "extrasTitle": "Etwas zu feiern?",
+    "extrasBody": "Machen Sie es zu etwas Besonderem mit einem Geburtstagspaket mit Luftballons und Girlanden (25 € p. P.) oder einem romantischen Paket mit Rosenblättern und Herzballons (30 € p. P.). Lust auf noch mehr Süßes? Ab 5 Personen können Sie einen Schokoladenbrunnen dazunehmen, für 17,50 € p. P.",
+    "bookingTitle": "Reservieren",
+    "bookingBody": "Reservieren Sie Ihr Iglu online: Wählen Sie ein Datum ab dem 1. Dezember und eine Uhrzeit, danach die Iglo Experience. Lieber per E-Mail? Schreiben Sie an <mail>info@restaurantoostkade.nl</mail>."
   },
   "ImpressionsPage": {
     "tab": "Impressionen",
@@ -44,7 +78,8 @@
     "contact": "Kontakt",
     "languageLabel": "Sprache",
     "openMenu": "Menü öffnen",
-    "closeMenu": "Menü schließen"
+    "closeMenu": "Menü schließen",
+    "iglo": "Iglus"
   },
   "Home": {
     "heroEyebrow": "Am Hafen von Oud-Beijerland",

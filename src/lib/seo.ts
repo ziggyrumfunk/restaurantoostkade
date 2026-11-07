@@ -48,13 +48,17 @@ export function pageMetadata({
   locale,
   title,
   description,
+  image = OG_IMAGE,
 }: {
   route: Route;
   locale: string;
   title: string;
   description: string;
+  /** Share-preview image; defaults to the site's standard one. */
+  image?: { url: string; width: number; height: number; alt?: string };
 }): Metadata {
   const alternates = pageAlternates(route, locale);
+  const shareImage = { alt: SITE_NAME, ...image };
   const shareTitle = `${title} | ${SITE_NAME}`;
   return {
     title,
@@ -67,13 +71,13 @@ export function pageMetadata({
       siteName: SITE_NAME,
       locale: OG_LOCALE[toLocale(locale)],
       type: 'website',
-      images: [OG_IMAGE],
+      images: [shareImage],
     },
     twitter: {
       card: 'summary_large_image',
       title: shareTitle,
       description,
-      images: [OG_IMAGE.url],
+      images: [shareImage.url],
     },
   };
 }

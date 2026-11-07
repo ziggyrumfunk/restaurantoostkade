@@ -1,4 +1,4 @@
-/* Promo modal (currently: new menu announcement with a 3x3 dish collage).
+/* Promo modal (currently: Iglo Experience announcement).
    Theme-aware via design tokens; sharp corners to match the site. Shown once
    per session, auto-expires (see PromoPopup.tsx). */
 
@@ -22,46 +22,44 @@
 .card {
   position: relative;
   display: flex;
+  flex-direction: column;
   width: 100%;
-  max-width: 840px;
-  max-height: calc(100svh - 2 * var(--space-5));
+  max-width: 600px;
+  max-height: calc(100svh - 2 * var(--space-4));
   background: var(--color-bg-elev);
   color: var(--color-ink);
   box-shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
-  overflow: hidden;
+  overflow-y: auto;
   animation: cardIn 360ms var(--ease) both;
 }
 
-/* Collage column (left on desktop): 3x3 grid of dish photos. */
-.media {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  gap: 3px;
-  flex: 0 0 46%;
-  min-height: 420px;
-  background: var(--color-surface);
-}
-
-.tile {
-  position: relative;
-  overflow: hidden;
-}
-
+/* Full width on top: the visual has text in it, so it is never cropped. */
 .image {
-  object-fit: cover;
-  object-position: center;
+  display: block;
+  width: 100%;
+  height: auto;
+  flex: none;
 }
 
-/* Text column (right on desktop). */
 .content {
-  flex: 1 1 auto;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: center;
-  gap: var(--space-4);
-  padding: clamp(1.75rem, 4vw, 3rem);
+  gap: var(--space-3);
+  padding: clamp(1.5rem, 4vw, 2.25rem);
+}
+
+.body a {
+  color: var(--color-ink);
+  text-decoration: underline;
+  overflow-wrap: anywhere;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: var(--space-2);
 }
 
 .eyebrow {
@@ -87,10 +85,6 @@
   line-height: var(--lh-loose);
   color: var(--color-ink-soft);
   max-width: 42ch;
-}
-
-.content :global(.btn) {
-  margin-top: var(--space-2);
 }
 
 /* Close button — sits in the top-right corner of the card. */
@@ -119,22 +113,14 @@
 /* Stack on small screens: image as a banner on top, text below. */
 @media (max-width: 760px) {
   .card {
-    flex-direction: column;
     max-width: 420px;
-    max-height: calc(100svh - 2 * var(--space-4));
-    overflow-y: auto;
-  }
-  .media {
-    flex: none;
-    width: 100%;
-    min-height: 0;
-    aspect-ratio: 4 / 3;
   }
   .content {
     align-items: center;
     text-align: center;
-    gap: var(--space-3);
-    padding: clamp(1.5rem, 6vw, 2rem);
+  }
+  .actions {
+    justify-content: center;
   }
   .body {
     font-size: var(--fs-base);

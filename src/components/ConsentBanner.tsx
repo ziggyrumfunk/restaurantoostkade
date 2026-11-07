@@ -65,10 +65,12 @@ export function ConsentBanner() {
 
     const prevOverflow = document.body.style.overflow;
     document.body.style.overflow = 'hidden';
+    document.documentElement.classList.add('zc-hidden');
 
     return () => {
       document.removeEventListener('keydown', onKey);
       document.body.style.overflow = prevOverflow;
+      document.documentElement.classList.remove('zc-hidden');
     };
   }, [visible]);
 

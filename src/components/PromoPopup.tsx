@@ -3,35 +3,27 @@
 import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
-import { Link } from '@/i18n/routing';
+import { Link, usePathname } from '@/i18n/routing';
+import { CONSENT_CHANGED_EVENT, getStoredConsent } from '@/lib/consent';
+import { IGLO_FIRST_DAY, IGLO_IMAGE } from '@/lib/igloData';
+import { ReserveButton } from './ReserveButton';
 import styles from './PromoPopup.module.css';
 
-const SESSION_KEY = 'oostkade_nieuwe_kaart_2026_seen';
+const SESSION_KEY = 'oostkade_iglo_2026_seen';
 
-// New menu announcement runs for three weeks: stop after Monday 3 August 2026.
+// Iglo Experience announcement: stops after the igloos' last day, 28 Feb 2027.
 // To reuse this popup for another promo, change the text in messages/*.json,
-// swap the images below, and update this date. To remove it entirely, delete
-// the <PromoPopup /> line in src/app/[locale]/layout.tsx.
-const PROMO_END = new Date('2026-08-04T00:00:00');
+// swap the image and links below, and update this date. To remove it entirely,
+// delete the <PromoPopup /> line in src/app/[locale]/layout.tsx.
+const PROMO_END = new Date('2027-03-01T00:00:00');
 
-// 3x3 collage of dishes from the new menu (public/menu-juli/).
-const COLLAGE = [
-  '/menu-juli/oostkade-menu-juli-13.jpg', // ceviche met aardbei
-  '/menu-juli/oostkade-menu-juli-01.jpg', // mosselen
-  '/menu-juli/oostkade-menu-juli-02.jpg', // flatbread (lunch)
-  '/menu-juli/oostkade-menu-juli-03.jpg', // gamba's
-  '/menu-juli/oostkade-menu-juli-15.jpg', // truffelpasta
-  '/menu-juli/oostkade-menu-juli-06.jpg', // rode biet
-  '/menu-juli/oostkade-menu-juli-14.jpg', // rundvlees
-  '/menu-juli/oostkade-menu-juli-05.jpg', // tonijntartaar
-  '/menu-juli/oostkade-menu-juli-17.jpg', // teriyakikip
-];
-
-// Wait a moment after load so the popup appears just after the intro splash.
+// Wait a moment so the popup appears just after the intro splash.
 const SHOW_DELAY = 1600;
 
 export function PromoPopup() {
   const t = useTranslations('Promo');
+  const pathname = usePathname();
+  const onPromoPage = pathname === '/iglo';
   const [visible, setVisible] = useState(false);
   const [leaving, setLeaving] = useState(false);
   const closeRef = useRef<HTMLButtonElement | null>(null);
@@ -44,17 +36,36 @@ export function PromoPopup() {
     }, 300);
   };
 
-  // Decide whether to show: only within the promo window, once per session.
+  // Decide whether to show: only within the promo window, once per session, and
+  // never on the page it promotes (being there counts as having seen it). Waits
+  // for the cookie choice: both modals lock body scroll, and restoring out of
+  // order would leave the page unscrollable.
   useEffect(() => {
     if (new Date() >= PROMO_END) return;
     if (window.sessionStorage.getItem(SESSION_KEY) === '1') return;
-
-    const timer = window.setTimeout(() => {
-      setVisible(true);
+    if (onPromoPage) {
       window.sessionStorage.setItem(SESSION_KEY, '1');
-    }, SHOW_DELAY);
-    return () => window.clearTimeout(timer);
-  }, []);
+      return;
+    }
+
+    let timer: number | undefined;
+    const schedule = () => {
+      timer = window.setTimeout(() => {
+        setVisible(true);
+        window.sessionStorage.setItem(SESSION_KEY, '1');
+      }, SHOW_DELAY);
+    };
+
+    if (getStoredConsent() !== null) {
+      schedule();
+      return () => window.clearTimeout(timer);
+    }
+    window.addEventListener(CONSENT_CHANGED_EVENT, schedule, { once: true });
+    return () => {
+      window.removeEventListener(CONSENT_CHANGED_EVENT, schedule);
+      window.clearTimeout(timer);
+    };
+  }, [onPromoPage]);
 
   // While open: focus the close button, lock body scroll, close on Escape.
   useEffect(() => {
@@ -68,10 +79,12 @@ export function PromoPopup() {
 
     const prevOverflow = document.body.style.overflow;
     document.body.style.overflow = 'hidden';
+    document.documentElement.classList.add('zc-hidden');
 
     return () => {
       document.removeEventListener('keydown', onKey);
       document.body.style.overflow = prevOverflow;
+      document.documentElement.classList.remove('zc-hidden');
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [visible]);
@@ -99,27 +112,31 @@ export function PromoPopup() {
           </svg>
         </button>
 
-        <div className={styles.media} role="img" aria-label={t('imageAlt')}>
-          {COLLAGE.map((src) => (
-            <div key={src} className={styles.tile}>
-              <Image
-                src={src}
-                alt=""
-                fill
-                sizes="(max-width: 760px) 31vw, 140px"
-                className={styles.image}
-              />
-            </div>
-          ))}
-        </div>
+        <Image
+          src={IGLO_IMAGE.url}
+          alt={t('imageAlt')}
+          width={IGLO_IMAGE.width}
+          height={IGLO_IMAGE.height}
+          sizes="(max-width: 640px) 100vw, 600px"
+          className={styles.image}
+        />
 
         <div className={styles.content}>
           <span className={styles.eyebrow}>{t('date')}</span>
           <h2 id="promo-title" className={styles.title}>{t('title')}</h2>
-          <p className={styles.body}>{t('body')}</p>
-          <Link href="/menu" className="btn" onClick={handleClose}>
-            {t('cta')}
-          </Link>
+          <p className={styles.body}>
+            {t.rich('body', {
+              mail: (chunks) => <a href="mailto:info@restaurantoostkade.nl">{chunks}</a>,
+            })}
+          </p>
+          <div className={styles.actions}>
+            <ReserveButton className="btn" day={IGLO_FIRST_DAY} onClick={handleClose}>
+              {t('cta')}
+            </ReserveButton>
+            <Link href="/iglo" className="btn btn-ghost" onClick={handleClose}>
+              {t('more')}
+            </Link>
+          </div>
         </div>
       </div>
     </div>

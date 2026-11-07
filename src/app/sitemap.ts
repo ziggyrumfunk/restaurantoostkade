@@ -3,13 +3,14 @@ import { routing } from '@/i18n/routing';
 
 const SITE = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://restaurantoostkade.nl';
 
-const ROUTES = ['/', '/menu', '/drinks', '/lunch', '/impressions', '/events', '/reservations', '/contact'] as const;
+const ROUTES = ['/', '/menu', '/drinks', '/lunch', '/iglo', '/impressions', '/events', '/reservations', '/contact'] as const;
 
 const dutchPathFor: Record<(typeof ROUTES)[number], string> = {
   '/': '/',
   '/menu': '/menukaart',
   '/drinks': '/dranken',
   '/lunch': '/lunch',
+  '/iglo': '/iglo',
   '/impressions': '/sfeer',
   '/events': '/private-dining',
   '/reservations': '/reserveren',
@@ -21,6 +22,7 @@ const englishPathFor: Record<(typeof ROUTES)[number], string> = {
   '/menu': '/menu',
   '/drinks': '/drinks',
   '/lunch': '/lunch',
+  '/iglo': '/iglo',
   '/impressions': '/impressions',
   '/events': '/private-dining',
   '/reservations': '/reservations',
@@ -32,6 +34,7 @@ const germanPathFor: Record<(typeof ROUTES)[number], string> = {
   '/menu': '/speisekarte',
   '/drinks': '/getraenke',
   '/lunch': '/lunch',
+  '/iglo': '/iglo',
   '/impressions': '/impressionen',
   '/events': '/private-dining',
   '/reservations': '/reservierung',

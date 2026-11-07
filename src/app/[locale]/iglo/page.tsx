@@ -2,12 +2,22 @@ import type { ReactNode } from 'react';
 import Image from 'next/image';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { pageMetadata } from '@/lib/seo';
-import { IGLO_FIRST_DAY, IGLO_IMAGE, IGLO_MENUS } from '@/lib/igloData';
-import { PageHeader } from '@/components/PageHeader';
+import {
+  IGLO_DOME_IMAGE,
+  IGLO_FIRST_DAY,
+  IGLO_IMAGE,
+  IGLO_MENUS,
+  IGLO_TABLE_IMAGE,
+  IGLO_TABLE_SPREAD,
+} from '@/lib/igloData';
 import { ReserveButton } from '@/components/ReserveButton';
 import styles from './iglo.module.css';
 
 const EMAIL = 'info@restaurantoostkade.nl';
+
+const GLANCE = ['When', 'Days', 'Group', 'Price'] as const;
+const FACTS = ['factParty', 'factWeekend', 'factMenu'] as const;
+const EXTRAS = ['extraBirthday', 'extraRomantic', 'extraFountain'] as const;
 
 export async function generateMetadata({
   params,
@@ -37,52 +47,93 @@ export default async function IgloPage({
 
   return (
     <>
-      <PageHeader eyebrow="Iglo Experience" title={t('title')} lead={t('lead')}>
-        <div className={styles.actions}>
-          <ReserveButton className="btn" day={IGLO_FIRST_DAY}>{t('reserveCta')}</ReserveButton>
-          <a className="btn btn-ghost" href={`mailto:${EMAIL}`}>{t('mailCta')}</a>
-        </div>
-      </PageHeader>
-
-      <div className="container">
+      <div className={styles.hero}>
         <Image
           src={IGLO_IMAGE.url}
           alt={t('imageAlt')}
           width={IGLO_IMAGE.width}
           height={IGLO_IMAGE.height}
-          sizes="(max-width: 1280px) 100vw, 1200px"
-          className={styles.bannerImg}
+          sizes="100vw"
+          className={styles.heroImg}
           priority
         />
       </div>
 
+      <header className={`container ${styles.heading}`}>
+        <div className={styles.headingText}>
+          <h1 className="handwritten">{t('title')}</h1>
+          <p className={styles.headingLead}>{t('lead')}</p>
+        </div>
+        <div className={styles.actions}>
+          <ReserveButton className="btn" day={IGLO_FIRST_DAY}>{t('reserveCta')}</ReserveButton>
+          <a className="btn btn-ghost" href={`mailto:${EMAIL}`}>{t('mailCta')}</a>
+        </div>
+      </header>
+
+      <div className="container">
+        <dl className={styles.glance}>
+          {GLANCE.map((key) => (
+            <div key={key}>
+              <dt>{t(`glance${key}Label`)}</dt>
+              <dd>{t(`glance${key}`)}</dd>
+            </div>
+          ))}
+        </dl>
+      </div>
+
       <section className="section">
-        <div className={`container ${styles.introGrid}`}>
-          <div className={`${styles.copy} reveal`}>
-            <p className="lead">{t('intro')}</p>
-            <h2 className={`${styles.h2} handwritten`}>{t('formatTitle')}</h2>
+        <div className={`container ${styles.intro}`}>
+          <div className={`${styles.introText} reveal`}>
+            <p className={styles.introLead}>{t('intro')}</p>
+            <h2 className={styles.h3}>{t('formatTitle')}</h2>
             <p>{t('formatBody')}</p>
           </div>
-          <ul className={`${styles.prices} reveal`}>
-            {IGLO_MENUS.map((menu) => (
-              <li key={menu.id}>
-                <strong>{t(`${menu.id}Title`)}</strong>
-                <span className={styles.dots} aria-hidden="true" />
-                <span className={styles.price}>{t(`${menu.id}Price`)}</span>
-              </li>
-            ))}
-          </ul>
+          <div className={styles.introImages}>
+            <div className={`${styles.frame} reveal`}>
+              <Image
+                src={IGLO_TABLE_IMAGE.url}
+                alt={t('tableAlt')}
+                width={IGLO_TABLE_IMAGE.width}
+                height={IGLO_TABLE_IMAGE.height}
+                sizes="(max-width: 900px) 100vw, 640px"
+              />
+            </div>
+            <div className={`${styles.frame} reveal`}>
+              <Image
+                src={IGLO_DOME_IMAGE.url}
+                alt={t('domeAlt')}
+                width={IGLO_DOME_IMAGE.width}
+                height={IGLO_DOME_IMAGE.height}
+                sizes="(max-width: 900px) 100vw, 640px"
+              />
+            </div>
+          </div>
         </div>
       </section>
 
-      <section className={`section ${styles.menus}`}>
+      <section className={styles.menus}>
         <div className="container">
-          <h2 className={`${styles.h2} ${styles.menusTitle} handwritten`}>{t('menusTitle')}</h2>
-          <div className={styles.menuGrid}>
-            {IGLO_MENUS.map((menu) => (
-              <article key={menu.id} className={`${styles.menu} reveal`}>
-                <h3 className={styles.menuTitle}>{t(`${menu.id}Title`)}</h3>
-                <p className={styles.menuPrice}>{t(`${menu.id}Price`)}</p>
+          <h2 className={`${styles.menusTitle} handwritten`}>{t('menusTitle')}</h2>
+          {IGLO_MENUS.map((menu) => (
+            <article key={menu.id} className={styles.menu}>
+              <div className={styles.menuMedia}>
+                <div className={`${styles.frame} ${styles.menuFrame} reveal`}>
+                  <Image
+                    src={menu.image}
+                    alt={t(`${menu.id}ImageAlt`)}
+                    fill
+                    sizes="(max-width: 900px) 100vw, 520px"
+                  />
+                </div>
+              </div>
+
+              <div className={styles.menuBody}>
+                <header className={styles.menuHeader}>
+                  <h3 className={styles.menuTitle}>{t(`${menu.id}Title`)}</h3>
+                  <p className={styles.menuPrice}>{t(`${menu.id}Price`)}</p>
+                  <p className={styles.menuTime}>{t(menu.time)}</p>
+                </header>
+
                 {menu.groups.map((group, i) => {
                   const parts = [
                     group.course ? t('course', { n: group.course }) : null,
@@ -90,7 +141,7 @@ export default async function IgloPage({
                   ].filter(Boolean);
                   return (
                     <div key={i} className={styles.group}>
-                      {parts.length > 0 && <h4 className={styles.groupTitle}>{parts.join(': ')}</h4>}
+                      <h4 className={styles.groupTitle}>{parts.join(': ')}</h4>
                       <ul className={styles.dishes}>
                         {group.dishes.map((dish) => (
                           <li key={dish.name}>
@@ -102,33 +153,48 @@ export default async function IgloPage({
                     </div>
                   );
                 })}
-              </article>
-            ))}
-          </div>
+
+                <ReserveButton className={`btn btn-ghost ${styles.menuCta}`} day={IGLO_FIRST_DAY}>
+                  {t('reserveCta')}
+                </ReserveButton>
+              </div>
+            </article>
+          ))}
           <p className={styles.allergy}>{t('allergy')}</p>
         </div>
       </section>
 
-      <section className="section">
-        <div className={`container ${styles.infoGrid}`}>
+      <section className={`section ${styles.practical}`}>
+        <div className={`container ${styles.practicalGrid}`}>
           <div className="reveal">
-            <h2 className={`${styles.h2} handwritten`}>{t('goodToKnowTitle')}</h2>
+            <h2 className={`${styles.practicalTitle} handwritten`}>{t('goodToKnowTitle')}</h2>
             <ul className={styles.facts}>
-              {(['fact1', 'fact2', 'fact3', 'fact4', 'fact5'] as const).map((key) => (
+              {FACTS.map((key) => (
                 <li key={key}>{t(key)}</li>
               ))}
             </ul>
           </div>
           <div className="reveal">
-            <h2 className={`${styles.h2} handwritten`}>{t('extrasTitle')}</h2>
-            <p>{t('extrasBody')}</p>
+            <h2 className={`${styles.practicalTitle} handwritten`}>{t('extrasTitle')}</h2>
+            <ul className={styles.extras}>
+              {EXTRAS.map((key) => (
+                <li key={key}>
+                  <div>
+                    <strong>{t(key)}</strong>
+                    <span>{t(`${key}Desc`)}</span>
+                  </div>
+                  <span className={styles.extraPrice}>{t(`${key}Price`)}</span>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>
 
-      <section className={`section ${styles.bookingSection}`}>
-        <div className={`container ${styles.booking} reveal`}>
-          <h2 className={`${styles.h2} handwritten`}>{t('bookingTitle')}</h2>
+      <section className={styles.booking}>
+        <Image src={IGLO_TABLE_SPREAD} alt="" fill sizes="100vw" className={styles.bookingImg} />
+        <div className={`container ${styles.bookingInner} reveal`}>
+          <h2 className="handwritten">{t('bookingTitle')}</h2>
           <p>{t.rich('bookingBody', { mail })}</p>
           <div className={styles.actions}>
             <ReserveButton className="btn" day={IGLO_FIRST_DAY}>{t('reserveCta')}</ReserveButton>

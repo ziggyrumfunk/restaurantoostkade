@@ -5,28 +5,42 @@
 
 export const IGLO_IMAGE = { url: '/iglo/oostkade-iglo-01.webp', width: 1600, height: 900 };
 
+/** Detail crops of the igloo visual, cut clear of the lettering baked into it. */
+export const IGLO_TABLE_IMAGE = { url: '/iglo/oostkade-iglo-tafel.webp', width: 910, height: 385 };
+export const IGLO_DOME_IMAGE = { url: '/iglo/oostkade-iglo-koepel.webp', width: 820, height: 415 };
+
+/** A full shared table, behind the booking section. */
+export const IGLO_TABLE_SPREAD = '/menu-juli/oostkade-menu-juli-07.jpg';
+
 /** First day the igloos can be booked: the widget opens on this date. */
 export const IGLO_FIRST_DAY = '2026-12-01';
 
 export type IgloGroup = {
-  /** Course number; omitted for the brunch's opening dishes. */
+  /** Course number; omitted for the brunch, which isn't served in courses. */
   course?: number;
   /** Message key for the group's label, added after the course number. */
-  label?: 'dessert' | 'dessertPlatter' | 'luxuryDessertPlatter';
+  label?: 'savory' | 'dessert' | 'dessertPlatter' | 'luxuryDessertPlatter';
   dishes: { name: string; desc?: string }[];
 };
 
 export type IgloMenu = {
   /** Message key prefix for the menu's title and price. */
   id: 'brunch' | 'dinner4' | 'dinner5';
+  /** Message key for the start times. */
+  time: 'brunchTime' | 'dinnerTime';
+  /** A dish from this menu; its alt text is in messages under `${id}ImageAlt`. */
+  image: string;
   groups: IgloGroup[];
 };
 
 export const IGLO_MENUS: IgloMenu[] = [
   {
     id: 'brunch',
+    time: 'brunchTime',
+    image: '/menu-juli/oostkade-menu-juli-12.jpg',
     groups: [
       {
+        label: 'savory',
         dishes: [
           { name: 'Brioche Steak Tartare' },
           { name: 'Kreeftensoep' },
@@ -50,6 +64,8 @@ export const IGLO_MENUS: IgloMenu[] = [
   },
   {
     id: 'dinner4',
+    time: 'dinnerTime',
+    image: '/menu-juli/oostkade-menu-juli-06.jpg',
     groups: [
       {
         course: 1,
@@ -89,6 +105,8 @@ export const IGLO_MENUS: IgloMenu[] = [
   },
   {
     id: 'dinner5',
+    time: 'dinnerTime',
+    image: '/menu-juli/oostkade-menu-juli-03.jpg',
     groups: [
       {
         course: 1,

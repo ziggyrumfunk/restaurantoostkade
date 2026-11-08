@@ -42,7 +42,7 @@ export const IGLO_MENUS: IgloMenu[] = [
       {
         label: 'savory',
         dishes: [
-          { name: 'Brioche Steak Tartare' },
+          { name: 'Brioche Tonijnsalade' },
           { name: 'Kreeftensoep' },
           { name: 'Minikroketjes van oude kaas' },
           { name: 'Eggs Benedict' },

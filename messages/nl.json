@@ -64,7 +64,30 @@
     "extraFountainPrice": "€17,50 p.p.",
     "facadeAlt": "Twee doorzichtige iglo's met lichtjes op het terras, voor de bakstenen gevel van Oostkade in de schemering",
     "closeAlt": "Twee doorzichtige iglo's van dichtbij, met gedekte ronde tafels, kaarslicht en schapenvachten over de stoelen",
-    "factDeposit": "We hanteren een aanbetaling van €20 p.p. Die brengen we op de dag zelf in mindering op de rekening."
+    "factDeposit": "We hanteren een aanbetaling van €20 p.p. Die brengen we op de dag zelf in mindering op de rekening.",
+    "kerstNote": "Met kerst serveren we in de iglo's ons kerstmenu van zes gangen.",
+    "kerstLink": "Bekijk het kerstmenu"
+  },
+  "Kerst": {
+    "eyebrow": "Kerst 2026",
+    "title": "Kerstmenu",
+    "lead": "Zes gangen met keuze, in het restaurant of in een verwarmde iglo aan de haven.",
+    "metaTitle": "Kerstmenu 2026 in Oud-Beijerland",
+    "metaDescription": "Het kerstmenu 2026 van Restaurant Oostkade aan de haven van Oud-Beijerland: zes gangen met keuze, €88,50 p.p. in het restaurant of €110 p.p. in een verwarmde iglo.",
+    "restaurantLabel": "In het restaurant",
+    "restaurantPrice": "€88,50 p.p.",
+    "igloLabel": "In de iglo",
+    "igloPrice": "€110 p.p.",
+    "igloNote": "Vanaf 5 personen",
+    "reserveCta": "Reserveren",
+    "mailCta": "Mail ons",
+    "amuse": "Amuse",
+    "course": "Gang {n}",
+    "or": "of",
+    "allergy": "Heb je een allergie? Laat het ons weten.",
+    "howTo": "Reserveer online en kies <b>Restaurant</b> voor een tafel binnen of <b>Iglo Experience</b> voor een iglo, of mail naar <mail>info@restaurantoostkade.nl</mail>.",
+    "deposit": "<b>Zonder aanbetaling geen iglo-reservering.</b> De aanbetaling brengen we op de dag zelf in mindering op de rekening.",
+    "igloLink": "Meer over de iglo's"
   },
   "ImpressionsPage": {
     "tab": "Sfeerimpressie",
@@ -185,7 +208,9 @@
     "mustTry": "Must try",
     "veggie": "Vegetarisch",
     "tabDinner": "Dinerkaart",
-    "tabLunch": "Lunchkaart"
+    "tabLunch": "Lunchkaart",
+    "kerstNote": "Met kerst serveren we een kerstmenu van zes gangen.",
+    "kerstLink": "Bekijk het kerstmenu"
   },
   "Drinks": {
     "title": "Drankenkaart",

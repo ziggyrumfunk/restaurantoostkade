@@ -64,7 +64,30 @@
     "extraFountainPrice": "17,50 € p. P.",
     "facadeAlt": "Zwei durchsichtige Iglus mit Lichterketten auf der Terrasse, vor der Backsteinfassade von Oostkade in der Dämmerung",
     "closeAlt": "Zwei durchsichtige Iglus aus der Nähe, mit gedeckten runden Tischen, Kerzenlicht und Schaffellen über den Stühlen",
-    "factDeposit": "Wir erheben eine Anzahlung von 20 € p. P., die wir am Tag selbst von Ihrer Rechnung abziehen."
+    "factDeposit": "Wir erheben eine Anzahlung von 20 € p. P., die wir am Tag selbst von Ihrer Rechnung abziehen.",
+    "kerstNote": "An Weihnachten servieren wir in den Iglus unser Weihnachtsmenü mit sechs Gängen.",
+    "kerstLink": "Zum Weihnachtsmenü"
+  },
+  "Kerst": {
+    "eyebrow": "Weihnachten 2026",
+    "title": "Weihnachtsmenü",
+    "lead": "Sechs Gänge zur Auswahl, im Restaurant oder in einem beheizten Iglu am Hafen.",
+    "metaTitle": "Weihnachtsmenü 2026 in Oud-Beijerland",
+    "metaDescription": "Das Weihnachtsmenü 2026 im Restaurant Oostkade am Hafen von Oud-Beijerland: sechs Gänge zur Auswahl, 88,50 € p. P. im Restaurant oder 110 € p. P. in einem beheizten Iglu.",
+    "restaurantLabel": "Im Restaurant",
+    "restaurantPrice": "88,50 € p. P.",
+    "igloLabel": "Im Iglu",
+    "igloPrice": "110 € p. P.",
+    "igloNote": "Ab 5 Personen",
+    "reserveCta": "Reservieren",
+    "mailCta": "E-Mail senden",
+    "amuse": "Amuse-Bouche",
+    "course": "Gang {n}",
+    "or": "oder",
+    "allergy": "Haben Sie eine Allergie? Sagen Sie uns Bescheid.",
+    "howTo": "Reservieren Sie online und wählen Sie <b>Restaurant</b> für einen Tisch drinnen oder <b>Iglo Experience</b> für ein Iglu, oder schreiben Sie an <mail>info@restaurantoostkade.nl</mail>.",
+    "deposit": "<b>Ohne Anzahlung keine Iglu-Reservierung.</b> Wir ziehen die Anzahlung am Tag selbst von Ihrer Rechnung ab.",
+    "igloLink": "Mehr über die Iglus"
   },
   "ImpressionsPage": {
     "tab": "Impressionen",
@@ -185,7 +208,9 @@
     "mustTry": "Empfehlung",
     "veggie": "Vegetarisch",
     "tabDinner": "Dinnerkarte",
-    "tabLunch": "Lunchkarte"
+    "tabLunch": "Lunchkarte",
+    "kerstNote": "An Weihnachten servieren wir ein Weihnachtsmenü mit sechs Gängen.",
+    "kerstLink": "Zum Weihnachtsmenü"
   },
   "Drinks": {
     "title": "Getränkekarte",

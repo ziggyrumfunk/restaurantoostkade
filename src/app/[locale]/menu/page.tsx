@@ -2,6 +2,7 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { pageMetadata } from '@/lib/seo';
 import { PageHeader } from '@/components/PageHeader';
 import { MenuList } from '@/components/MenuList';
+import { Link } from '@/i18n/routing';
 
 export async function generateMetadata({
   params,
@@ -41,6 +42,14 @@ export default async function MenuPage({
           '/menu-juli/oostkade-menu-juli-17.jpg',
         ]}
       />
+      <div className="container" style={{ paddingTop: 'var(--space-6)' }}>
+        <p className="lead">
+          {t('kerstNote')}{' '}
+          <Link href="/kerst" style={{ color: 'var(--color-ink)', textDecoration: 'underline' }}>
+            {t('kerstLink')}
+          </Link>
+        </p>
+      </div>
       <MenuList />
     </>
   );

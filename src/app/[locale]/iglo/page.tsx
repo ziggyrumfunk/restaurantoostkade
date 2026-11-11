@@ -11,6 +11,7 @@ import {
   IGLO_TABLE_SPREAD,
 } from '@/lib/igloData';
 import { ReserveButton } from '@/components/ReserveButton';
+import { Link } from '@/i18n/routing';
 import styles from './iglo.module.css';
 
 const EMAIL = 'info@restaurantoostkade.nl';
@@ -160,6 +161,9 @@ export default async function IgloPage({
             </article>
           ))}
           <p className={styles.allergy}>{t('allergy')}</p>
+          <p className={styles.festive}>
+            {t('kerstNote')} <Link href="/kerst">{t('kerstLink')}</Link>
+          </p>
         </div>
       </section>
 

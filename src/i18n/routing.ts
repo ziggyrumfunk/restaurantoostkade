@@ -33,6 +33,11 @@ export const routing = defineRouting({
       en: '/iglo',
       de: '/iglo',
     },
+    '/kerst': {
+      nl: '/kerstmenu',
+      en: '/christmas-menu',
+      de: '/weihnachtsmenue',
+    },
     '/impressions': {
       nl: '/sfeer',
       en: '/impressions',

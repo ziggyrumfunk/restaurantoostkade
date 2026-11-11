@@ -260,6 +260,17 @@
   color: var(--color-ink-soft);
 }
 
+.festive {
+  padding-top: var(--space-4);
+  font-size: var(--fs-md);
+  color: var(--color-ink);
+}
+.festive a {
+  color: var(--color-ink);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
 /* Good to know and extras */
 .practicalGrid {
   display: grid;

@@ -188,7 +188,8 @@
 .menuMedia .frame img {
   height: 100%;
   object-fit: cover;
-  object-position: 50% 30%;
+  /* Keeps the garland and the white star in frame. */
+  object-position: 95% 50%;
 }
 
 .card {

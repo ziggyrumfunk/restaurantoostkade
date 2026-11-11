@@ -9,7 +9,7 @@ import styles from './kerst.module.css';
 const EMAIL = 'info@restaurantoostkade.nl';
 
 const HERO_IMAGE = { url: '/kerst/oostkade-kerst-sfeer-01.webp', width: 856, height: 842 };
-const MENU_IMAGE = { url: '/kerst/oostkade-kerst-ober-01.webp', width: 707, height: 871 };
+const MENU_IMAGE = { url: '/kerst/oostkade-kerst-sfeer-02.webp', width: 817, height: 541 };
 const STRIP = [
   { url: '/kerst/oostkade-kerst-03.jpg', alt: 'img3Alt' },
   { url: '/kerst/oostkade-kerst-04.jpg', alt: 'img4Alt' },

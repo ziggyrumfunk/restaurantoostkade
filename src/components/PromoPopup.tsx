@@ -128,7 +128,10 @@ export function PromoPopup() {
               mail: (chunks) => <a href="mailto:info@restaurantoostkade.nl">{chunks}</a>,
             })}
           </p>
-          <p className={styles.deposit}>{t('deposit')}</p>
+          <div className={styles.notice}>
+            <p>{t.rich('howTo', { b: (chunks) => <strong>{chunks}</strong> })}</p>
+            <p>{t('deposit')}</p>
+          </div>
           <div className={styles.actions}>
             <Link href="/iglo" className="btn" onClick={handleClose}>
               {t('more')}

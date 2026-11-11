@@ -75,7 +75,7 @@
 }
 .heroImg {
   object-fit: cover;
-  object-position: 50% 45%;
+  object-position: 50% 40%;
 }
 
 /* Gold sparkles drifting in and out */
@@ -180,7 +180,7 @@
   min-width: 0;
 }
 .menuMedia .frame {
-  aspect-ratio: 2 / 3;
+  aspect-ratio: 4 / 5;
   max-height: calc(100svh - 140px);
   outline: 1px solid var(--gold-soft);
   outline-offset: 10px;
@@ -188,6 +188,7 @@
 .menuMedia .frame img {
   height: 100%;
   object-fit: cover;
+  object-position: 50% 30%;
 }
 
 .card {

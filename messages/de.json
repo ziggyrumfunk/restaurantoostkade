@@ -2,10 +2,11 @@
   "Promo": {
     "date": "Ab dem 1. Dezember",
     "title": "Essen im Iglu",
-    "body": "In diesem Winter stehen vier beheizte Iglus auf unserer Terrasse am Hafen. Reservieren Sie online, indem Sie ein Datum ab dem 1. Dezember wählen, oder schreiben Sie an <mail>info@restaurantoostkade.nl</mail>.",
-    "howTo": "Wählen Sie beim Reservieren <b>Iglo Experience</b> für einen Tisch im Iglu. Für einen Tisch im Restaurant wählen Sie <b>Restaurant</b>.",
-    "deposit": "Bitte beachten: Iglus können nur mit einer Anzahlung reserviert werden. Wir ziehen sie am Tag selbst von Ihrer Rechnung ab.",
+    "body": "In diesem Winter stehen vier beheizte Iglus auf unserer Terrasse am Hafen. Tagsüber servieren wir dort einen Sharing Brunch, abends ein Sharing Dinner mit 4 oder 5 Gängen. An Weihnachten und am Valentinstag gibt es ein besonderes Menü.",
+    "howTo": "Reservieren Sie online und wählen Sie <b>Iglo Experience</b>, oder schreiben Sie an <mail>info@restaurantoostkade.nl</mail>. Für einen Tisch im Restaurant wählen Sie <b>Restaurant</b>.",
+    "deposit": "<b>Ohne Anzahlung keine Iglu-Reservierung.</b> Wir ziehen die Anzahlung am Tag selbst von Ihrer Rechnung ab.",
     "more": "Zu den Iglus",
+    "menu": "Iglu-Menü",
     "close": "Schließen",
     "imageAlt": "Zwei durchsichtige Iglus mit Lichterketten, gedeckten Tischen und Schaffellen auf der Terrasse von Oostkade, mit dem Text Iglo Experience"
   },
@@ -18,7 +19,7 @@
     "imageAlt": "Zwei durchsichtige Iglus mit Lichterketten, gedeckten Tischen und Schaffellen auf der Terrasse von Oostkade, mit dem Text Iglo Experience",
     "intro": "In diesem Winter stehen vier beheizte Iglus auf unserer Terrasse. Dort sitzen Sie mit Ihrer eigenen Gruppe am Tisch, unter den Lichtern und geschützt vor dem Wind. Ideal für einen Abend mit Freunden, ein Familienessen oder ein Essen mit Kollegen.",
     "formatTitle": "Brunch oder Dinner",
-    "formatBody": "Der Sharing Brunch beginnt zwischen 12:00 und 15:00 Uhr, das Sharing Dinner mit vier oder fünf Gängen zwischen 17:00 und 20:00 Uhr. Alle Gerichte kommen in die Mitte des Tisches, sodass jeder von allem probieren kann.",
+    "formatBody": "Der Sharing Brunch beginnt zwischen 12:00 und 15:00 Uhr, das Sharing Dinner mit vier oder fünf Gängen zwischen 17:00 und 20:00 Uhr. Alle Gerichte kommen in die Mitte des Tisches, sodass jeder von allem probieren kann. An Weihnachten und am Valentinstag servieren wir ein besonderes Menü.",
     "menusTitle": "Die Menüs",
     "brunchTitle": "Sharing Brunch",
     "brunchPrice": "47,50 € p. P.",

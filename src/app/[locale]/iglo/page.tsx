@@ -110,7 +110,7 @@ export default async function IgloPage({
         </div>
       </section>
 
-      <section className={styles.menus}>
+      <section id="menus" className={styles.menus}>
         <div className="container">
           <h2 className={`${styles.menusTitle} handwritten`}>{t('menusTitle')}</h2>
           {IGLO_MENUS.map((menu) => (

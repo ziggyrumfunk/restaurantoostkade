@@ -2,10 +2,11 @@
   "Promo": {
     "date": "From 1 December",
     "title": "Dine in an igloo",
-    "body": "This winter, four heated igloos are coming to our terrace by the harbour. Book online by choosing a date from 1 December, or email <mail>info@restaurantoostkade.nl</mail>.",
-    "howTo": "When booking, choose <b>Iglo Experience</b> for a table in an igloo. For a table in the restaurant, choose <b>Restaurant</b>.",
-    "deposit": "Please note: igloo bookings require a deposit. We deduct it from your bill on the day itself.",
+    "body": "This winter, four heated igloos stand on our terrace by the harbour. During the day we serve a sharing brunch there, in the evening a sharing dinner of 4 or 5 courses. At Christmas and on Valentine's Day we have a special menu.",
+    "howTo": "Book online and choose <b>Iglo Experience</b>, or email <mail>info@restaurantoostkade.nl</mail>. For a table in the restaurant, choose <b>Restaurant</b>.",
+    "deposit": "<b>No deposit, no igloo booking.</b> We deduct the deposit from your bill on the day itself.",
     "more": "See the igloos",
+    "menu": "Igloo menu",
     "close": "Close",
     "imageAlt": "Two transparent igloos with string lights, set tables and sheepskins on the Oostkade terrace, with the text Iglo Experience"
   },
@@ -18,7 +19,7 @@
     "imageAlt": "Two transparent igloos with string lights, set tables and sheepskins on the Oostkade terrace, with the text Iglo Experience",
     "intro": "This winter, four heated igloos are coming to our terrace. You sit at the table with your own group, under the lights and out of the wind. Perfect for an evening with friends, a family dinner or a meal with colleagues.",
     "formatTitle": "Brunch or dinner",
-    "formatBody": "The sharing brunch starts between 12:00 and 15:00, the sharing dinner of four or five courses between 17:00 and 20:00. All dishes go in the middle of the table, so everyone gets to taste a bit of everything.",
+    "formatBody": "The sharing brunch starts between 12:00 and 15:00, the sharing dinner of four or five courses between 17:00 and 20:00. All dishes go in the middle of the table, so everyone gets to taste a bit of everything. At Christmas and on Valentine's Day we serve a special menu.",
     "menusTitle": "The menus",
     "brunchTitle": "Sharing brunch",
     "brunchPrice": "€47.50 p.p.",

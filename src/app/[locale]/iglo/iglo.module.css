@@ -151,6 +151,7 @@
 /* Menus: each one gets its own spread, the dish photo stays in view alongside
    the longer lists. */
 .menus {
+  scroll-margin-top: 84px;
   background: var(--color-surface);
   padding-block: clamp(4rem, 9vw, 8rem);
 }

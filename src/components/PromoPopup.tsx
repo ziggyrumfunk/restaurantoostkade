@@ -123,18 +123,22 @@ export function PromoPopup() {
         <div className={styles.content}>
           <span className={styles.eyebrow}>{t('date')}</span>
           <h2 id="promo-title" className={styles.title}>{t('title')}</h2>
-          <p className={styles.body}>
-            {t.rich('body', {
-              mail: (chunks) => <a href="mailto:info@restaurantoostkade.nl">{chunks}</a>,
-            })}
-          </p>
+          <p className={styles.body}>{t('body')}</p>
           <div className={styles.notice}>
-            <p>{t.rich('howTo', { b: (chunks) => <strong>{chunks}</strong> })}</p>
-            <p>{t('deposit')}</p>
+            <p>
+              {t.rich('howTo', {
+                b: (chunks) => <strong>{chunks}</strong>,
+                mail: (chunks) => <a href="mailto:info@restaurantoostkade.nl">{chunks}</a>,
+              })}
+            </p>
+            <p>{t.rich('deposit', { b: (chunks) => <strong>{chunks}</strong> })}</p>
           </div>
           <div className={styles.actions}>
             <Link href="/iglo" className="btn" onClick={handleClose}>
               {t('more')}
+            </Link>
+            <Link href={{ pathname: '/iglo', hash: 'menus' }} className="btn btn-ghost" onClick={handleClose}>
+              {t('menu')}
             </Link>
           </div>
         </div>

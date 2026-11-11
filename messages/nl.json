@@ -2,10 +2,11 @@
   "Promo": {
     "date": "Vanaf 1 december",
     "title": "Dineren in een iglo",
-    "body": "Deze winter staan er vier verwarmde iglo's op ons terras aan de haven. Reserveer online door een datum vanaf 1 december te kiezen, of mail naar <mail>info@restaurantoostkade.nl</mail>.",
-    "howTo": "Kies bij het reserveren voor <b>Iglo Experience</b> als je in een iglo wilt eten. Voor een tafel in het restaurant kies je <b>Restaurant</b>.",
-    "deposit": "Let op: een iglo reserveer je alleen met een aanbetaling. Die brengen we op de dag zelf in mindering op de rekening.",
+    "body": "Deze winter staan er vier verwarmde iglo's op ons terras aan de haven. Overdag serveren we er een sharing brunch, 's avonds een sharing diner van 4 of 5 gangen. Met kerst en Valentijnsdag hebben we een speciaal menu.",
+    "howTo": "Reserveer online en kies <b>Iglo Experience</b>, of mail naar <mail>info@restaurantoostkade.nl</mail>. Voor een tafel in het restaurant kies je <b>Restaurant</b>.",
+    "deposit": "<b>Zonder aanbetaling geen iglo-reservering.</b> De aanbetaling brengen we op de dag zelf in mindering op de rekening.",
     "more": "Bekijk de iglo's",
+    "menu": "Iglo-menu",
     "close": "Sluiten",
     "imageAlt": "Twee doorzichtige iglo's met lichtjes, gedekte tafels en schapenvachten op het terras van Oostkade, met de tekst Iglo Experience"
   },
@@ -18,7 +19,7 @@
     "imageAlt": "Twee doorzichtige iglo's met lichtjes, gedekte tafels en schapenvachten op het terras van Oostkade, met de tekst Iglo Experience",
     "intro": "Deze winter staan er vier verwarmde iglo's op ons terras. Daar zit je met je eigen gezelschap aan tafel, onder de lichtjes en uit de wind. Ideaal voor een avond met vrienden, een familiediner of een etentje met collega's.",
     "formatTitle": "Brunch of diner",
-    "formatBody": "De sharing brunch start tussen 12:00 en 15:00, het sharing diner van vier of vijf gangen tussen 17:00 en 20:00. Alle gerechten komen in het midden van de tafel, zodat iedereen van alles kan proeven.",
+    "formatBody": "De sharing brunch start tussen 12:00 en 15:00, het sharing diner van vier of vijf gangen tussen 17:00 en 20:00. Alle gerechten komen in het midden van de tafel, zodat iedereen van alles kan proeven. Met kerst en Valentijnsdag serveren we een speciaal menu.",
     "menusTitle": "De menu's",
     "brunchTitle": "Sharing brunch",
     "brunchPrice": "€47,50 p.p.",

@@ -65,8 +65,10 @@
 .notice strong {
   font-weight: 700;
 }
-.notice p:last-child {
-  font-weight: 600;
+.notice a {
+  color: var(--color-ink);
+  text-decoration: underline;
+  overflow-wrap: anywhere;
 }
 
 .body a {

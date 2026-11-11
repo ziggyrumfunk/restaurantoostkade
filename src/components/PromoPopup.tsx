@@ -5,8 +5,7 @@ import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { Link, usePathname } from '@/i18n/routing';
 import { CONSENT_CHANGED_EVENT, getStoredConsent } from '@/lib/consent';
-import { IGLO_FIRST_DAY, IGLO_IMAGE } from '@/lib/igloData';
-import { ReserveButton } from './ReserveButton';
+import { IGLO_IMAGE } from '@/lib/igloData';
 import styles from './PromoPopup.module.css';
 
 const SESSION_KEY = 'oostkade_iglo_2026_seen';
@@ -129,11 +128,9 @@ export function PromoPopup() {
               mail: (chunks) => <a href="mailto:info@restaurantoostkade.nl">{chunks}</a>,
             })}
           </p>
+          <p className={styles.deposit}>{t('deposit')}</p>
           <div className={styles.actions}>
-            <ReserveButton className="btn" day={IGLO_FIRST_DAY} onClick={handleClose}>
-              {t('cta')}
-            </ReserveButton>
-            <Link href="/iglo" className="btn btn-ghost" onClick={handleClose}>
+            <Link href="/iglo" className="btn" onClick={handleClose}>
               {t('more')}
             </Link>
           </div>

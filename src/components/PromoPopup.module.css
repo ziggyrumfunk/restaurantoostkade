@@ -49,6 +49,18 @@
   padding: clamp(1.5rem, 4vw, 2.25rem);
 }
 
+/* The deposit has to be impossible to miss: framed, not small print. */
+.deposit {
+  width: 100%;
+  padding: var(--space-3) var(--space-4);
+  border-left: 3px solid var(--color-accent-deep);
+  background: var(--color-surface);
+  color: var(--color-ink);
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: left;
+}
+
 .body a {
   color: var(--color-ink);
   text-decoration: underline;

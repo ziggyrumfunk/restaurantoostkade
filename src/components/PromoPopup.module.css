@@ -24,7 +24,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 600px;
+  max-width: 660px;
   max-height: calc(100svh - 2 * var(--space-4));
   background: var(--color-bg-elev);
   color: var(--color-ink);
@@ -33,11 +33,15 @@
   animation: cardIn 360ms var(--ease) both;
 }
 
-/* Full width on top: the visual has text in it, so it is never cropped. */
+/* Full width on top. The lettering sits in the middle of the visual, so on
+   short screens it may lose some top and bottom, never the sides. */
 .image {
   display: block;
   width: 100%;
   height: auto;
+  max-height: 30svh;
+  min-height: 180px;
+  object-fit: cover;
   flex: none;
 }
 

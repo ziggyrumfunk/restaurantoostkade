@@ -33,6 +33,7 @@
   display: flex;
   align-items: center;
   line-height: 1;
+  flex-shrink: 0; /* the logo keeps its size when the nav row gets tight */
 }
 .logo {
   /* Logo SVG ships with white fills. Invert to dark on the cream header. */
@@ -127,6 +128,9 @@
   z-index: 100;
   isolation: isolate;
   will-change: opacity, transform;
+  /* A long list still reaches the last link on a short phone screen. */
+  overflow-y: auto;
+  overscroll-behavior: contain;
 }
 
 /* When the mobile menu is open the header bar itself goes from translucent
@@ -177,10 +181,25 @@
 @media (max-width: 1500px) {
   .nav ul { gap: var(--space-4); }
 }
-@media (max-width: 1160px) {
+/* Where the nav row stops fitting and the MENU button takes over. With the
+   seasonal Kerstmenu link the row needs about 1250px in Dutch and 1330px in
+   German (scrollbar included). Without that link 1160px was enough. */
+@media (max-width: 1260px) {
   .nav { display: none; }
   .burger { display: block; }
 }
+@media (max-width: 1340px) {
+  :global(html[lang='de']) .nav { display: none; }
+  :global(html[lang='de']) .burger { display: block; }
+}
 @media (max-width: 960px) {
   .reserveBtn { display: none; }
+}
+/* Short screens: tighten the phone menu so all links and the language
+   switcher fit without scrolling on most phones. */
+@media (max-height: 880px) {
+  .mobile { padding-block: var(--space-5); }
+  .mobileList { gap: var(--space-1); }
+  .mobileLink { font-size: 1.625rem; padding-block: 0.5rem; }
+  .mobileFooter { padding-top: var(--space-4); }
 }

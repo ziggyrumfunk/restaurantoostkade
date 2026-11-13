@@ -63,10 +63,23 @@
   line-height: var(--lh-loose);
   color: var(--cream-soft);
 }
+/* German: "Weihnachtsmenü" is one long word. Size it to the width of its
+   box (about 7.2 times the font size wide), so it never runs past the edges. */
+.heroInner {
+  width: 100%;
+  container-type: inline-size;
+}
+.heroTitle:lang(de) {
+  font-size: min(6.5rem, 13cqw);
+}
 .heroPrice {
   font-size: var(--fs-md);
   font-weight: 600;
   color: var(--gold);
+}
+.heroDates {
+  font-size: var(--fs-base);
+  color: var(--cream-soft);
 }
 .heroMedia {
   position: relative;
@@ -231,6 +244,12 @@
 .cardTitle {
   color: var(--ink);
   font-size: clamp(2.75rem, 5vw, 4rem);
+}
+.cardHeader {
+  container-type: inline-size;
+}
+.cardTitle:lang(de) {
+  font-size: min(4rem, 13cqw);
 }
 .cardSub {
   font-size: var(--fs-xs);

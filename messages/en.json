@@ -73,6 +73,7 @@
     "title": "Christmas menu",
     "lead": "Six courses by the harbour, with a choice at almost every course. From tuna sashimi to venison steak, finished with a millefeuille.",
     "heroPrice": "€88.50 p.p.",
+    "heroDates": "On 24 and 26 December, in the evening. Christmas Day is fully booked.",
     "metaTitle": "Christmas menu 2026 in Oud-Beijerland",
     "metaDescription": "The 2026 Christmas menu at Restaurant Oostkade by the harbour of Oud-Beijerland: six courses with a choice, €88.50 p.p. in the restaurant or €110 p.p. in a heated igloo.",
     "reserveCta": "Book a table",
@@ -132,7 +133,8 @@
     "languageLabel": "Language",
     "openMenu": "Open menu",
     "closeMenu": "Close menu",
-    "iglo": "Igloos"
+    "iglo": "Igloos",
+    "kerst": "Christmas menu"
   },
   "Home": {
     "heroEyebrow": "On the harbour of Oud-Beijerland",

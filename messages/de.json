@@ -73,6 +73,7 @@
     "title": "Weihnachtsmenü",
     "lead": "Sechs Gänge am Hafen, mit einer Auswahl bei fast jedem Gang. Von Thunfisch-Sashimi bis Hirschsteak, zum Abschluss ein Millefeuille.",
     "heroPrice": "88,50 € p. P.",
+    "heroDates": "Am 24. und 26. Dezember, abends. Der 25. Dezember ist ausgebucht.",
     "metaTitle": "Weihnachtsmenü 2026 in Oud-Beijerland",
     "metaDescription": "Das Weihnachtsmenü 2026 im Restaurant Oostkade am Hafen von Oud-Beijerland: sechs Gänge zur Auswahl, 88,50 € p. P. im Restaurant oder 110 € p. P. in einem beheizten Iglu.",
     "reserveCta": "Reservieren",
@@ -132,7 +133,8 @@
     "languageLabel": "Sprache",
     "openMenu": "Menü öffnen",
     "closeMenu": "Menü schließen",
-    "iglo": "Iglus"
+    "iglo": "Iglus",
+    "kerst": "Weihnachtsmenü"
   },
   "Home": {
     "heroEyebrow": "Am Hafen von Oud-Beijerland",

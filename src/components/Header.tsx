@@ -34,6 +34,7 @@ export function Header() {
   const nav = [
     { href: '/', label: t('home') },
     { href: '/iglo', label: t('iglo') },
+    { href: '/kerst', label: t('kerst') },
     { href: '/menu', label: t('menu') },
     { href: '/drinks', label: t('drinks') },
     { href: '/lunch', label: t('lunch') },

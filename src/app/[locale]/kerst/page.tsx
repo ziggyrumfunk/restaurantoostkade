@@ -89,6 +89,7 @@ export default async function KerstPage({
             <Ornament />
             <p className={styles.heroLead}>{t('lead')}</p>
             <p className={styles.heroPrice}>{t('heroPrice')}</p>
+            <p className={styles.heroDates}>{t('heroDates')}</p>
             <div className={styles.actions}>
               <ReserveButton className="btn">{t('reserveCta')}</ReserveButton>
               <a className="btn btn-ghost" href="#menukaart">{t('menuCta')}</a>
